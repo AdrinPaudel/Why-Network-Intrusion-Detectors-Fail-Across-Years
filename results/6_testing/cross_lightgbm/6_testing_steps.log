@@ -1,0 +1,60 @@
+======================================================================
+6_CROSS-YEAR TRANSFER  [cicids2017 <-> cicids2018 / lightgbm]
+Started: 2026-07-17 15:21:26
+======================================================================
+
+============================================================
+CROSS-YEAR: cicids2017 <-> cicids2018  [engine: lightgbm]
+============================================================
+    loaded rf_binary.joblib (trained on cicids2017)
+    loaded rf_multiclass.joblib (trained on cicids2017)
+
+[SUB-STEP 6.1] [cicids2017 -> cicids2018] stream 20% test.parquet and cross-predict (2 model(s)) (started: 15:21:27)
+      cross-predicted 4,000,000 rows (35,868 rows/s)
+      cross-predicted 8,000,000 rows (35,590 rows/s)
+      cross-predicted 12,000,000 rows (35,617 rows/s)
+  [OK] cross-scored 12,639,079 rows in 354.9s
+  [OK] Saved 6_cross_roc_binary_concept.png
+  [OK] Saved 6_cross_pr_binary_concept.png
+  [OK]   [recalibration/concept] attack_f1 0.5=0.5561 -> sld_em=0.1060 (p_hat=1.000) | oracle=0.6885
+  [OK] Saved 6_cross_confusion_binary_concept.png
+  [OK]   [binary/concept] acc=0.9211 macro_f1=0.7564 mcc=0.5669 pr_auc=0.4057
+  [OK] Saved 6_cross_roc_binary_covariate.png
+  [OK] Saved 6_cross_pr_binary_covariate.png
+  [OK]   [recalibration/covariate] attack_f1 0.5=0.0437 -> sld_em=0.0000 (p_hat=0.000) | oracle=0.2599
+  [OK] Saved 6_cross_confusion_binary_covariate.png
+  [OK]   [binary/covariate] acc=0.9393 macro_f1=0.5062 mcc=0.0486 pr_auc=0.2026
+  [OK] Saved 6_cross_confusion_multiclass_concept.png
+  [OK]   [multiclass/concept] acc=0.9317 macro_f1=0.1852 mcc=0.0067
+  [OK] Saved 6_cross_confusion_multiclass_covariate.png
+  [OK]   [multiclass/covariate] acc=0.9384 macro_f1=0.2445 mcc=0.0397
+    loaded rf_binary.joblib (trained on cicids2018)
+    loaded rf_multiclass.joblib (trained on cicids2018)
+
+[SUB-STEP 6.2] [cicids2018 -> cicids2017] stream 20% test.parquet and cross-predict (2 model(s)) (started: 15:28:00)
+      cross-predicted 420,048 rows (33,643 rows/s)
+  [OK] cross-scored 420,048 rows in 12.5s
+  [OK] Saved 6_cross_roc_binary_concept.png
+  [OK] Saved 6_cross_pr_binary_concept.png
+  [OK]   [recalibration/concept] attack_f1 0.5=0.0001 -> sld_em=0.3880 (p_hat=1.000) | oracle=0.7320
+  [OK] Saved 6_cross_confusion_binary_concept.png
+  [OK]   [binary/concept] acc=0.7593 macro_f1=0.4317 mcc=0.0052 pr_auc=0.5939
+  [OK] Saved 6_cross_roc_binary_covariate.png
+  [OK] Saved 6_cross_pr_binary_covariate.png
+  [OK]   [recalibration/covariate] attack_f1 0.5=0.3930 -> sld_em=0.3880 (p_hat=1.000) | oracle=0.7478
+  [OK] Saved 6_cross_confusion_binary_covariate.png
+  [OK]   [binary/covariate] acc=0.8164 macro_f1=0.6424 mcc=0.4328 pr_auc=0.7971
+  [OK] Saved 6_cross_confusion_multiclass_concept.png
+  [OK]   [multiclass/concept] acc=0.7593 macro_f1=0.1079 mcc=0.0000
+  [OK] Saved 6_cross_confusion_multiclass_covariate.png
+  [OK]   [multiclass/covariate] acc=0.7679 macro_f1=0.2557 mcc=0.2268
+
+[SUB-STEP 6.3] Write cross-year baseline JSON (consumed by step 11 ablation) (started: 15:28:14)
+  [OK] Saved H:\nidswork\output\6_testing\cross_year_baseline_lightgbm.json
+
+[SUB-STEP 6.4] Write cross-year report (started: 15:28:14)
+  [OK] Saved 6_cross_year_report.txt
+
+======================================================================
+Completed: 2026-07-17 15:28:14
+======================================================================

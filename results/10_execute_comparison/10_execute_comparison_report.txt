@@ -1,0 +1,117 @@
+
+======================================================================
+EXECUTE COMPARISON REPORT — cicids2017 <-> cicids2018
+======================================================================
+Generated : 2026-07-17 15:44:43
+Features  : 83 evaluated
+
+  This report is diagnostic output for the Axis 1/Axis 2 shift tests computed in
+  this step. It feeds step 11 (cross-analysis), which correlates these shift/
+  stability values against feature importance — see results.md for the canonical
+  C1-C18/H1/H1.5/H2 analysis IDs and what each one means.
+
+
+======================================================================
+VERDICT DISTRIBUTION (Flip vs Collapse: HOW did discrimination fail?)
+======================================================================
+  collapsed      :   4  (4.8%)
+  flipped        :   6  (7.2%)
+  restructured   :  24  (28.9%)
+  shifted        :  36  (43.4%)
+  stable         :   3  (3.6%)
+  weak           :  10  (12.0%)
+
+======================================================================
+SENSITIVITY SWEEP (robustness — verdict counts at alternate calibrated-C2ST thresholds)
+======================================================================
+  Verdict rule: calibrated C2ST-AUC (excess over the per-feature permutation null)
+  > threshold -> shifted. Current threshold: 0.0.
+
+  threshold | stable | weak |  shifted | flipped | collapsed | restruct
+  ----------+--------+------+----------+---------+-----------+---------
+       0.00 |      3 |   10 |       36 |       6 |         4 |       24  <- current
+       0.02 |      3 |   10 |       36 |       6 |         4 |       24
+       0.05 |      4 |   10 |       35 |       6 |         4 |       24
+       0.10 |      9 |   10 |       33 |       6 |         4 |       21
+
+  Interpretation: a stable count that barely moves across the sweep means the
+  stable/shifted split is robust to the exact threshold; a big swing needs a caveat.
+
+======================================================================
+E1 CROSS-METRIC AGREEMENT (corroboration vs the calibrated-C2ST verdict — diagnostic only)
+======================================================================
+  Each corroboration metric, calibrated against its OWN permutation null, votes
+  shifted/stable; agreement = same vote as the C2ST verdict. Disagreement never
+  changes a verdict — it flags features whose shift evidence is metric-dependent.
+
+    wasserstein_qn     :  87.1% agreement (61/70 features)
+    mmd                :  92.9% agreement (65/70 features)
+    energy_distance    :  68.6% agreement (48/70 features)
+    ks_statistic       :  97.1% agreement (68/70 features)
+    anderson_darling   :  97.1% agreement (68/70 features)
+    jensen_shannon     :  61.5% agreement (8/13 features)
+
+  features with at least one disagreeing metric (28):
+    Fwd URG Flags                             agreement=0.00  disagrees: jensen_shannon
+    Bwd URG Flags                             agreement=0.00  disagrees: jensen_shannon
+    FIN Flag Count                            agreement=0.00  disagrees: jensen_shannon
+    Subflow Fwd Packets                       agreement=0.00  disagrees: jensen_shannon
+    ICMP Code                                 agreement=0.00  disagrees: jensen_shannon
+    Active Std                                agreement=0.20  disagrees: anderson_darling, energy_distance, ks_statistic, wasserstein_qn
+    Idle Std                                  agreement=0.40  disagrees: anderson_darling, ks_statistic, wasserstein_qn
+    Packet Length Min                         agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Fwd Bytes/Bulk Avg                        agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Fwd Packet/Bulk Avg                       agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Bwd Bytes/Bulk Avg                        agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Fwd Bulk Rate Avg                         agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Bwd Packet/Bulk Avg                       agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Bwd Bulk Rate Avg                         agreement=0.60  disagrees: energy_distance, wasserstein_qn
+    Active Mean                               agreement=0.60  disagrees: energy_distance, mmd
+    ... and 13 more (see e1_agreement in layer B)
+
+======================================================================
+FLIP CORROBORATION AUDIT (pooled flip vs real per-family reversal)
+======================================================================
+  pooled flipped                : 6
+  corroborated by a family flip : 5  (83.3%)
+  UNcorroborated (likely mixture artifact): 1
+  corroborated features (family that flipped):
+    Fwd Packet Length Max                     [BruteForce, DDoS]
+    Fwd IAT Min                               [DDoS, DoS]
+    Fwd RST Flags                             [DoS]
+    RST Flag Count                            [BruteForce, DDoS, DoS]
+    Down/Up Ratio                             [Botnet, Infiltration]
+
+======================================================================
+C2ST-AUC DISTRIBUTION + STABILITY (raw data — note: per-feature CIs are wide)
+======================================================================
+  mean   : 0.6630
+  median : 0.6940
+  min    : 0.5000
+  max    : 0.8502
+  mean 95% CI width : 0.0306  (wider = less fold-stable)
+  least stable (widest CI):
+    Subflow Bwd Bytes                         CI width=0.0562
+    Packet Length Variance                    CI width=0.0562
+    SYN Flag Count                            CI width=0.0551
+    Idle Max                                  CI width=0.0544
+    Bwd Packet Length Mean                    CI width=0.0525
+
+======================================================================
+QUANTILE-SHIFT BREAKDOWN (WHERE in the distribution did the shift occur?)
+======================================================================
+  Where the largest |q18 - q17| sits (P25=lower, P50=median, P75=upper):
+    p25    : 1
+    p50    : 7
+    p75    : 50
+
+======================================================================
+OUTPUT
+======================================================================
+  Layer A JSON      : H:\nidswork\output\10_execute_comparison\verdicts_layerA_cicids2017_cicids2018.json
+  Layer B JSON      : H:\nidswork\output\10_execute_comparison\verdicts_layerB_cicids2017_cicids2018.json
+  flat CSV table    : H:\nidswork\output\10_execute_comparison\verdicts_table_cicids2017_cicids2018.csv
+  overlap plots     : H:\nidswork\results\10_execute_comparison\overlap_plots
+  Q-Q plots         : H:\nidswork\results\10_execute_comparison\qq_plots
+  verdict scatter   : H:\nidswork\results\10_execute_comparison\verdict_scatter.png
+  steps log         : H:\nidswork\results\10_execute_comparison\10_execute_comparison_steps.log

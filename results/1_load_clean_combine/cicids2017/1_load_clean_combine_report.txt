@@ -1,0 +1,57 @@
+STEP 1 REPORT  --  CICIDS2017
+Generated : 2026-07-17 06:25:48
+============================================================
+
+## Row Counts
+  Total raw rows       :    2,099,976
+  NaN rows removed     :            0
+  Inf rows removed     :            5
+  After NaN/Inf clean  :    2,099,971
+  Duplicates removed   :            0
+  After global dedup   :    2,099,971
+  Final (post-labels)  :    2,099,960
+
+## Per-File Stats
+  File                                                Raw        NaN        Inf         Clean
+  ------------------------------------------ ------------  ---------  ---------  ------------
+  wednesday.csv                                   496,641          0          1       496,640
+  friday.csv                                      547,557          0          0       547,557
+  monday.csv                                      371,624          0          3       371,621
+  thursday.csv                                    362,076          0          1       362,075
+  tuesday.csv                                     322,078          0          0       322,078
+
+## Raw Label Inventory (before consolidation)
+  Label                                                     Count
+  ---------------------------------------------------- ----------
+  BENIGN                                                1,582,561
+  Portscan                                                159,066
+  DoS Hulk                                                158,468
+  DDoS                                                     95,144
+  Infiltration - Portscan                                  71,767
+  Benign                                                   11,979
+  DoS GoldenEye                                             7,567
+  FTP-Patator                                               3,972
+  DoS Slowloris                                             3,859
+  SSH-Patator                                               2,961
+  DoS Slowhttptest                                          1,740
+  Botnet                                                      736
+  Web Attack - Brute Force                                     73
+  Infiltration                                                 36
+  Web Attack - XSS                                             18
+  Web Attack - SQL Injection                                   13
+  Heartbleed                                                   11
+
+## Canonical Families (after consolidation)
+  Family                      Count
+  ---------------------- ----------
+  Benign                  1,594,540
+  DoS                       171,634
+  PortScan                  159,066
+  DDoS                       95,144
+  Infiltration               71,803
+  BruteForce                  6,933
+  Botnet                        736
+  WebAttack                     104
+
+## Output
+  data/cc_data/cicids2017_cleaned.parquet

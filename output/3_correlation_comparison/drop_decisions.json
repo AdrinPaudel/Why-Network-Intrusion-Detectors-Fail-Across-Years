@@ -1,0 +1,387 @@
+{
+  "generated": "2026-07-17T06:52:00",
+  "note": "Derived from CORRECTED CIC-IDS 2017/2018 datasets. Do not substitute published feature lists from original (uncorrected) releases.",
+  "strategy": "consensus_intersection_both_metrics_both_years",
+  "consensus_rule": "min(|r_2017|, |r_2018|) >= threshold for BOTH Pearson and Spearman",
+  "consensus_threshold": 0.95,
+  "per_year_threshold": 0.95,
+  "criterion": "mRMR minimum-redundancy (lowest avg |r| to all features)",
+  "n_features_total": 83,
+  "features_to_drop": [
+    "Average Packet Size",
+    "Bwd Packet/Bulk Avg",
+    "Bwd Segment Size Avg",
+    "Fwd Packets/s",
+    "Fwd Segment Size Avg",
+    "Idle Max",
+    "Idle Min",
+    "Subflow Bwd Bytes",
+    "Subflow Fwd Bytes",
+    "URG Flag Count"
+  ],
+  "features_to_monitor": [],
+  "redundancy_groups": [
+    {
+      "group": [
+        "Fwd Packet Length Mean",
+        "Fwd Segment Size Avg",
+        "Subflow Fwd Bytes"
+      ],
+      "keep": "Fwd Packet Length Mean",
+      "drop": [
+        "Fwd Segment Size Avg",
+        "Subflow Fwd Bytes"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 0.987688
+    },
+    {
+      "group": [
+        "Bwd Packet Length Mean",
+        "Bwd Segment Size Avg",
+        "Subflow Bwd Bytes"
+      ],
+      "keep": "Bwd Packet Length Mean",
+      "drop": [
+        "Bwd Segment Size Avg",
+        "Subflow Bwd Bytes"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 0.98935
+    },
+    {
+      "group": [
+        "Flow Packets/s",
+        "Fwd Packets/s"
+      ],
+      "keep": "Flow Packets/s",
+      "drop": [
+        "Fwd Packets/s"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 0.980495
+    },
+    {
+      "group": [
+        "Fwd URG Flags",
+        "URG Flag Count"
+      ],
+      "keep": "Fwd URG Flags",
+      "drop": [
+        "URG Flag Count"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 0.999823
+    },
+    {
+      "group": [
+        "Packet Length Mean",
+        "Average Packet Size"
+      ],
+      "keep": "Packet Length Mean",
+      "drop": [
+        "Average Packet Size"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 1.0
+    },
+    {
+      "group": [
+        "Bwd Bytes/Bulk Avg",
+        "Bwd Packet/Bulk Avg"
+      ],
+      "keep": "Bwd Bytes/Bulk Avg",
+      "drop": [
+        "Bwd Packet/Bulk Avg"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 0.989354
+    },
+    {
+      "group": [
+        "Idle Mean",
+        "Idle Max",
+        "Idle Min"
+      ],
+      "keep": "Idle Mean",
+      "drop": [
+        "Idle Max",
+        "Idle Min"
+      ],
+      "status": "stable",
+      "avg_pearson_within": 0.989251
+    }
+  ],
+  "shifted_pairs": [
+    {
+      "feature_a": "Total Fwd Packet",
+      "feature_b": "ACK Flag Count",
+      "pearson_2017": 0.999687,
+      "pearson_2018": 0.081099,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Flow Duration",
+      "feature_b": "Fwd IAT Total",
+      "pearson_2017": 0.999459,
+      "pearson_2018": 0.857424,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Total Fwd Packet",
+      "feature_b": "Total Bwd packets",
+      "pearson_2017": 0.999076,
+      "pearson_2018": 0.074796,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Flow IAT Max",
+      "feature_b": "Fwd IAT Max",
+      "pearson_2017": 0.998563,
+      "pearson_2018": 0.58634,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd Packet/Bulk Avg",
+      "feature_b": "Fwd Act Data Pkts",
+      "pearson_2017": 0.6065,
+      "pearson_2018": 0.997746,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Total Fwd Packet",
+      "feature_b": "Total Length of Bwd Packet",
+      "pearson_2017": 0.996986,
+      "pearson_2018": 0.073982,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd IAT Max",
+      "feature_b": "Idle Max",
+      "pearson_2017": 0.9969,
+      "pearson_2018": 0.58644,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Total Fwd Packet",
+      "feature_b": "Fwd Act Data Pkts",
+      "pearson_2017": 0.059208,
+      "pearson_2018": 0.995975,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Fwd Packet Length Min",
+      "feature_b": "Packet Length Min",
+      "pearson_2017": 0.839468,
+      "pearson_2018": 0.994708,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Total Fwd Packet",
+      "feature_b": "Fwd Packet/Bulk Avg",
+      "pearson_2017": 0.008172,
+      "pearson_2018": 0.993663,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Flow Packets/s",
+      "feature_b": "Bwd Packets/s",
+      "pearson_2017": 0.49384,
+      "pearson_2018": 0.991593,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Max",
+      "feature_b": "Packet Length Max",
+      "pearson_2017": 0.989389,
+      "pearson_2018": 0.602812,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Packet Length Mean",
+      "feature_b": "Subflow Bwd Bytes",
+      "pearson_2017": 0.987663,
+      "pearson_2018": 0.815169,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Average Packet Size",
+      "feature_b": "Subflow Bwd Bytes",
+      "pearson_2017": 0.987663,
+      "pearson_2018": 0.815169,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd IAT Max",
+      "feature_b": "Idle Mean",
+      "pearson_2017": 0.983972,
+      "pearson_2018": 0.540696,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Max",
+      "feature_b": "Packet Length Std",
+      "pearson_2017": 0.983431,
+      "pearson_2018": 0.706312,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd IAT Total",
+      "feature_b": "Bwd IAT Total",
+      "pearson_2017": 0.982248,
+      "pearson_2018": 0.847598,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Std",
+      "feature_b": "Packet Length Std",
+      "pearson_2017": 0.982088,
+      "pearson_2018": 0.711878,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Std",
+      "feature_b": "Packet Length Max",
+      "pearson_2017": 0.972916,
+      "pearson_2018": 0.579,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Mean",
+      "feature_b": "Packet Length Mean",
+      "pearson_2017": 0.967664,
+      "pearson_2018": 0.812538,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Mean",
+      "feature_b": "Average Packet Size",
+      "pearson_2017": 0.967664,
+      "pearson_2018": 0.812538,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Packet Length Mean",
+      "feature_b": "Bwd Segment Size Avg",
+      "pearson_2017": 0.967664,
+      "pearson_2018": 0.812538,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Average Packet Size",
+      "feature_b": "Bwd Segment Size Avg",
+      "pearson_2017": 0.967664,
+      "pearson_2018": 0.812538,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd Packets/s",
+      "feature_b": "Bwd Packets/s",
+      "pearson_2017": 0.263799,
+      "pearson_2018": 0.967251,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Fwd IAT Mean",
+      "feature_b": "Fwd IAT Min",
+      "pearson_2017": 0.966917,
+      "pearson_2018": 0.688675,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Total Length of Fwd Packet",
+      "feature_b": "Fwd Bytes/Bulk Avg",
+      "pearson_2017": 0.378966,
+      "pearson_2018": 0.966099,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Std",
+      "feature_b": "Packet Length Variance",
+      "pearson_2017": 0.964036,
+      "pearson_2018": 0.081922,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Active Mean",
+      "feature_b": "Active Min",
+      "pearson_2017": 0.906988,
+      "pearson_2018": 0.96381,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Mean",
+      "feature_b": "Packet Length Std",
+      "pearson_2017": 0.963494,
+      "pearson_2018": 0.607789,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Packet Length Std",
+      "feature_b": "Bwd Segment Size Avg",
+      "pearson_2017": 0.963494,
+      "pearson_2018": 0.607789,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd IAT Max",
+      "feature_b": "Bwd IAT Max",
+      "pearson_2017": 0.957907,
+      "pearson_2018": 0.563703,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd PSH Flags",
+      "feature_b": "PSH Flag Count",
+      "pearson_2017": 0.955612,
+      "pearson_2018": 0.886354,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd IAT Mean",
+      "feature_b": "Bwd IAT Min",
+      "pearson_2017": 0.954881,
+      "pearson_2018": 0.835777,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd IAT Max",
+      "feature_b": "Idle Min",
+      "pearson_2017": 0.952929,
+      "pearson_2018": 0.482888,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd IAT Max",
+      "feature_b": "Idle Min",
+      "pearson_2017": 0.927156,
+      "pearson_2018": 0.9523,
+      "correlated_in": "2018_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Max",
+      "feature_b": "Bwd Packet Length Mean",
+      "pearson_2017": 0.950532,
+      "pearson_2018": 0.683366,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Bwd Packet Length Max",
+      "feature_b": "Bwd Segment Size Avg",
+      "pearson_2017": 0.950532,
+      "pearson_2018": 0.683366,
+      "correlated_in": "2017_only"
+    },
+    {
+      "feature_a": "Fwd IAT Min",
+      "feature_b": "Bwd IAT Min",
+      "pearson_2017": 0.95023,
+      "pearson_2018": 0.344366,
+      "correlated_in": "2017_only"
+    }
+  ],
+  "usage": {
+    "drop": "Remove features_to_drop before any ML training/preprocessing.",
+    "monitor": "features_to_monitor are correlated in only one year \u2014 review manually. If training on combined 2017+2018, they are safe to keep."
+  }
+}

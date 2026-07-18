@@ -1,0 +1,291 @@
+{
+  "task": "multiclass",
+  "importance_kind": "lgbm_gain",
+  "normalized": "sum_to_1",
+  "importances": [
+    [
+      "Flow Bytes/s",
+      0.10136939067328941
+    ],
+    [
+      "Fwd Packet Length Std",
+      0.09411124200546021
+    ],
+    [
+      "FWD Init Win Bytes",
+      0.08907001020481262
+    ],
+    [
+      "Bwd Packet Length Mean",
+      0.06510463370093253
+    ],
+    [
+      "Fwd Seg Size Min",
+      0.05077390841967171
+    ],
+    [
+      "Packet Length Mean",
+      0.04849151047075231
+    ],
+    [
+      "Bwd Packet Length Std",
+      0.04703330419108938
+    ],
+    [
+      "Fwd Header Length",
+      0.04598049383677644
+    ],
+    [
+      "Fwd PSH Flags",
+      0.0402337671919538
+    ],
+    [
+      "Packet Length Max",
+      0.03337973198370839
+    ],
+    [
+      "PSH Flag Count",
+      0.02915269269311965
+    ],
+    [
+      "Bwd PSH Flags",
+      0.028833288381133148
+    ],
+    [
+      "SYN Flag Count",
+      0.028058201172470425
+    ],
+    [
+      "Flow Duration",
+      0.025698471679052193
+    ],
+    [
+      "Packet Length Variance",
+      0.01949271418627585
+    ],
+    [
+      "Total TCP Flow Time",
+      0.0181219126159087
+    ],
+    [
+      "Fwd IAT Min",
+      0.016372414603872655
+    ],
+    [
+      "Bwd Header Length",
+      0.015253484921115626
+    ],
+    [
+      "Bwd IAT Min",
+      0.015101342839948228
+    ],
+    [
+      "CWR Flag Count",
+      0.014001581235280395
+    ],
+    [
+      "Bwd IAT Max",
+      0.012309031174913054
+    ],
+    [
+      "ECE Flag Count",
+      0.012283653459053138
+    ],
+    [
+      "Fwd IAT Total",
+      0.011844504258150045
+    ],
+    [
+      "Packet Length Std",
+      0.0118161163225125
+    ],
+    [
+      "Total Length of Fwd Packet",
+      0.011636870018500405
+    ],
+    [
+      "Bwd Packet Length Max",
+      0.010039252053774204
+    ],
+    [
+      "Bwd Init Win Bytes",
+      0.01001381121082133
+    ],
+    [
+      "Fwd Packet Length Max",
+      0.007696103247847641
+    ],
+    [
+      "Total Bwd packets",
+      0.00604307889357661
+    ],
+    [
+      "Fwd IAT Max",
+      0.005896907874172375
+    ],
+    [
+      "Fwd Act Data Pkts",
+      0.005123625394996803
+    ],
+    [
+      "Bwd Packet Length Min",
+      0.004728508668367241
+    ],
+    [
+      "Down/Up Ratio",
+      0.004544197957163645
+    ],
+    [
+      "Total Length of Bwd Packet",
+      0.004529830668017008
+    ],
+    [
+      "Fwd IAT Mean",
+      0.004385828620212523
+    ],
+    [
+      "Bwd IAT Std",
+      0.0043246702149105564
+    ],
+    [
+      "Bwd IAT Mean",
+      0.004240894177856858
+    ],
+    [
+      "Bwd IAT Total",
+      0.004029093170638845
+    ],
+    [
+      "Active Min",
+      0.0038019555579324473
+    ],
+    [
+      "Fwd Packet Length Mean",
+      0.003480126248992097
+    ],
+    [
+      "Flow IAT Min",
+      0.002947657114150287
+    ],
+    [
+      "FIN Flag Count",
+      0.002738428089131375
+    ],
+    [
+      "ACK Flag Count",
+      0.002673003585312238
+    ],
+    [
+      "Flow Packets/s",
+      0.002618397201664535
+    ],
+    [
+      "Flow IAT Mean",
+      0.0025394954983345526
+    ],
+    [
+      "Fwd IAT Std",
+      0.0023989134477962323
+    ],
+    [
+      "Fwd RST Flags",
+      0.00201203423093531
+    ],
+    [
+      "Total Fwd Packet",
+      0.0019846684275640317
+    ],
+    [
+      "Bwd Packets/s",
+      0.0017451623144676127
+    ],
+    [
+      "Flow IAT Max",
+      0.001576673225873353
+    ],
+    [
+      "Fwd Packet Length Min",
+      0.001534176359476967
+    ],
+    [
+      "Active Mean",
+      0.0011365427043918944
+    ],
+    [
+      "Active Std",
+      0.0007812641607156203
+    ],
+    [
+      "Idle Mean",
+      0.0007524498312441691
+    ],
+    [
+      "RST Flag Count",
+      0.0005736445095965925
+    ],
+    [
+      "Packet Length Min",
+      0.000547561980430313
+    ],
+    [
+      "Fwd Bytes/Bulk Avg",
+      0.0005173935622427583
+    ],
+    [
+      "Active Max",
+      0.0004896429895482955
+    ],
+    [
+      "Flow IAT Std",
+      0.00036484930159304876
+    ],
+    [
+      "Bwd RST Flags",
+      0.00030920562151660815
+    ],
+    [
+      "Fwd Packet/Bulk Avg",
+      0.0002948095056163991
+    ],
+    [
+      "ICMP Code",
+      0.0002555300693725458
+    ],
+    [
+      "Bwd Bytes/Bulk Avg",
+      0.0001940531664837281
+    ],
+    [
+      "Subflow Fwd Packets",
+      0.00016402004186905848
+    ],
+    [
+      "Fwd Bulk Rate Avg",
+      0.0001609899878596904
+    ],
+    [
+      "Idle Std",
+      9.728241366426614e-05
+    ],
+    [
+      "Bwd Bulk Rate Avg",
+      9.236690742136525e-05
+    ],
+    [
+      "ICMP Type",
+      5.6653743478397074e-05
+    ],
+    [
+      "Fwd URG Flags",
+      4.093859651316857e-05
+    ],
+    [
+      "Subflow Bwd Packets",
+      3.52127025666283e-08
+    ],
+    [
+      "Bwd URG Flags",
+      0.0
+    ]
+  ]
+}

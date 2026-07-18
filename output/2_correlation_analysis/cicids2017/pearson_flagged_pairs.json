@@ -1,0 +1,414 @@
+{
+  "dataset": "cicids2017",
+  "n_features": 83,
+  "threshold": 0.9,
+  "method": "pearson",
+  "count": 81,
+  "pairs": [
+    {
+      "a": "Fwd Packet Length Mean",
+      "b": "Fwd Segment Size Avg",
+      "r": 1.0
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Bwd Segment Size Avg",
+      "r": 1.0
+    },
+    {
+      "a": "Packet Length Mean",
+      "b": "Average Packet Size",
+      "r": 1.0
+    },
+    {
+      "a": "Total Bwd packets",
+      "b": "ACK Flag Count",
+      "r": 0.999826
+    },
+    {
+      "a": "Total Fwd Packet",
+      "b": "ACK Flag Count",
+      "r": 0.999687
+    },
+    {
+      "a": "Fwd URG Flags",
+      "b": "URG Flag Count",
+      "r": 0.999646
+    },
+    {
+      "a": "Flow Duration",
+      "b": "Fwd IAT Total",
+      "r": 0.999459
+    },
+    {
+      "a": "Total Fwd Packet",
+      "b": "Total Bwd packets",
+      "r": 0.999076
+    },
+    {
+      "a": "Flow IAT Max",
+      "b": "Fwd IAT Max",
+      "r": 0.998563
+    },
+    {
+      "a": "Flow IAT Max",
+      "b": "Idle Max",
+      "r": 0.998336
+    },
+    {
+      "a": "Total Fwd Packet",
+      "b": "Total Length of Bwd Packet",
+      "r": 0.996986
+    },
+    {
+      "a": "Fwd IAT Max",
+      "b": "Idle Max",
+      "r": 0.9969
+    },
+    {
+      "a": "Total Length of Bwd Packet",
+      "b": "ACK Flag Count",
+      "r": 0.995749
+    },
+    {
+      "a": "Total Bwd packets",
+      "b": "Total Length of Bwd Packet",
+      "r": 0.994427
+    },
+    {
+      "a": "Idle Mean",
+      "b": "Idle Min",
+      "r": 0.989572
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Packet Length Max",
+      "r": 0.989389
+    },
+    {
+      "a": "Packet Length Max",
+      "b": "Packet Length Std",
+      "r": 0.988317
+    },
+    {
+      "a": "Average Packet Size",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.987663
+    },
+    {
+      "a": "Packet Length Mean",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.987663
+    },
+    {
+      "a": "Idle Mean",
+      "b": "Idle Max",
+      "r": 0.986997
+    },
+    {
+      "a": "Flow IAT Max",
+      "b": "Idle Mean",
+      "r": 0.985343
+    },
+    {
+      "a": "Fwd IAT Max",
+      "b": "Idle Mean",
+      "r": 0.983972
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Bwd Packet Length Std",
+      "r": 0.983559
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Packet Length Std",
+      "r": 0.983431
+    },
+    {
+      "a": "Flow Duration",
+      "b": "Bwd IAT Total",
+      "r": 0.982795
+    },
+    {
+      "a": "Fwd IAT Total",
+      "b": "Bwd IAT Total",
+      "r": 0.982248
+    },
+    {
+      "a": "Bwd Packet Length Std",
+      "b": "Packet Length Std",
+      "r": 0.982088
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.981025
+    },
+    {
+      "a": "Bwd Segment Size Avg",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.981025
+    },
+    {
+      "a": "Bwd Bytes/Bulk Avg",
+      "b": "Bwd Packet/Bulk Avg",
+      "r": 0.978954
+    },
+    {
+      "a": "Fwd Packet Length Mean",
+      "b": "Subflow Fwd Bytes",
+      "r": 0.974721
+    },
+    {
+      "a": "Fwd Segment Size Avg",
+      "b": "Subflow Fwd Bytes",
+      "r": 0.974721
+    },
+    {
+      "a": "Bwd Packet Length Std",
+      "b": "Packet Length Max",
+      "r": 0.972916
+    },
+    {
+      "a": "Flow Packets/s",
+      "b": "Fwd Packets/s",
+      "r": 0.969026
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Packet Length Mean",
+      "r": 0.967664
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Average Packet Size",
+      "r": 0.967664
+    },
+    {
+      "a": "Average Packet Size",
+      "b": "Bwd Segment Size Avg",
+      "r": 0.967664
+    },
+    {
+      "a": "Packet Length Mean",
+      "b": "Bwd Segment Size Avg",
+      "r": 0.967664
+    },
+    {
+      "a": "Fwd IAT Mean",
+      "b": "Fwd IAT Min",
+      "r": 0.966917
+    },
+    {
+      "a": "Bwd Packet Length Std",
+      "b": "Packet Length Variance",
+      "r": 0.964036
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Packet Length Std",
+      "r": 0.963494
+    },
+    {
+      "a": "Packet Length Std",
+      "b": "Bwd Segment Size Avg",
+      "r": 0.963494
+    },
+    {
+      "a": "Flow IAT Max",
+      "b": "Bwd IAT Max",
+      "r": 0.959396
+    },
+    {
+      "a": "Bwd IAT Max",
+      "b": "Idle Max",
+      "r": 0.957966
+    },
+    {
+      "a": "Fwd IAT Max",
+      "b": "Bwd IAT Max",
+      "r": 0.957907
+    },
+    {
+      "a": "Idle Max",
+      "b": "Idle Min",
+      "r": 0.955762
+    },
+    {
+      "a": "Bwd PSH Flags",
+      "b": "PSH Flag Count",
+      "r": 0.955612
+    },
+    {
+      "a": "Bwd IAT Mean",
+      "b": "Bwd IAT Min",
+      "r": 0.954881
+    },
+    {
+      "a": "Flow IAT Max",
+      "b": "Idle Min",
+      "r": 0.954246
+    },
+    {
+      "a": "Fwd IAT Max",
+      "b": "Idle Min",
+      "r": 0.952929
+    },
+    {
+      "a": "Bwd IAT Max",
+      "b": "Idle Mean",
+      "r": 0.951929
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Bwd Packet Length Mean",
+      "r": 0.950532
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Bwd Segment Size Avg",
+      "r": 0.950532
+    },
+    {
+      "a": "Fwd IAT Min",
+      "b": "Bwd IAT Min",
+      "r": 0.95023
+    },
+    {
+      "a": "Flow IAT Std",
+      "b": "Bwd IAT Mean",
+      "r": 0.948986
+    },
+    {
+      "a": "Fwd Packet Length Max",
+      "b": "Fwd Packet Length Std",
+      "r": 0.948319
+    },
+    {
+      "a": "Fwd IAT Mean",
+      "b": "Bwd IAT Mean",
+      "r": 0.948278
+    },
+    {
+      "a": "Packet Length Std",
+      "b": "Packet Length Variance",
+      "r": 0.939374
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Bwd Packet Length Std",
+      "r": 0.938037
+    },
+    {
+      "a": "Bwd Packet Length Std",
+      "b": "Bwd Segment Size Avg",
+      "r": 0.938037
+    },
+    {
+      "a": "Bwd Packet Length Mean",
+      "b": "Packet Length Max",
+      "r": 0.937678
+    },
+    {
+      "a": "Packet Length Max",
+      "b": "Bwd Segment Size Avg",
+      "r": 0.937678
+    },
+    {
+      "a": "Packet Length Std",
+      "b": "Average Packet Size",
+      "r": 0.93515
+    },
+    {
+      "a": "Packet Length Mean",
+      "b": "Packet Length Std",
+      "r": 0.93515
+    },
+    {
+      "a": "Packet Length Max",
+      "b": "Packet Length Variance",
+      "r": 0.93387
+    },
+    {
+      "a": "Fwd IAT Std",
+      "b": "Bwd IAT Std",
+      "r": 0.933685
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Packet Length Variance",
+      "r": 0.93329
+    },
+    {
+      "a": "Packet Length Std",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.930193
+    },
+    {
+      "a": "Bwd IAT Max",
+      "b": "Idle Min",
+      "r": 0.927156
+    },
+    {
+      "a": "Fwd IAT Mean",
+      "b": "Bwd IAT Min",
+      "r": 0.927117
+    },
+    {
+      "a": "Flow IAT Std",
+      "b": "Fwd IAT Mean",
+      "r": 0.922227
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.917971
+    },
+    {
+      "a": "Flow IAT Mean",
+      "b": "Fwd IAT Mean",
+      "r": 0.916618
+    },
+    {
+      "a": "Packet Length Max",
+      "b": "Packet Length Mean",
+      "r": 0.912821
+    },
+    {
+      "a": "Packet Length Max",
+      "b": "Average Packet Size",
+      "r": 0.912821
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Packet Length Mean",
+      "r": 0.908146
+    },
+    {
+      "a": "Bwd Packet Length Max",
+      "b": "Average Packet Size",
+      "r": 0.908146
+    },
+    {
+      "a": "Active Mean",
+      "b": "Active Min",
+      "r": 0.906988
+    },
+    {
+      "a": "Packet Length Max",
+      "b": "Subflow Bwd Bytes",
+      "r": 0.905672
+    },
+    {
+      "a": "Fwd IAT Min",
+      "b": "Bwd IAT Mean",
+      "r": 0.901629
+    },
+    {
+      "a": "Fwd RST Flags",
+      "b": "RST Flag Count",
+      "r": 0.901387
+    }
+  ]
+}

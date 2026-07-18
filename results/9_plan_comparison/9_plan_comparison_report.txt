@@ -1,0 +1,48 @@
+
+======================================================================
+PLAN COMPARISON REPORT — cicids2017 <-> cicids2018
+======================================================================
+Generated : 2026-07-17 15:39:02
+Features  : 83 planned
+
+======================================================================
+ROUTE (detected_type -> corroboration path)
+======================================================================
+  continuous_multimodal    : 39
+  discrete_count           : 4
+  nominal                  : 9
+  structural_change        : 31
+
+======================================================================
+METRIC FAMILY
+======================================================================
+  continuous               : 70
+  nominal                  : 13
+
+======================================================================
+CORROBORATION PRIMARY (the verdict metric is always calibrated C2ST-AUC)
+======================================================================
+  jensen_shannon           : 13
+  mmd                      : 39
+  wasserstein_qn           : 31
+
+======================================================================
+COMPARISON MODE
+======================================================================
+  per_mode                 : 39
+  whole_distribution       : 44
+
+======================================================================
+FLAGS
+======================================================================
+  type mismatch across years   : 5
+  modality mismatch across yrs : 33
+  routed to structural_change  : 31
+  zero-mass handled separately : 57
+
+======================================================================
+OUTPUT
+======================================================================
+  plans JSON : H:\nidswork\output\9_plan_comparison\comparison_plans_cicids2017_cicids2018.json
+  report     : H:\nidswork\results\9_plan_comparison\9_plan_comparison_report.txt
+  steps log  : H:\nidswork\results\9_plan_comparison\9_plan_comparison_steps.log

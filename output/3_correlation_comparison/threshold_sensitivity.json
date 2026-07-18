@@ -1,0 +1,60 @@
+{
+  "official_threshold": 0.95,
+  "sweep": [
+    {
+      "threshold": 0.9,
+      "n_dropped": 12,
+      "n_features_remaining": 71,
+      "n_diff_from_official": 2,
+      "dropped_not_in_official": [
+        "Active Min",
+        "Packet Length Std"
+      ],
+      "official_not_in_dropped": []
+    },
+    {
+      "threshold": 0.925,
+      "n_dropped": 11,
+      "n_features_remaining": 72,
+      "n_diff_from_official": 1,
+      "dropped_not_in_official": [
+        "Packet Length Std"
+      ],
+      "official_not_in_dropped": []
+    },
+    {
+      "threshold": 0.95,
+      "n_dropped": 10,
+      "n_features_remaining": 73,
+      "n_diff_from_official": 0,
+      "dropped_not_in_official": [],
+      "official_not_in_dropped": []
+    },
+    {
+      "threshold": 0.975,
+      "n_dropped": 8,
+      "n_features_remaining": 75,
+      "n_diff_from_official": 2,
+      "dropped_not_in_official": [],
+      "official_not_in_dropped": [
+        "Fwd Packets/s",
+        "Subflow Fwd Bytes"
+      ]
+    },
+    {
+      "threshold": 0.99,
+      "n_dropped": 4,
+      "n_features_remaining": 79,
+      "n_diff_from_official": 6,
+      "dropped_not_in_official": [],
+      "official_not_in_dropped": [
+        "Bwd Packet/Bulk Avg",
+        "Fwd Packets/s",
+        "Idle Max",
+        "Idle Min",
+        "Subflow Bwd Bytes",
+        "Subflow Fwd Bytes"
+      ]
+    }
+  ]
+}

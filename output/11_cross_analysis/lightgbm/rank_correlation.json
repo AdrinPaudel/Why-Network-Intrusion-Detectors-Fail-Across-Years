@@ -1,0 +1,385 @@
+{
+  "n_features": 71,
+  "importance_vs_c2st": {
+    "spearman": 0.4046078006232401,
+    "kendall": 0.2673646551695006,
+    "bootstrap_ci95": {
+      "lo": 0.16932355506636446,
+      "med": 0.40566615914628557,
+      "hi": 0.5935596900553654,
+      "p_boot": 0.002
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": 0.16097254039306108,
+      "med": 0.4019770786615039,
+      "hi": 0.6077875481178729,
+      "n_clusters": 45,
+      "p_boot": 0.004
+    },
+    "fdr_significant": true,
+    "q_value_bh": 0.008,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_vs_concept_stability": {
+    "spearman": 0.46058400893644896,
+    "kendall": 0.33085128462296975,
+    "bootstrap_ci95": {
+      "lo": 0.23714042023436924,
+      "med": 0.4568556472200894,
+      "hi": 0.6545022478667385,
+      "p_boot": 0.0
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": 0.22754992181711536,
+      "med": 0.4592047552489701,
+      "hi": 0.6572257065408963,
+      "n_clusters": 45,
+      "p_boot": 0.0
+    },
+    "fdr_significant": true,
+    "q_value_bh": 0.0,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_2018_vs_c2st": {
+    "spearman": 0.5934135956923524,
+    "kendall": 0.4332595918108172,
+    "bootstrap_ci95": {
+      "lo": 0.3702400670711935,
+      "med": 0.5963522948218337,
+      "hi": 0.7586224303349236,
+      "p_boot": 0.0
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": 0.373064203860878,
+      "med": 0.5948114197620666,
+      "hi": 0.7925151384725863,
+      "n_clusters": 45,
+      "p_boot": 0.0
+    },
+    "fdr_significant": true,
+    "q_value_bh": 0.0,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_2018_vs_concept_stability": {
+    "spearman": 0.5680295777327199,
+    "kendall": 0.39525056143522663,
+    "bootstrap_ci95": {
+      "lo": 0.3720580303355177,
+      "med": 0.5695205338786804,
+      "hi": 0.7150244422012559,
+      "p_boot": 0.0
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": 0.3667618423242048,
+      "med": 0.5605938056294039,
+      "hi": 0.7152078476584742,
+      "n_clusters": 45,
+      "p_boot": 0.0
+    },
+    "fdr_significant": true,
+    "q_value_bh": 0.0,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_perm_2017_vs_c2st": {
+    "spearman": -0.00576813441418958,
+    "kendall": 0.008053152264141583,
+    "bootstrap_ci95": {
+      "lo": -0.26364972387550123,
+      "med": -0.012928665654528415,
+      "hi": 0.2216601832488264,
+      "p_boot": 0.926
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": -0.24280158521835457,
+      "med": -0.005884962771857082,
+      "hi": 0.29630156866778384,
+      "n_clusters": 45,
+      "p_boot": 0.954
+    },
+    "fdr_significant": false,
+    "q_value_bh": 0.954,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_perm_vs_concept_stability": {
+    "spearman": 0.1543775517957656,
+    "kendall": 0.10303884289961102,
+    "bootstrap_ci95": {
+      "lo": -0.08788969232536098,
+      "med": 0.1463034029113651,
+      "hi": 0.3721204122729823,
+      "p_boot": 0.222
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": -0.0928354288700683,
+      "med": 0.1471722787018182,
+      "hi": 0.37105101626742293,
+      "n_clusters": 45,
+      "p_boot": 0.222
+    },
+    "fdr_significant": false,
+    "q_value_bh": 0.2537142857142857,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_perm_2018_vs_c2st": {
+    "spearman": 0.1966866763908249,
+    "kendall": 0.12321322964136622,
+    "bootstrap_ci95": {
+      "lo": -0.0807271465008199,
+      "med": 0.19321686882158406,
+      "hi": 0.44004057539629854,
+      "p_boot": 0.156
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": -0.07642378977818166,
+      "med": 0.19894053218630403,
+      "hi": 0.46169035061425473,
+      "n_clusters": 45,
+      "p_boot": 0.148
+    },
+    "fdr_significant": false,
+    "q_value_bh": 0.19733333333333333,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_perm_2018_vs_concept_stability": {
+    "spearman": 0.34034490565335623,
+    "kendall": 0.2559871253287211,
+    "bootstrap_ci95": {
+      "lo": 0.10101964929779798,
+      "med": 0.33798787428627963,
+      "hi": 0.5571370527072197,
+      "p_boot": 0.005
+    },
+    "n_pairs": 71,
+    "cluster_bootstrap_ci95": {
+      "lo": 0.05854548253445643,
+      "med": 0.33181205436500505,
+      "hi": 0.5795183978953664,
+      "n_clusters": 45,
+      "p_boot": 0.015
+    },
+    "fdr_significant": true,
+    "q_value_bh": 0.024,
+    "fdr_p_source": "cluster_bootstrap"
+  },
+  "importance_vs_concept_stability_partial_cardinality_variance": 0.47072270885722445,
+  "h3_group_medians_c2st": {
+    "5": {
+      "top_k_median_c2st": 0.21788943007929892,
+      "bottom_k_median_c2st": 0.00032717295763893205,
+      "effect_diff": 0.21756225712166
+    },
+    "10": {
+      "top_k_median_c2st": 0.27935985359433374,
+      "bottom_k_median_c2st": 0.00016358647881946603,
+      "effect_diff": 0.27919626711551426
+    },
+    "15": {
+      "top_k_median_c2st": 0.36110543887500757,
+      "bottom_k_median_c2st": 0.02538732346352671,
+      "effect_diff": 0.33571811541148083
+    }
+  },
+  "n_feature_clusters": 45,
+  "perm_importance_noise_2017": {
+    "n_features_valid": 71,
+    "n_low_confidence": 10,
+    "frac_low_confidence": 0.14084507042253522,
+    "n_low_confidence_in_tail_half": 5,
+    "n_tail_half": 35
+  },
+  "axis1_primary_metric": "c2st_auc",
+  "axis1_secondary_metrics": [
+    "mmd",
+    "wasserstein_qn"
+  ],
+  "axis1_secondary_metrics_caveat": "MMD and Wasserstein-qn are observational sub-metrics of Axis 1 (supporting context only); not every feature has both (discrete features skip MMD), so only C2ST-AUC, present for every feature, decides the Axis-1 verdict.",
+  "axis1_tests": {
+    "native_2017": {
+      "spearman": 0.4046078006232401,
+      "kendall": 0.2673646551695006,
+      "bootstrap_ci95": {
+        "lo": 0.16932355506636446,
+        "med": 0.40566615914628557,
+        "hi": 0.5935596900553654,
+        "p_boot": 0.002
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": 0.16097254039306108,
+        "med": 0.4019770786615039,
+        "hi": 0.6077875481178729,
+        "n_clusters": 45,
+        "p_boot": 0.004
+      },
+      "fdr_significant": true,
+      "q_value_bh": 0.008,
+      "fdr_p_source": "cluster_bootstrap"
+    },
+    "native_2018": {
+      "spearman": 0.5934135956923524,
+      "kendall": 0.4332595918108172,
+      "bootstrap_ci95": {
+        "lo": 0.3702400670711935,
+        "med": 0.5963522948218337,
+        "hi": 0.7586224303349236,
+        "p_boot": 0.0
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": 0.373064203860878,
+        "med": 0.5948114197620666,
+        "hi": 0.7925151384725863,
+        "n_clusters": 45,
+        "p_boot": 0.0
+      },
+      "fdr_significant": true,
+      "q_value_bh": 0.0,
+      "fdr_p_source": "cluster_bootstrap"
+    },
+    "permutation_2017": {
+      "spearman": -0.00576813441418958,
+      "kendall": 0.008053152264141583,
+      "bootstrap_ci95": {
+        "lo": -0.26364972387550123,
+        "med": -0.012928665654528415,
+        "hi": 0.2216601832488264,
+        "p_boot": 0.926
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": -0.24280158521835457,
+        "med": -0.005884962771857082,
+        "hi": 0.29630156866778384,
+        "n_clusters": 45,
+        "p_boot": 0.954
+      },
+      "fdr_significant": false,
+      "q_value_bh": 0.954,
+      "fdr_p_source": "cluster_bootstrap"
+    },
+    "permutation_2018": {
+      "spearman": 0.1966866763908249,
+      "kendall": 0.12321322964136622,
+      "bootstrap_ci95": {
+        "lo": -0.0807271465008199,
+        "med": 0.19321686882158406,
+        "hi": 0.44004057539629854,
+        "p_boot": 0.156
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": -0.07642378977818166,
+        "med": 0.19894053218630403,
+        "hi": 0.46169035061425473,
+        "n_clusters": 45,
+        "p_boot": 0.148
+      },
+      "fdr_significant": false,
+      "q_value_bh": 0.19733333333333333,
+      "fdr_p_source": "cluster_bootstrap"
+    }
+  },
+  "axis2_primary_metric": "separation_stability",
+  "axis2_secondary_metrics": [],
+  "axis2_tests": {
+    "native_2017": {
+      "spearman": 0.46058400893644896,
+      "kendall": 0.33085128462296975,
+      "bootstrap_ci95": {
+        "lo": 0.23714042023436924,
+        "med": 0.4568556472200894,
+        "hi": 0.6545022478667385,
+        "p_boot": 0.0
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": 0.22754992181711536,
+        "med": 0.4592047552489701,
+        "hi": 0.6572257065408963,
+        "n_clusters": 45,
+        "p_boot": 0.0
+      },
+      "fdr_significant": true,
+      "q_value_bh": 0.0,
+      "fdr_p_source": "cluster_bootstrap"
+    },
+    "native_2018": {
+      "spearman": 0.5680295777327199,
+      "kendall": 0.39525056143522663,
+      "bootstrap_ci95": {
+        "lo": 0.3720580303355177,
+        "med": 0.5695205338786804,
+        "hi": 0.7150244422012559,
+        "p_boot": 0.0
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": 0.3667618423242048,
+        "med": 0.5605938056294039,
+        "hi": 0.7152078476584742,
+        "n_clusters": 45,
+        "p_boot": 0.0
+      },
+      "fdr_significant": true,
+      "q_value_bh": 0.0,
+      "fdr_p_source": "cluster_bootstrap"
+    },
+    "permutation_2017": {
+      "spearman": 0.1543775517957656,
+      "kendall": 0.10303884289961102,
+      "bootstrap_ci95": {
+        "lo": -0.08788969232536098,
+        "med": 0.1463034029113651,
+        "hi": 0.3721204122729823,
+        "p_boot": 0.222
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": -0.0928354288700683,
+        "med": 0.1471722787018182,
+        "hi": 0.37105101626742293,
+        "n_clusters": 45,
+        "p_boot": 0.222
+      },
+      "fdr_significant": false,
+      "q_value_bh": 0.2537142857142857,
+      "fdr_p_source": "cluster_bootstrap"
+    },
+    "permutation_2018": {
+      "spearman": 0.34034490565335623,
+      "kendall": 0.2559871253287211,
+      "bootstrap_ci95": {
+        "lo": 0.10101964929779798,
+        "med": 0.33798787428627963,
+        "hi": 0.5571370527072197,
+        "p_boot": 0.005
+      },
+      "n_pairs": 71,
+      "cluster_bootstrap_ci95": {
+        "lo": 0.05854548253445643,
+        "med": 0.33181205436500505,
+        "hi": 0.5795183978953664,
+        "n_clusters": 45,
+        "p_boot": 0.015
+      },
+      "fdr_significant": true,
+      "q_value_bh": 0.024,
+      "fdr_p_source": "cluster_bootstrap"
+    }
+  },
+  "fdr_correction_summary": {
+    "alpha": 0.05,
+    "family": "the 8 H1 cells ({native,permutation} x {2017,2018} x {axis1,axis2})",
+    "p_source": "cluster bootstrap where available, else plain bootstrap",
+    "n_tests": 8,
+    "n_significant_uncorrected": 5,
+    "n_significant_bh_corrected": 5
+  }
+}

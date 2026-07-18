@@ -1,0 +1,51 @@
+======================================================================
+SCRIPT 4 STEPS LOG
+Started: 2026-07-17 06:52:26
+======================================================================
+  backend=cpu(numpy), compression=snappy
+  cicids2018_cleaned.parquet: 90 cols → 71 features (excluded 19: identifiers + Label + 10 drops)
+
+[SUB-STEP 4.1] PASS 1 — fit scaler (train rows only) (started: 06:52:26)
+  batch 50: 6,144,000 rows (325,565 rows/s)
+  batch 100: 12,288,000 rows (306,325 rows/s)
+  batch 150: 18,432,000 rows (306,588 rows/s)
+  batch 200: 24,576,000 rows (312,661 rows/s)
+  batch 250: 30,720,000 rows (305,891 rows/s)
+  batch 300: 36,864,000 rows (289,365 rows/s)
+  batch 350: 43,008,000 rows (279,520 rows/s)
+  batch 400: 49,152,000 rows (283,003 rows/s)
+  batch 450: 55,296,000 rows (281,697 rows/s)
+  batch 500: 61,440,000 rows (284,979 rows/s)
+    [fit] done: 515 batches, 63,195,088 rows, 221.7s, scaler n_train=50,556,009
+  [OK] scaler fitted
+  [✓] Sub-step 4.1 completed at 06:56:08
+
+[SUB-STEP 4.2] PASS 2 — scale + write train/test Parquet (started: 06:56:08)
+  batch 50: train=4,915,066 test=1,228,934 (120,789 rows/s)
+  batch 100: train=9,830,442 test=2,457,558 (169,626 rows/s)
+  batch 150: train=14,745,458 test=3,686,542 (196,456 rows/s)
+  batch 200: train=19,660,642 test=4,915,358 (211,552 rows/s)
+  batch 250: train=24,575,846 test=6,144,154 (222,182 rows/s)
+  batch 300: train=29,491,121 test=7,372,879 (229,409 rows/s)
+  batch 350: train=34,406,287 test=8,601,713 (236,922 rows/s)
+  batch 400: train=39,321,612 test=9,830,388 (234,029 rows/s)
+  batch 450: train=44,236,721 test=11,059,279 (235,270 rows/s)
+  batch 500: train=49,151,921 test=12,288,079 (215,049 rows/s)
+  [OK] train=50,556,009 test=12,639,079
+  [✓] Sub-step 4.2 completed at 07:01:12
+
+[SUB-STEP 4.3] Save metadata + visualizations (started: 07:01:12)
+  [OK] Saved preprocessing_meta.json  (train=50,556,009  test=12,639,079)
+  [OK] Saved feature_names.json
+  [OK] Saved label_mapping.json
+  [OK] Saved scaler.json
+  [OK] Saved class_distribution.png
+  [OK] Saved scaling_check.png
+  [OK] complete
+  [✓] Sub-step 4.3 completed at 07:01:14
+  [OK] Saved 4_preprocessing_report.txt
+  [OK] cicids2018 complete: train=50,556,009, test=12,639,079
+
+======================================================================
+Completed: 2026-07-17 07:01:14
+======================================================================

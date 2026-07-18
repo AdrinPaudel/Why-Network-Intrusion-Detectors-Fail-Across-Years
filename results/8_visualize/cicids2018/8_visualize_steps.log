@@ -1,0 +1,25 @@
+======================================================================
+SCRIPT 8 VISUALIZE — cicids2018
+Started: 2026-07-17 15:33:34
+======================================================================
+  workers=8, variants=['multiclass', 'multiclass_extended', 'binary', 'binary_extended'], rain/class=50,000
+
+[SUB-STEP 8.1] Discover features (started: 15:33:34)
+  [OK] 83 features to plot
+  [✓] Sub-step 8.1 completed at 15:33:34
+
+[SUB-STEP 8.2] Render plots (started: 15:33:34)
+  20/83 features plotted
+  40/83 features plotted
+  60/83 features plotted
+  80/83 features plotted
+  [OK] plots written under H:\nidswork\results\8_visualize\cicids2018 (+ filename_manifest.json)
+  [✓] Sub-step 8.2 completed at 15:39:01
+
+[SUB-STEP 8.3] Write report (started: 15:39:01)
+  [OK] Saved 8_visualize_report.txt
+  [✓] Sub-step 8.3 completed at 15:39:01
+
+======================================================================
+Completed: 2026-07-17 15:39:01
+======================================================================

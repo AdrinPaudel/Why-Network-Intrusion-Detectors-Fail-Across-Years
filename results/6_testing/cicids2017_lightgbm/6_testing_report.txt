@@ -1,0 +1,33 @@
+
+======================================================================
+TEST REPORT  --  LightGBM RF-mode on CIC-IDS 2017 / 2018 (held-out test split)
+======================================================================
+Generated : 2026-07-17 15:15:23
+
+======================================================================
+DATASET: cicids2017   (test rows: 420,048)
+======================================================================
+  [CAVEAT] 20.7% of test rows are exact feature-value duplicates of a train row (check_train_test_overlap()) — within-year metrics below are partly measuring memorization, not generalization, to that extent.
+
+  [binary]  accuracy=0.9999  balanced_acc=0.9998  macro_f1=0.9998  weighted_f1=0.9999  mcc=0.9997
+           roc_auc=1.0000  pr_auc=1.0000
+    [overlap-free subset: 333,281 rows — test rows that are NOT exact feature-duplicates of a train row]
+           accuracy=0.9999  balanced_acc=0.9997  macro_f1=0.9997  weighted_f1=0.9999  mcc=0.9995  roc_auc=1.0000  pr_auc=1.0000
+    class           precision     recall         f1      support
+    -------------- ---------- ---------- ---------- ------------
+    Benign             0.9999     0.9999     0.9999      318,958
+    Attack             0.9997     0.9997     0.9997      101,090
+
+  [multiclass]  accuracy=0.9949  balanced_acc=0.9754  macro_f1=0.9731  weighted_f1=0.9949  mcc=0.9875
+    [overlap-free subset: 333,281 rows — test rows that are NOT exact feature-duplicates of a train row]
+           accuracy=0.9998  balanced_acc=0.9853  macro_f1=0.9804  weighted_f1=0.9998  mcc=0.9994
+    class           precision     recall         f1      support
+    -------------- ---------- ---------- ---------- ------------
+    Benign             1.0000     0.9999     0.9999      318,958
+    Botnet             1.0000     1.0000     1.0000           27
+    BruteForce         1.0000     1.0000     1.0000        1,400
+    DDoS               1.0000     1.0000     1.0000       19,000
+    DoS                0.9999     1.0000     0.9999       34,400
+    Infiltration       0.9198     0.9349     0.9273       14,400
+    PortScan           0.9700     0.9636     0.9668       31,800
+    WebAttack          0.8769     0.9048     0.8906           63

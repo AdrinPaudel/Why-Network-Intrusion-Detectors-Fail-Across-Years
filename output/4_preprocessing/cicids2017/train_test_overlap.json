@@ -1,0 +1,8 @@
+{
+  "dataset": "cicids2017",
+  "n_features": 71,
+  "n_train_distinct_feature_hashes": 1383174,
+  "n_test_rows": 420048,
+  "n_test_rows_matching_train": 86767,
+  "frac_test_rows_matching_train": 0.20656448786805318
+}

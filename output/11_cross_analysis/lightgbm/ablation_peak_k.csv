@@ -1,0 +1,11 @@
+policy,direction,peak_K,peak_macro_f1_cross_domain,is_interior,fine_search_window
+all_features,2017->2018,71,0.8863136763814266,False,at boundary
+all_features,2018->2017,71,0.5555454736219578,False,at boundary
+axis1_stable,2017->2018,50,0.32448373672339403,False,at boundary
+axis1_stable,2018->2017,50,0.5053190793491626,False,at boundary
+axis2_stable,2017->2018,30,0.5940893348147195,True,20-50
+axis2_stable,2018->2017,10,0.6038140833655051,True,5-20
+random,2017->2018,50,0.8754065689514496,False,at boundary
+random,2018->2017,5,0.46835355185202615,False,at boundary
+top_importance,2017->2018,50,0.8950193673200333,False,at boundary
+top_importance,2018->2017,5,0.5652178713907984,False,at boundary

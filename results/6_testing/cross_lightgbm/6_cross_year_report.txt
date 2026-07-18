@@ -1,0 +1,35 @@
+
+======================================================================
+CROSS-YEAR TRANSFER REPORT  --  train on one year, test on the other
+======================================================================
+Generated : 2026-07-17 15:28:14
+
+  Framings (same model, different test input):
+    CONCEPT   = target year self-normalized (covariate shift removed) -> concept transfer
+    COVARIATE = target re-based into train-year scaler (shift preserved) -> deployment failure
+  COVARIATE is the deployment-realistic number; the gap CONCEPT - COVARIATE is the share of
+  the collapse attributable to covariate (location/scale) shift vs concept change.
+
+======================================================================
+DIRECTION: cicids2017->cicids2018   (test rows: 12,639,079)
+======================================================================
+
+  [binary]
+    concept    accuracy=0.9211  balanced_acc=0.9034  macro_f1=0.7564  mcc=0.5669  attack_f1=0.5561  benign_f1=0.9567  sensitivity=0.8834  fpr=0.0767  precision=0.4058  specificity=0.9233  pr_auc=0.4057
+    covariate  accuracy=0.9393  balanced_acc=0.5091  macro_f1=0.5062  mcc=0.0486  attack_f1=0.0437  benign_f1=0.9686  sensitivity=0.0248  fpr=0.0065  precision=0.1839  specificity=0.9935  pr_auc=0.2026
+
+  [multiclass]
+    concept    accuracy=0.9317  balanced_acc=0.2643  macro_f1=0.1852  mcc=0.0067
+    covariate  accuracy=0.9384  balanced_acc=0.3204  macro_f1=0.2445  mcc=0.0397
+
+======================================================================
+DIRECTION: cicids2018->cicids2017   (test rows: 420,048)
+======================================================================
+
+  [binary]
+    concept    accuracy=0.7593  balanced_acc=0.5000  macro_f1=0.4317  mcc=0.0052  attack_f1=0.0001  benign_f1=0.8632  sensitivity=0.0000  fpr=0.0000  precision=0.8333  specificity=1.0000  pr_auc=0.5939
+    covariate  accuracy=0.8164  balanced_acc=0.6219  macro_f1=0.6424  mcc=0.4328  attack_f1=0.3930  benign_f1=0.8918  sensitivity=0.2469  fpr=0.0031  precision=0.9616  specificity=0.9969  pr_auc=0.7971
+
+  [multiclass]
+    concept    accuracy=0.7593  balanced_acc=0.1250  macro_f1=0.1079  mcc=0.0000
+    covariate  accuracy=0.7679  balanced_acc=0.2664  macro_f1=0.2557  mcc=0.2268

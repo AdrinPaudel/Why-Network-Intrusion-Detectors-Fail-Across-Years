@@ -1,0 +1,87 @@
+{
+  "dataset": "cicids2018",
+  "generated": "2026-07-17T15:15:07",
+  "source_train_parquet": "H:\\nidswork\\output\\4_preprocessing\\cicids2018\\train.parquet",
+  "train_class_counts": {
+    "Benign": 47727708,
+    "Botnet": 114400,
+    "BruteForce": 75397,
+    "DDoS": 1099348,
+    "DoS": 1467410,
+    "Infiltration": 71663,
+    "WebAttack": 83
+  },
+  "train_total_rows": 50556009,
+  "perm_holdout_overlap_filter": {
+    "available": true,
+    "n_sampled": 137000,
+    "n_train_duplicates_removed": 23274,
+    "n_overlap_free": 113726,
+    "frac_train_duplicates": 0.1698832116788321
+  },
+  "tasks": [
+    {
+      "task": "binary",
+      "model_file": "H:\\nidswork\\output\\5_training\\cicids2018_lightgbm\\rf_binary.joblib",
+      "model_size_mb": 2.2,
+      "n_train_rows": 50556009,
+      "n_features": 71,
+      "n_classes": 2,
+      "fit_seconds": 257.8,
+      "has_permutation_importance": true,
+      "class_counts_train": {
+        "Benign": 47727708,
+        "Attack": 2828301
+      },
+      "config": {
+        "engine": "lightgbm",
+        "model": "LGBMClassifier(rf)",
+        "native_importance_primary": "lgbm_gain",
+        "native_importance_secondary": "lgbm_split_count",
+        "n_estimators": 200,
+        "max_depth": null,
+        "num_leaves": 255,
+        "min_child_samples": 20,
+        "bagging_fraction": 0.632,
+        "feature_fraction": 0.5,
+        "class_weight": "balanced",
+        "gpu": true,
+        "seed": 42
+      }
+    },
+    {
+      "task": "multiclass",
+      "model_file": "H:\\nidswork\\output\\5_training\\cicids2018_lightgbm\\rf_multiclass.joblib",
+      "model_size_mb": 11.4,
+      "n_train_rows": 50556009,
+      "n_features": 71,
+      "n_classes": 7,
+      "fit_seconds": 1546.0,
+      "has_permutation_importance": true,
+      "class_counts_train": {
+        "Benign": 47727708,
+        "Botnet": 114400,
+        "BruteForce": 75397,
+        "DDoS": 1099348,
+        "DoS": 1467410,
+        "Infiltration": 71663,
+        "WebAttack": 83
+      },
+      "config": {
+        "engine": "lightgbm",
+        "model": "LGBMClassifier(rf)",
+        "native_importance_primary": "lgbm_gain",
+        "native_importance_secondary": "lgbm_split_count",
+        "n_estimators": 200,
+        "max_depth": null,
+        "num_leaves": 255,
+        "min_child_samples": 20,
+        "bagging_fraction": 0.632,
+        "feature_fraction": 0.5,
+        "class_weight": "balanced",
+        "gpu": true,
+        "seed": 42
+      }
+    }
+  ]
+}

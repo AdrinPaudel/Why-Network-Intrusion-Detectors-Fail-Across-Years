@@ -1,0 +1,43 @@
+{
+  "rank_delta_L_vs_c2st": {
+    "spearman": 0.14362780429838629,
+    "kendall": 0.08789856967656696,
+    "bootstrap_ci95": {
+      "lo": -0.08575042232021583,
+      "med": 0.1428674017711001,
+      "hi": 0.35934246358304456,
+      "p_boot": 0.209
+    },
+    "n_pairs": 71
+  },
+  "rank_delta_L_vs_wasserstein": {
+    "spearman": -0.193802814332563,
+    "kendall": -0.12538700225096233,
+    "bootstrap_ci95": {
+      "lo": -0.4393933020675082,
+      "med": -0.192064775518143,
+      "hi": 0.07743337247447732,
+      "p_boot": 0.146
+    },
+    "n_pairs": 61
+  },
+  "rank_delta_L_vs_mmd": {
+    "spearman": 0.2107645297868466,
+    "kendall": 0.15300528468509503,
+    "bootstrap_ci95": {
+      "lo": -0.08792378480769268,
+      "med": 0.2076189804336228,
+      "hi": 0.47520289212389766,
+      "p_boot": 0.141
+    },
+    "n_pairs": 61
+  },
+  "rank_delta_L_vs_c2st_partial_cardinality_variance": 0.09074686373241489,
+  "quadrants_L_vs_E": {
+    "hi_L_hi_E": 18,
+    "lo_L_lo_E": 16,
+    "hi_L_lo_E": 19,
+    "lo_L_hi_E": 18
+  },
+  "interpretation": "L vs C2ST Spearman = +0.144 (POSITIVE): features whose importance rank rose 2017\u21922018 also shifted more in raw value."
+}

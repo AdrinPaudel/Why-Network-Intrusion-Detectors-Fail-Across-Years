@@ -1,0 +1,151 @@
+{
+  "accuracy": 0.7593370281491639,
+  "balanced_accuracy": 0.125,
+  "macro_precision": 0.09491712851864549,
+  "macro_recall": 0.125,
+  "macro_f1": 0.10790101839497922,
+  "weighted_f1": 0.6554659091384942,
+  "mcc": 0.0,
+  "per_class": {
+    "Benign": {
+      "precision": 0.7593370281491639,
+      "recall": 1.0,
+      "f1": 0.8632081471598337,
+      "support": 318958
+    },
+    "Botnet": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 27
+    },
+    "BruteForce": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1400
+    },
+    "DDoS": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 19000
+    },
+    "DoS": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 34400
+    },
+    "Infiltration": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 14400
+    },
+    "PortScan": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 31800
+    },
+    "WebAttack": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 63
+    }
+  },
+  "confusion_matrix": [
+    [
+      318958,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      27,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1400,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      19000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      34400,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      14400,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      31800,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      63,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "labels": [
+    "Benign",
+    "Botnet",
+    "BruteForce",
+    "DDoS",
+    "DoS",
+    "Infiltration",
+    "PortScan",
+    "WebAttack"
+  ]
+}

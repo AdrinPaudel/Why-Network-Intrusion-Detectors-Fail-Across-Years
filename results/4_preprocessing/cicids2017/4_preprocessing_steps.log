@@ -1,0 +1,31 @@
+======================================================================
+SCRIPT 4 STEPS LOG
+Started: 2026-07-17 06:52:01
+======================================================================
+  backend=cpu(numpy), compression=snappy
+  cicids2017_cleaned.parquet: 90 cols → 71 features (excluded 19: identifiers + Label + 10 drops)
+
+[SUB-STEP 4.1] PASS 1 — fit scaler (train rows only) (started: 06:52:01)
+    [fit] done: 18 batches, 2,099,960 rows, 5.9s, scaler n_train=1,679,912
+  [OK] scaler fitted
+  [✓] Sub-step 4.1 completed at 06:52:07
+
+[SUB-STEP 4.2] PASS 2 — scale + write train/test Parquet (started: 06:52:07)
+  [OK] train=1,679,912 test=420,048
+  [✓] Sub-step 4.2 completed at 06:52:24
+
+[SUB-STEP 4.3] Save metadata + visualizations (started: 06:52:24)
+  [OK] Saved preprocessing_meta.json  (train=1,679,912  test=420,048)
+  [OK] Saved feature_names.json
+  [OK] Saved label_mapping.json
+  [OK] Saved scaler.json
+  [OK] Saved class_distribution.png
+  [OK] Saved scaling_check.png
+  [OK] complete
+  [✓] Sub-step 4.3 completed at 06:52:26
+  [OK] Saved 4_preprocessing_report.txt
+  [OK] cicids2017 complete: train=1,679,912, test=420,048
+
+======================================================================
+Completed: 2026-07-17 06:52:26
+======================================================================

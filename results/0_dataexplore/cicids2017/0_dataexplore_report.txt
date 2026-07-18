@@ -1,0 +1,250 @@
+================================================================================
+DATA EXPLORATION REPORT — CICIDS2017
+Generated: 2026-07-17 06:20:18
+================================================================================
+
+----------------------------------------------------------------------
+SECTION 1 — COLUMN INVENTORY
+----------------------------------------------------------------------
+Total columns: 91
+
+Columns (in order):
+    1. id
+    2. Flow ID
+    3. Src IP
+    4. Src Port
+    5. Dst IP
+    6. Dst Port
+    7. Protocol
+    8. Timestamp
+    9. Flow Duration
+   10. Total Fwd Packet
+   11. Total Bwd packets
+   12. Total Length of Fwd Packet
+   13. Total Length of Bwd Packet
+   14. Fwd Packet Length Max
+   15. Fwd Packet Length Min
+   16. Fwd Packet Length Mean
+   17. Fwd Packet Length Std
+   18. Bwd Packet Length Max
+   19. Bwd Packet Length Min
+   20. Bwd Packet Length Mean
+   21. Bwd Packet Length Std
+   22. Flow Bytes/s
+   23. Flow Packets/s
+   24. Flow IAT Mean
+   25. Flow IAT Std
+   26. Flow IAT Max
+   27. Flow IAT Min
+   28. Fwd IAT Total
+   29. Fwd IAT Mean
+   30. Fwd IAT Std
+   31. Fwd IAT Max
+   32. Fwd IAT Min
+   33. Bwd IAT Total
+   34. Bwd IAT Mean
+   35. Bwd IAT Std
+   36. Bwd IAT Max
+   37. Bwd IAT Min
+   38. Fwd PSH Flags
+   39. Bwd PSH Flags
+   40. Fwd URG Flags
+   41. Bwd URG Flags
+   42. Fwd RST Flags
+   43. Bwd RST Flags
+   44. Fwd Header Length
+   45. Bwd Header Length
+   46. Fwd Packets/s
+   47. Bwd Packets/s
+   48. Packet Length Min
+   49. Packet Length Max
+   50. Packet Length Mean
+   51. Packet Length Std
+   52. Packet Length Variance
+   53. FIN Flag Count
+   54. SYN Flag Count
+   55. RST Flag Count
+   56. PSH Flag Count
+   57. ACK Flag Count
+   58. URG Flag Count
+   59. CWR Flag Count
+   60. ECE Flag Count
+   61. Down/Up Ratio
+   62. Average Packet Size
+   63. Fwd Segment Size Avg
+   64. Bwd Segment Size Avg
+   65. Fwd Bytes/Bulk Avg
+   66. Fwd Packet/Bulk Avg
+   67. Fwd Bulk Rate Avg
+   68. Bwd Bytes/Bulk Avg
+   69. Bwd Packet/Bulk Avg
+   70. Bwd Bulk Rate Avg
+   71. Subflow Fwd Packets
+   72. Subflow Fwd Bytes
+   73. Subflow Bwd Packets
+   74. Subflow Bwd Bytes
+   75. FWD Init Win Bytes
+   76. Bwd Init Win Bytes
+   77. Fwd Act Data Pkts
+   78. Fwd Seg Size Min
+   79. Active Mean
+   80. Active Std
+   81. Active Max
+   82. Active Min
+   83. Idle Mean
+   84. Idle Std
+   85. Idle Max
+   86. Idle Min
+   87. ICMP Code
+   88. ICMP Type
+   89. Total TCP Flow Time
+   90. Label
+   91. Attempted Category
+
+----------------------------------------------------------------------
+SECTION 2 — PER-FILE STATISTICS
+----------------------------------------------------------------------
+
+File: tuesday.csv
+  Total rows: 322,078
+
+  Data quality:
+    Clean: 322,078
+    NaN (any column): 0
+    Inf (any column): 0
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 315,106
+    FTP-Patator: 3,972
+    SSH-Patator: 2,961
+    SSH-Patator - Attempted: 27
+    FTP-Patator - Attempted: 12
+
+  Labels (after consolidation):
+    Benign: 315,145
+    FTP-Patator: 3,972
+    SSH-Patator: 2,961
+
+
+File: monday.csv
+  Total rows: 371,624
+
+  Data quality:
+    Clean: 371,621
+    NaN (any column): 0
+    Inf (any column): 3
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 371,624
+
+  Labels (after consolidation):
+    Benign: 371,624
+
+
+File: thursday.csv
+  Total rows: 362,076
+
+  Data quality:
+    Clean: 362,075
+    NaN (any column): 0
+    Inf (any column): 1
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 288,172
+    Infiltration - Portscan: 71,767
+    Web Attack - Brute Force - Attempted: 1,292
+    Web Attack - XSS - Attempted: 655
+    Web Attack - Brute Force: 73
+    Infiltration - Attempted: 45
+    Infiltration: 36
+    Web Attack - XSS: 18
+    Web Attack - SQL Injection: 13
+    Web Attack - SQL Injection - Attempted: 5
+
+  Labels (after consolidation):
+    Benign: 290,169
+    Infiltration - Portscan: 71,767
+    Web Attack - Brute Force: 73
+    Infiltration: 36
+    Web Attack - XSS: 18
+    Web Attack - SQL Injection: 13
+
+
+File: wednesday.csv
+  Total rows: 496,641
+
+  Data quality:
+    Clean: 496,640
+    NaN (any column): 0
+    Inf (any column): 1
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 319,120
+    DoS Hulk: 158,468
+    DoS GoldenEye: 7,567
+    DoS Slowloris: 3,859
+    DoS Slowhttptest - Attempted: 3,368
+    DoS Slowloris - Attempted: 1,847
+    DoS Slowhttptest: 1,740
+    DoS Hulk - Attempted: 581
+    DoS GoldenEye - Attempted: 80
+    Heartbleed: 11
+
+  Labels (after consolidation):
+    Benign: 324,996
+    DoS Hulk: 158,468
+    DoS GoldenEye: 7,567
+    DoS Slowloris: 3,859
+    DoS Slowhttptest: 1,740
+    Heartbleed: 11
+
+
+File: friday.csv
+  Total rows: 547,557
+
+  Data quality:
+    Clean: 547,557
+    NaN (any column): 0
+    Inf (any column): 0
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 288,544
+    Portscan: 159,066
+    DDoS: 95,144
+    Botnet - Attempted: 4,067
+    Botnet: 736
+
+  Labels (after consolidation):
+    Benign: 292,611
+    Portscan: 159,066
+    DDoS: 95,144
+    Botnet: 736
+
+
+----------------------------------------------------------------------
+SECTION 3 — DATASET TOTALS
+----------------------------------------------------------------------
+Total rows across all files: 2,099,976
+
+Total rows per label (after consolidation):
+  Benign: 1,594,545  (75.93%)
+  Portscan: 159,066  (7.57%)
+  DoS Hulk: 158,468  (7.55%)
+  DDoS: 95,144  (4.53%)
+  Infiltration - Portscan: 71,767  (3.42%)
+  DoS GoldenEye: 7,567  (0.36%)
+  FTP-Patator: 3,972  (0.19%)
+  DoS Slowloris: 3,859  (0.18%)
+  SSH-Patator: 2,961  (0.14%)
+  DoS Slowhttptest: 1,740  (0.08%)
+  Botnet: 736  (0.04%)
+  Web Attack - Brute Force: 73  (0.00%)
+  Infiltration: 36  (0.00%)
+  Web Attack - XSS: 18  (0.00%)
+  Web Attack - SQL Injection: 13  (0.00%)
+  Heartbleed: 11  (0.00%)

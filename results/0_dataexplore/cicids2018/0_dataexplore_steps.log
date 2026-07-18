@@ -1,0 +1,61 @@
+======================================================================
+0_DATAEXPLORE STEPS LOG
+Started: 2026-07-17 06:20:21
+======================================================================
+  Found 10 CSV file(s) (largest first):
+    Friday-16-02-2018.csv  (3.92 GB)
+    Wednesday-21-02-2018.csv  (3.68 GB)
+    Wednesday-28-02-2018.csv  (3.55 GB)
+    Thursday-01-03-2018.csv  (3.55 GB)
+    Friday-02-03-2018.csv  (3.44 GB)
+    Thursday-22-02-2018.csv  (3.24 GB)
+    Tuesday-20-02-2018.csv  (3.20 GB)
+    Friday-23-02-2018.csv  (3.18 GB)
+    Wednesday-14-02-2018.csv  (3.04 GB)
+    Thursday-15-02-2018.csv  (2.79 GB)
+  
+
+[SUB-STEP 0.1] Column inventory (header-only reads, 0 data rows loaded) (started: 06:20:21)
+  Friday-16-02-2018.csv: 91 columns
+  Wednesday-21-02-2018.csv: 91 columns
+  Wednesday-28-02-2018.csv: 91 columns
+  Thursday-01-03-2018.csv: 91 columns
+  Friday-02-03-2018.csv: 91 columns
+  Thursday-22-02-2018.csv: 91 columns
+  Tuesday-20-02-2018.csv: 91 columns
+  Friday-23-02-2018.csv: 91 columns
+  Wednesday-14-02-2018.csv: 91 columns
+  Thursday-15-02-2018.csv: 91 columns
+  [OK] All 10 files aligned: 91 columns, same order
+
+[SUB-STEP 0.2] Single-pass analysis (parallel, 10 process(es)) (started: 06:20:21)
+  [1/10] Thursday-15-02-2018.csv (2.79 GB): 5,410,102 rows | clean 5,410,088 | NaN/Inf 14
+      Attempted→Benign: 2 label type(s), 6,581 rows total
+  [2/10] Friday-23-02-2018.csv (3.18 GB): 5,976,481 rows | clean 5,976,477 | NaN/Inf 4
+      Attempted→Benign: 3 label type(s), 72 rows total
+  [3/10] Wednesday-14-02-2018.csv (3.04 GB): 5,898,350 rows | clean 5,898,349 | NaN/Inf 1
+      Attempted→Benign: 1 label type(s), 193,354 rows total
+  [4/10] Thursday-01-03-2018.csv (3.55 GB): 6,551,401 rows | clean 6,551,394 | NaN/Inf 7
+      Attempted→Benign: 1 label type(s), 13 rows total
+  [5/10] Thursday-22-02-2018.csv (3.24 GB): 6,071,153 rows | clean 6,071,151 | NaN/Inf 2
+      Attempted→Benign: 3 label type(s), 83 rows total
+  [6/10] Wednesday-28-02-2018.csv (3.55 GB): 6,568,726 rows | clean 6,568,722 | NaN/Inf 4
+      Attempted→Benign: 1 label type(s), 15 rows total
+  [7/10] Tuesday-20-02-2018.csv (3.20 GB): 6,054,702 rows | clean 6,054,694 | NaN/Inf 8
+      Attempted→Benign: 1 label type(s), 80 rows total
+  [8/10] Friday-02-03-2018.csv (3.44 GB): 6,311,371 rows | clean 6,311,368 | NaN/Inf 3
+      Attempted→Benign: 1 label type(s), 262 rows total
+  [9/10] Wednesday-21-02-2018.csv (3.68 GB): 6,962,593 rows | clean 6,962,587 | NaN/Inf 6
+      Attempted→Benign: 1 label type(s), 171 rows total
+  [10/10] Friday-16-02-2018.csv (3.92 GB): 7,390,266 rows | clean 7,390,258 | NaN/Inf 8
+      Attempted→Benign: 2 label type(s), 105,606 rows total
+  [OK] Done
+
+[SUB-STEP 0.3] Writing results report (started: 06:24:39)
+
+[SUB-STEP 0.4] Writing visualization charts (started: 06:24:39)
+  [OK] All outputs written to H:\nidswork\results\0_dataexplore\cicids2018
+
+======================================================================
+Completed: 2026-07-17 06:24:43
+======================================================================

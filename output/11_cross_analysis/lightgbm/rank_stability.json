@@ -1,0 +1,138 @@
+{
+  "spearman_rank_2017_vs_2018": 0.5624413145539906,
+  "interpretation": "moderate (some rank movement)",
+  "top_k_overlaps": {
+    "5": {
+      "top_2017": [
+        "Bwd PSH Flags",
+        "FWD Init Win Bytes",
+        "PSH Flag Count",
+        "RST Flag Count",
+        "SYN Flag Count"
+      ],
+      "top_2018": [
+        "Bwd Init Win Bytes",
+        "Bwd Packet Length Max",
+        "FIN Flag Count",
+        "FWD Init Win Bytes",
+        "Fwd Packet Length Mean"
+      ],
+      "overlap_count": 1,
+      "overlap_fraction": 0.2
+    },
+    "10": {
+      "top_2017": [
+        "ACK Flag Count",
+        "Bwd PSH Flags",
+        "FWD Init Win Bytes",
+        "Flow Duration",
+        "Fwd Act Data Pkts",
+        "Fwd IAT Min",
+        "PSH Flag Count",
+        "Packet Length Min",
+        "RST Flag Count",
+        "SYN Flag Count"
+      ],
+      "top_2018": [
+        "Bwd IAT Total",
+        "Bwd Init Win Bytes",
+        "Bwd Packet Length Max",
+        "Bwd Packet Length Std",
+        "FIN Flag Count",
+        "FWD Init Win Bytes",
+        "Flow IAT Min",
+        "Fwd Packet Length Max",
+        "Fwd Packet Length Mean",
+        "Packet Length Max"
+      ],
+      "overlap_count": 1,
+      "overlap_fraction": 0.1
+    },
+    "15": {
+      "top_2017": [
+        "ACK Flag Count",
+        "Bwd IAT Max",
+        "Bwd Init Win Bytes",
+        "Bwd PSH Flags",
+        "Bwd Packet Length Std",
+        "FWD Init Win Bytes",
+        "Flow Duration",
+        "Flow IAT Max",
+        "Fwd Act Data Pkts",
+        "Fwd IAT Min",
+        "Fwd Packet Length Min",
+        "PSH Flag Count",
+        "Packet Length Min",
+        "RST Flag Count",
+        "SYN Flag Count"
+      ],
+      "top_2018": [
+        "Bwd IAT Total",
+        "Bwd Init Win Bytes",
+        "Bwd Packet Length Max",
+        "Bwd Packet Length Mean",
+        "Bwd Packet Length Std",
+        "FIN Flag Count",
+        "FWD Init Win Bytes",
+        "Flow IAT Min",
+        "Fwd Packet Length Max",
+        "Fwd Packet Length Mean",
+        "Fwd Packet Length Std",
+        "Fwd Seg Size Min",
+        "Packet Length Max",
+        "Total Length of Bwd Packet",
+        "Total Length of Fwd Packet"
+      ],
+      "overlap_count": 3,
+      "overlap_fraction": 0.2
+    },
+    "20": {
+      "top_2017": [
+        "ACK Flag Count",
+        "Bwd IAT Max",
+        "Bwd Init Win Bytes",
+        "Bwd PSH Flags",
+        "Bwd Packet Length Std",
+        "FWD Init Win Bytes",
+        "Flow Duration",
+        "Flow IAT Max",
+        "Fwd Act Data Pkts",
+        "Fwd IAT Min",
+        "Fwd PSH Flags",
+        "Fwd Packet Length Max",
+        "Fwd Packet Length Min",
+        "Fwd Packet Length Std",
+        "Fwd Seg Size Min",
+        "PSH Flag Count",
+        "Packet Length Min",
+        "RST Flag Count",
+        "SYN Flag Count",
+        "Total TCP Flow Time"
+      ],
+      "top_2018": [
+        "Bwd IAT Max",
+        "Bwd IAT Total",
+        "Bwd Init Win Bytes",
+        "Bwd Packet Length Max",
+        "Bwd Packet Length Mean",
+        "Bwd Packet Length Std",
+        "FIN Flag Count",
+        "FWD Init Win Bytes",
+        "Flow Bytes/s",
+        "Flow Duration",
+        "Flow IAT Mean",
+        "Flow IAT Min",
+        "Fwd Packet Length Max",
+        "Fwd Packet Length Mean",
+        "Fwd Packet Length Std",
+        "Fwd Seg Size Min",
+        "Packet Length Max",
+        "Total Length of Bwd Packet",
+        "Total Length of Fwd Packet",
+        "Total TCP Flow Time"
+      ],
+      "overlap_count": 9,
+      "overlap_fraction": 0.45
+    }
+  }
+}

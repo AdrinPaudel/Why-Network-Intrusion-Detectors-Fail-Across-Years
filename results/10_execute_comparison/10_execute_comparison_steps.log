@@ -1,0 +1,38 @@
+======================================================================
+SCRIPT 10 EXECUTE COMPARISON — cicids2017 <-> cicids2018
+Started: 2026-07-17 15:39:04
+======================================================================
+
+[SUB-STEP 10.1] Load plan & profiles (started: 15:39:04)
+  [OK] 83 plans, 83/83 profiles -> 83 features to execute
+  [✓] Sub-step 10.1 completed at 15:39:04
+
+[SUB-STEP 10.2] Execute comparisons (started: 15:39:04)
+  83 features, 4 workers
+    10/83 compared (last: Fwd Packet Length Min)
+    20/83 compared (last: Flow IAT Std)
+    30/83 compared (last: Bwd IAT Std)
+    40/83 compared (last: Fwd Packets/s)
+    50/83 compared (last: Packet Length Variance)
+    60/83 compared (last: Fwd Packet/Bulk Avg)
+    70/83 compared (last: Fwd Act Data Pkts)
+    80/83 compared (last: Idle Max)
+  [OK] 83 features executed
+  [✓] Sub-step 10.2 completed at 15:44:43
+
+[SUB-STEP 10.3] Save verdicts & tables (started: 15:44:43)
+  [OK] flat table -> verdicts_table_cicids2017_cicids2018.csv
+  [✓] Sub-step 10.3 completed at 15:44:43
+
+[SUB-STEP 10.4] Render plots (started: 15:44:43)
+  [OK] verdict scatter -> verdict_scatter.png
+  [✓] Sub-step 10.4 completed at 15:44:43
+
+[SUB-STEP 10.5] Write report (started: 15:44:43)
+    collapsed=4, flipped=6, restructured=24, shifted=36, stable=3, weak=10
+  [OK] Saved 10_execute_comparison_report.txt
+  [✓] Sub-step 10.5 completed at 15:44:43
+
+======================================================================
+Completed: 2026-07-17 15:44:43
+======================================================================

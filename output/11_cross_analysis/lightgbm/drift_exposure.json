@@ -1,0 +1,8 @@
+{
+  "drift_exposure": 0.3476205675754822,
+  "drift_exposure_null_percentile": 0.6972,
+  "concept_exposure": 0.7843473293907219,
+  "concept_exposure_null_percentile": 0.3326,
+  "importance_weights": "normalized to sum 1 (importance-weighted mean of the signal)",
+  "interpretation": "percentile >0.95 => the model preferentially weights shifting/concept-unstable features more than chance"
+}

@@ -1,0 +1,32 @@
+
+======================================================================
+TEST REPORT  --  LightGBM RF-mode on CIC-IDS 2017 / 2018 (held-out test split)
+======================================================================
+Generated : 2026-07-17 15:21:26
+
+======================================================================
+DATASET: cicids2018   (test rows: 12,639,079)
+======================================================================
+  [CAVEAT] 30.3% of test rows are exact feature-value duplicates of a train row (check_train_test_overlap()) — within-year metrics below are partly measuring memorization, not generalization, to that extent.
+
+  [binary]  accuracy=1.0000  balanced_acc=0.9998  macro_f1=0.9998  weighted_f1=1.0000  mcc=0.9995
+           roc_auc=1.0000  pr_auc=1.0000
+    [overlap-free subset: 8,812,156 rows — test rows that are NOT exact feature-duplicates of a train row]
+           accuracy=0.9999  balanced_acc=0.9998  macro_f1=0.9998  weighted_f1=0.9999  mcc=0.9996  roc_auc=1.0000  pr_auc=1.0000
+    class           precision     recall         f1      support
+    -------------- ---------- ---------- ---------- ------------
+    Benign             1.0000     1.0000     1.0000   11,931,958
+    Attack             0.9995     0.9997     0.9996      707,121
+
+  [multiclass]  accuracy=0.9984  balanced_acc=0.9968  macro_f1=0.9337  weighted_f1=0.9987  mcc=0.9852
+    [overlap-free subset: 8,812,156 rows — test rows that are NOT exact feature-duplicates of a train row]
+           accuracy=0.9979  balanced_acc=0.9962  macro_f1=0.8744  weighted_f1=0.9987  mcc=0.9859
+    class           precision     recall         f1      support
+    -------------- ---------- ---------- ---------- ------------
+    Benign             1.0000     0.9983     0.9991   11,931,958
+    Botnet             0.9999     1.0000     1.0000       28,521
+    BruteForce         1.0000     1.0000     1.0000       18,800
+    DDoS               1.0000     1.0000     1.0000      274,800
+    DoS                0.9999     1.0000     1.0000      366,800
+    Infiltration       0.4684     0.9994     0.6379       18,000
+    WebAttack          0.8305     0.9800     0.8991          200

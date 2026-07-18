@@ -1,0 +1,33 @@
+======================================================================
+SCRIPT 7 STEPS LOG
+Started: 2026-07-17 15:29:00
+======================================================================
+  workers=8, sep-sample=60,000/class, include_identifiers=False
+
+[SUB-STEP 7.1] Discover feature columns (started: 15:29:00)
+  [OK] 83 features to profile
+  [✓] Sub-step 7.1 completed at 15:29:00
+
+[SUB-STEP 7.2] Profile features (started: 15:29:00)
+  10/83 profiled (last: Fwd Packet Length Mean)
+  20/83 profiled (last: Flow IAT Std)
+  30/83 profiled (last: Bwd IAT Std)
+  40/83 profiled (last: Fwd Header Length)
+  50/83 profiled (last: PSH Flag Count)
+  60/83 profiled (last: Fwd Bulk Rate Avg)
+  70/83 profiled (last: Bwd Init Win Bytes)
+  80/83 profiled (last: ICMP Type)
+  [OK] 83 features profiled
+  [✓] Sub-step 7.2 completed at 15:32:37
+
+[SUB-STEP 7.3] Write profiles.json (started: 15:32:37)
+  [OK] Saved H:\nidswork\output\7_profile\cicids2018\profiles.json (83 features)
+  [✓] Sub-step 7.3 completed at 15:32:37
+
+[SUB-STEP 7.4] Write report (started: 15:32:37)
+  [OK] Saved 7_profile_report.txt
+  [✓] Sub-step 7.4 completed at 15:32:37
+
+======================================================================
+Completed: 2026-07-17 15:32:37
+======================================================================

@@ -1,0 +1,21 @@
+{
+  "per_dataset": {
+    "cicids2017": {
+      "total_rows": 1679912,
+      "n_benign": 1275582,
+      "n_attack": 404330,
+      "p_benign": 0.7593,
+      "p_attack": 0.2407
+    },
+    "cicids2018": {
+      "total_rows": 50556009,
+      "n_benign": 47727708,
+      "n_attack": 2828301,
+      "p_benign": 0.9441,
+      "p_attack": 0.0559
+    }
+  },
+  "prior_shift_abs": 0.18480000000000008,
+  "interpretation": "P(benign) shifted from 75.9% (cicids2017) to 94.4% (cicids2018) (|delta|=0.185, LARGE). This prior shift acts independently of feature-distribution shift and is a likely contributor to cross-year precision degradation.",
+  "note": "Prior shift is NOT captured by the covariate or covariate-shape axes. It requires a prior-corrected evaluation (natural priors, uncapped test set)."
+}

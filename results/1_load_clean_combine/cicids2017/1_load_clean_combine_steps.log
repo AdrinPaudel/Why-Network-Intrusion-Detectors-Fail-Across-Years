@@ -1,0 +1,69 @@
+======================================================================
+SCRIPT 1 STEPS LOG
+Started: 2026-07-17 06:24:44
+======================================================================
+
+============================================================
+STEP 1  --  LOAD / CLEAN / COMBINE  --  CICIDS2017
+============================================================
+  [OK] Started: 2026-07-17 06:24:44
+  [OK] Found 5 file(s): ['wednesday.csv (291 MB)', 'friday.csv (285 MB)', 'monday.csv (208 MB)', 'thursday.csv (190 MB)', 'tuesday.csv (178 MB)']
+  [OK] Workload plan: 5 processes x 500,000 rows/chunk (24 cores, 5 files)
+
+[SUB-STEP 1.1] Parallel clean + hash in memory (5 workers, 500,000 rows/chunk) (started: 06:24:44)
+  [OK] tuesday.csv: 322,078 -> 322,078 (NaN:0  Inf:0)
+  [OK] thursday.csv: 362,076 -> 362,075 (NaN:0  Inf:1)
+  [OK] monday.csv: 371,624 -> 371,621 (NaN:0  Inf:3)
+  [OK] wednesday.csv: 496,641 -> 496,640 (NaN:0  Inf:1)
+  [OK] friday.csv: 547,557 -> 547,557 (NaN:0  Inf:0)
+  [✓] Sub-step 1.1 completed at 06:25:28
+  Inf-drop audit: 5 rows removed; 5 (100.0%) were zero-duration short flows.
+
+[SUB-STEP 1.2] Global dedup decision (vectorized duplicated() over all row hashes) (started: 06:25:29)
+  [OK] Found 0 duplicate rows to remove (keep=first) from 2,099,971 rows
+  [✓] Sub-step 1.2 completed at 06:25:29
+
+[SUB-STEP 1.3] Parallel filter + consolidate labels + floor filter (started: 06:25:29)
+  [OK] 17 unique raw labels before consolidation:
+  [OK]     BENIGN                                               1,582,561
+  [OK]     Portscan                                               159,066
+  [OK]     DoS Hulk                                               158,468
+  [OK]     DDoS                                                    95,144
+  [OK]     Infiltration - Portscan                                 71,767
+  [OK]     Benign                                                  11,979
+  [OK]     DoS GoldenEye                                            7,567
+  [OK]     FTP-Patator                                              3,972
+  [OK]     DoS Slowloris                                            3,859
+  [OK]     SSH-Patator                                              2,961
+  [OK]     DoS Slowhttptest                                         1,740
+  [OK]     Botnet                                                     736
+  [OK]     Web Attack - Brute Force                                    73
+  [OK]     Infiltration                                                36
+  [OK]     Web Attack - XSS                                            18
+  [OK]     Web Attack - SQL Injection                                  13
+  [OK]     Heartbleed                                                  11
+  [!] Unmapped labels (dropped): ['Heartbleed']
+  [OK] 8 canonical families, 2,099,960 rows:
+  [OK]     Benign                 1,594,540
+  [OK]     DoS                      171,634
+  [OK]     PortScan                 159,066
+  [OK]     DDoS                      95,144
+  [OK]     Infiltration              71,803
+  [OK]     BruteForce                 6,933
+  [OK]     Botnet                       736
+  [OK]     WebAttack                    104
+  [OK] Saved: H:\nidswork\data\cc_data\cicids2017_cleaned.parquet  (0.41 GB)
+  [✓] Sub-step 1.3 completed at 06:25:43
+
+[SUB-STEP 1.4] Generate visualizations (9 PNG charts) (started: 06:25:43)
+  [OK] 9 charts saved to H:\nidswork\results\1_load_clean_combine\cicids2017
+  [✓] Sub-step 1.4 completed at 06:25:48
+
+[SUB-STEP 1.5] Write text report (started: 06:25:48)
+  [OK] Report saved to H:\nidswork\results\1_load_clean_combine\cicids2017\1_load_clean_combine_report.txt
+  [✓] Sub-step 1.5 completed at 06:25:48
+  [OK] Finished: 2026-07-17 06:25:48
+
+======================================================================
+Completed: 2026-07-17 06:25:48
+======================================================================

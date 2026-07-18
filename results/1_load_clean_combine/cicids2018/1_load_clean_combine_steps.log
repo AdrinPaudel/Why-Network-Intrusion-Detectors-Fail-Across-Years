@@ -1,0 +1,71 @@
+======================================================================
+SCRIPT 1 STEPS LOG
+Started: 2026-07-17 06:25:48
+======================================================================
+
+============================================================
+STEP 1  --  LOAD / CLEAN / COMBINE  --  CICIDS2018
+============================================================
+  [OK] Started: 2026-07-17 06:25:48
+  [OK] Found 10 file(s): ['Friday-16-02-2018.csv (4212 MB)', 'Wednesday-21-02-2018.csv (3953 MB)', 'Wednesday-28-02-2018.csv (3812 MB)', 'Thursday-01-03-2018.csv (3808 MB)', 'Friday-02-03-2018.csv (3690 MB)', 'Thursday-22-02-2018.csv (3474 MB)', 'Tuesday-20-02-2018.csv (3431 MB)', 'Friday-23-02-2018.csv (3409 MB)', 'Wednesday-14-02-2018.csv (3263 MB)', 'Thursday-15-02-2018.csv (2993 MB)']
+  [OK] Workload plan: 10 processes x 500,000 rows/chunk (24 cores, 10 files)
+
+[SUB-STEP 1.1] Parallel clean + hash in memory (10 workers, 500,000 rows/chunk) (started: 06:25:48)
+  [OK] Wednesday-14-02-2018.csv: 5,898,350 -> 5,898,349 (NaN:0  Inf:1)
+  [OK] Thursday-15-02-2018.csv: 5,410,102 -> 5,410,088 (NaN:0  Inf:14)
+  [OK] Friday-23-02-2018.csv: 5,976,481 -> 5,976,477 (NaN:0  Inf:4)
+  [OK] Thursday-22-02-2018.csv: 6,071,153 -> 6,071,151 (NaN:0  Inf:2)
+  [OK] Tuesday-20-02-2018.csv: 6,054,702 -> 6,054,694 (NaN:0  Inf:8)
+  [OK] Thursday-01-03-2018.csv: 6,551,401 -> 6,551,394 (NaN:0  Inf:7)
+  [OK] Wednesday-28-02-2018.csv: 6,568,726 -> 6,568,722 (NaN:0  Inf:4)
+  [OK] Friday-02-03-2018.csv: 6,311,371 -> 6,311,368 (NaN:0  Inf:3)
+  [OK] Wednesday-21-02-2018.csv: 6,962,593 -> 6,962,587 (NaN:0  Inf:6)
+  [OK] Friday-16-02-2018.csv: 7,390,266 -> 7,390,258 (NaN:0  Inf:8)
+  [✓] Sub-step 1.1 completed at 06:39:17
+  Inf-drop audit: 57 rows removed; 57 (100.0%) were zero-duration short flows.
+
+[SUB-STEP 1.2] Global dedup decision (vectorized duplicated() over all row hashes) (started: 06:39:17)
+  [OK] Found 0 duplicate rows to remove (keep=first) from 63,195,088 rows
+  [✓] Sub-step 1.2 completed at 06:39:54
+
+[SUB-STEP 1.3] Parallel filter + consolidate labels + floor filter (started: 06:39:54)
+  [OK] 16 unique raw labels before consolidation:
+  [OK]     BENIGN                                              59,353,429
+  [OK]     DoS Hulk                                             1,803,160
+  [OK]     DDoS-HOIC                                            1,082,293
+  [OK]     Benign                                                 306,237
+  [OK]     DDoS-LOIC-HTTP                                         289,328
+  [OK]     Botnet Ares                                            142,921
+  [OK]     SSH-BruteForce                                          94,197
+  [OK]     Infiltration - NMAP Portscan                            89,374
+  [OK]     DoS GoldenEye                                           22,560
+  [OK]     DoS Slowloris                                            8,490
+  [OK]     DDoS-LOIC-UDP                                            2,527
+  [OK]     Infiltration - Communication Victim Attacker               204
+  [OK]     Web Attack - Brute Force                                   131
+  [OK]     Web Attack - XSS                                           113
+  [OK]     Infiltration - Dropbox Download                             85
+  [OK]     Web Attack - SQL                                            39
+  [OK] 7 canonical families, 63,195,088 rows:
+  [OK]     Benign                59,659,666
+  [OK]     DoS                    1,834,210
+  [OK]     DDoS                   1,374,148
+  [OK]     Botnet                   142,921
+  [OK]     BruteForce                94,197
+  [OK]     Infiltration              89,663
+  [OK]     WebAttack                    283
+  [OK] Saved: H:\nidswork\data\cc_data\cicids2018_cleaned.parquet  (12.86 GB)
+  [✓] Sub-step 1.3 completed at 06:44:28
+
+[SUB-STEP 1.4] Generate visualizations (9 PNG charts) (started: 06:44:28)
+  [OK] 9 charts saved to H:\nidswork\results\1_load_clean_combine\cicids2018
+  [✓] Sub-step 1.4 completed at 06:44:31
+
+[SUB-STEP 1.5] Write text report (started: 06:44:31)
+  [OK] Report saved to H:\nidswork\results\1_load_clean_combine\cicids2018\1_load_clean_combine_report.txt
+  [✓] Sub-step 1.5 completed at 06:44:31
+  [OK] Finished: 2026-07-17 06:44:31
+
+======================================================================
+Completed: 2026-07-17 06:44:31
+======================================================================

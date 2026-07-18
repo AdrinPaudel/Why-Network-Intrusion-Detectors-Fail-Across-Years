@@ -1,0 +1,12 @@
+{
+  "n_features": 83,
+  "benign_driven_count": 13,
+  "attack_driven_count": 70,
+  "mean_benign_shift_across_features": 0.31217703679823133,
+  "mean_attack_shift_across_features": 0.5545711554651865,
+  "interpretation": "Attack evolution dominates: attack distributions changed more than benign traffic -> adversary changed tactics",
+  "mean_benign_c2st": 0.6664961144578313,
+  "mean_attack_c2st": 0.7818239156626507,
+  "mean_pooled_c2st": 0.6658275528169013,
+  "pooled_interpretation": "Mean benign-only C2ST-AUC (0.6665) is above the pooled baseline (0.6658); mean attack-only C2ST-AUC (0.7818) is above the pooled baseline."
+}

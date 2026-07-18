@@ -1,0 +1,24 @@
+======================================================================
+SCRIPT 9 PLAN COMPARISON — cicids2017 <-> cicids2018
+Started: 2026-07-17 15:39:02
+======================================================================
+
+[SUB-STEP 9.1] Load profiles (started: 15:39:02)
+  [OK] 83 / 83 feature profiles loaded (cicids2017 / cicids2018)
+  [✓] Sub-step 9.1 completed at 15:39:02
+
+[SUB-STEP 9.2] Plan comparisons (started: 15:39:02)
+  [OK] 83 features planned
+  [✓] Sub-step 9.2 completed at 15:39:02
+
+[SUB-STEP 9.3] Save plans (started: 15:39:02)
+  [OK] Saved comparison_plans_cicids2017_cicids2018.json (83 features) -> H:\nidswork\output\9_plan_comparison
+  [✓] Sub-step 9.3 completed at 15:39:02
+
+[SUB-STEP 9.4] Write report (started: 15:39:02)
+  [OK] Saved 9_plan_comparison_report.txt
+  [✓] Sub-step 9.4 completed at 15:39:02
+
+======================================================================
+Completed: 2026-07-17 15:39:02
+======================================================================

@@ -1,0 +1,286 @@
+======================================================================
+CORRELATION ANALYSIS REPORT  —  CICIDS2017
+Generated : 2026-07-17 06:45:23
+======================================================================
+
+Flow features analysed: 83
+Pearson rows (exact):   2,099,960
+Spearman rows (sample): 2,099,960
+Threshold:              |r| ≥ 0.9
+
+------------------------------------------------------------
+HIGHLY CORRELATED PAIRS — PEARSON
+------------------------------------------------------------
+  81 pair(s)
+  Feature A                          Feature B                                r
+  ---------------------------------- ---------------------------------- -------
+  Fwd Packet Length Mean             Fwd Segment Size Avg                 1.000
+  Bwd Packet Length Mean             Bwd Segment Size Avg                 1.000
+  Packet Length Mean                 Average Packet Size                  1.000
+  Total Bwd packets                  ACK Flag Count                       1.000
+  Total Fwd Packet                   ACK Flag Count                       1.000
+  Fwd URG Flags                      URG Flag Count                       1.000
+  Flow Duration                      Fwd IAT Total                        0.999
+  Total Fwd Packet                   Total Bwd packets                    0.999
+  Flow IAT Max                       Fwd IAT Max                          0.999
+  Flow IAT Max                       Idle Max                             0.998
+  Total Fwd Packet                   Total Length of Bwd Packet           0.997
+  Fwd IAT Max                        Idle Max                             0.997
+  Total Length of Bwd Packet         ACK Flag Count                       0.996
+  Total Bwd packets                  Total Length of Bwd Packet           0.994
+  Idle Mean                          Idle Min                             0.990
+  Bwd Packet Length Max              Packet Length Max                    0.989
+  Packet Length Max                  Packet Length Std                    0.988
+  Average Packet Size                Subflow Bwd Bytes                    0.988
+  Packet Length Mean                 Subflow Bwd Bytes                    0.988
+  Idle Mean                          Idle Max                             0.987
+  Flow IAT Max                       Idle Mean                            0.985
+  Fwd IAT Max                        Idle Mean                            0.984
+  Bwd Packet Length Max              Bwd Packet Length Std                0.984
+  Bwd Packet Length Max              Packet Length Std                    0.983
+  Flow Duration                      Bwd IAT Total                        0.983
+  Fwd IAT Total                      Bwd IAT Total                        0.982
+  Bwd Packet Length Std              Packet Length Std                    0.982
+  Bwd Packet Length Mean             Subflow Bwd Bytes                    0.981
+  Bwd Segment Size Avg               Subflow Bwd Bytes                    0.981
+  Bwd Bytes/Bulk Avg                 Bwd Packet/Bulk Avg                  0.979
+  Fwd Packet Length Mean             Subflow Fwd Bytes                    0.975
+  Fwd Segment Size Avg               Subflow Fwd Bytes                    0.975
+  Bwd Packet Length Std              Packet Length Max                    0.973
+  Flow Packets/s                     Fwd Packets/s                        0.969
+  Bwd Packet Length Mean             Packet Length Mean                   0.968
+  Bwd Packet Length Mean             Average Packet Size                  0.968
+  Average Packet Size                Bwd Segment Size Avg                 0.968
+  Packet Length Mean                 Bwd Segment Size Avg                 0.968
+  Fwd IAT Mean                       Fwd IAT Min                          0.967
+  Bwd Packet Length Std              Packet Length Variance               0.964
+  Bwd Packet Length Mean             Packet Length Std                    0.963
+  Packet Length Std                  Bwd Segment Size Avg                 0.963
+  Flow IAT Max                       Bwd IAT Max                          0.959
+  Bwd IAT Max                        Idle Max                             0.958
+  Fwd IAT Max                        Bwd IAT Max                          0.958
+  Idle Max                           Idle Min                             0.956
+  Bwd PSH Flags                      PSH Flag Count                       0.956
+  Bwd IAT Mean                       Bwd IAT Min                          0.955
+  Flow IAT Max                       Idle Min                             0.954
+  Fwd IAT Max                        Idle Min                             0.953
+  Bwd IAT Max                        Idle Mean                            0.952
+  Bwd Packet Length Max              Bwd Packet Length Mean               0.951
+  Bwd Packet Length Max              Bwd Segment Size Avg                 0.951
+  Fwd IAT Min                        Bwd IAT Min                          0.950
+  Flow IAT Std                       Bwd IAT Mean                         0.949
+  Fwd Packet Length Max              Fwd Packet Length Std                0.948
+  Fwd IAT Mean                       Bwd IAT Mean                         0.948
+  Packet Length Std                  Packet Length Variance               0.939
+  Bwd Packet Length Mean             Bwd Packet Length Std                0.938
+  Bwd Packet Length Std              Bwd Segment Size Avg                 0.938
+  Bwd Packet Length Mean             Packet Length Max                    0.938
+  Packet Length Max                  Bwd Segment Size Avg                 0.938
+  Packet Length Std                  Average Packet Size                  0.935
+  Packet Length Mean                 Packet Length Std                    0.935
+  Packet Length Max                  Packet Length Variance               0.934
+  Fwd IAT Std                        Bwd IAT Std                          0.934
+  Bwd Packet Length Max              Packet Length Variance               0.933
+  Packet Length Std                  Subflow Bwd Bytes                    0.930
+  Bwd IAT Max                        Idle Min                             0.927
+  Fwd IAT Mean                       Bwd IAT Min                          0.927
+  Flow IAT Std                       Fwd IAT Mean                         0.922
+  Bwd Packet Length Max              Subflow Bwd Bytes                    0.918
+  Flow IAT Mean                      Fwd IAT Mean                         0.917
+  Packet Length Max                  Packet Length Mean                   0.913
+  Packet Length Max                  Average Packet Size                  0.913
+  Bwd Packet Length Max              Packet Length Mean                   0.908
+  Bwd Packet Length Max              Average Packet Size                  0.908
+  Active Mean                        Active Min                           0.907
+  Packet Length Max                  Subflow Bwd Bytes                    0.906
+  Fwd IAT Min                        Bwd IAT Mean                         0.902
+  Fwd RST Flags                      RST Flag Count                       0.901
+
+------------------------------------------------------------
+HIGHLY CORRELATED PAIRS — SPEARMAN
+------------------------------------------------------------
+  129 pair(s)
+  Feature A                          Feature B                                r
+  ---------------------------------- ---------------------------------- -------
+  ICMP Code                          ICMP Type                            1.000
+  Packet Length Mean                 Average Packet Size                  1.000
+  Fwd Packet Length Mean             Fwd Segment Size Avg                 1.000
+  Packet Length Std                  Packet Length Variance               1.000
+  Bwd Packet Length Mean             Bwd Segment Size Avg                 1.000
+  Fwd Bytes/Bulk Avg                 Fwd Packet/Bulk Avg                  1.000
+  Fwd Bytes/Bulk Avg                 Fwd Bulk Rate Avg                    1.000
+  Fwd Packet/Bulk Avg                Fwd Bulk Rate Avg                    1.000
+  Idle Mean                          Idle Max                             0.999
+  Flow Packets/s                     Fwd Packets/s                        0.999
+  Fwd Packet Length Min              Packet Length Min                    0.999
+  Idle Mean                          Idle Min                             0.998
+  Active Mean                        Active Max                           0.998
+  Bwd Bytes/Bulk Avg                 Bwd Packet/Bulk Avg                  0.997
+  Bwd IAT Total                      Bwd IAT Max                          0.997
+  Flow Packets/s                     Flow IAT Mean                       -0.996
+  Fwd PSH Flags                      PSH Flag Count                       0.996
+  Flow IAT Mean                      Fwd Packets/s                       -0.996
+  Idle Max                           Idle Min                             0.996
+  Fwd IAT Total                      Fwd IAT Max                          0.996
+  Bwd Segment Size Avg               Subflow Bwd Bytes                    0.995
+  Bwd Packet Length Mean             Subflow Bwd Bytes                    0.995
+  Bwd IAT Mean                       Bwd IAT Max                          0.995
+  Fwd URG Flags                      URG Flag Count                       0.995
+  Active Mean                        Active Min                           0.994
+  Fwd IAT Mean                       Fwd IAT Max                          0.994
+  Bwd Bytes/Bulk Avg                 Bwd Bulk Rate Avg                    0.993
+  Bwd IAT Total                      Bwd IAT Mean                         0.993
+  Fwd IAT Total                      Fwd IAT Mean                         0.993
+  Packet Length Max                  Packet Length Variance               0.990
+  Packet Length Max                  Packet Length Std                    0.990
+  Bwd Packet/Bulk Avg                Bwd Bulk Rate Avg                    0.989
+  Active Max                         Active Min                           0.989
+  Bwd PSH Flags                      PSH Flag Count                       0.986
+  Flow Duration                      Flow IAT Max                         0.986
+  Bwd Packet Length Max              Packet Length Max                    0.986
+  Active Std                         Idle Std                             0.981
+  Fwd Packet Length Mean             Subflow Fwd Bytes                    0.981
+  Fwd Segment Size Avg               Subflow Fwd Bytes                    0.981
+  Bwd Packet Length Max              Packet Length Variance               0.980
+  Bwd Packet Length Max              Packet Length Std                    0.980
+  Fwd PSH Flags                      Bwd PSH Flags                        0.974
+  Flow Packets/s                     Flow IAT Max                        -0.972
+  Packet Length Mean                 Subflow Bwd Bytes                    0.971
+  Average Packet Size                Subflow Bwd Bytes                    0.971
+  Flow IAT Max                       Fwd Packets/s                       -0.971
+  Packet Length Mean                 Bwd Segment Size Avg                 0.970
+  Average Packet Size                Bwd Segment Size Avg                 0.970
+  Bwd Packet Length Mean             Packet Length Mean                   0.970
+  Bwd Packet Length Mean             Average Packet Size                  0.970
+  Active Max                         Idle Max                             0.969
+  Active Max                         Idle Mean                            0.969
+  Active Min                         Idle Min                             0.968
+  Active Mean                        Idle Min                             0.968
+  Active Mean                        Idle Mean                            0.968
+  Active Max                         Idle Min                             0.967
+  Active Mean                        Idle Max                             0.967
+  Active Min                         Idle Mean                            0.966
+  Active Min                         Idle Max                             0.964
+  Total Length of Bwd Packet         Bwd Packet Length Max                0.960
+  Packet Length Max                  Packet Length Mean                   0.959
+  Packet Length Max                  Average Packet Size                  0.959
+  Flow Duration                      Flow Packets/s                      -0.959
+  Flow IAT Mean                      Flow IAT Max                         0.957
+  Flow Duration                      Fwd Packets/s                       -0.957
+  Bwd Packet Length Max              Bwd Packet Length Mean               0.955
+  Bwd Packet Length Max              Bwd Segment Size Avg                 0.955
+  Bwd Packet Length Max              Packet Length Mean                   0.951
+  Bwd Packet Length Max              Average Packet Size                  0.951
+  Packet Length Mean                 Packet Length Variance               0.951
+  Packet Length Variance             Average Packet Size                  0.951
+  Packet Length Mean                 Packet Length Std                    0.951
+  Packet Length Std                  Average Packet Size                  0.951
+  Bwd Packet Length Max              Subflow Bwd Bytes                    0.948
+  CWR Flag Count                     ECE Flag Count                       0.948
+  Total Length of Bwd Packet         Packet Length Max                    0.946
+  Total Length of Bwd Packet         Packet Length Variance               0.942
+  Total Length of Bwd Packet         Packet Length Std                    0.942
+  Flow Duration                      Flow IAT Mean                        0.941
+  Bwd Header Length                  ACK Flag Count                       0.937
+  Bwd Packet Length Mean             Packet Length Variance               0.933
+  Packet Length Variance             Bwd Segment Size Avg                 0.933
+  Bwd Packet Length Mean             Packet Length Std                    0.933
+  Packet Length Std                  Bwd Segment Size Avg                 0.933
+  Protocol                           Packet Length Min                    0.933
+  Bwd Packet Length Mean             Packet Length Max                    0.932
+  Packet Length Max                  Bwd Segment Size Avg                 0.932
+  Protocol                           Fwd Packet Length Min                0.932
+  Total Fwd Packet                   Total Bwd packets                    0.932
+  ACK Flag Count                     Total TCP Flow Time                  0.932
+  Fwd Header Length                  Bwd Header Length                    0.929
+  Packet Length Variance             Subflow Bwd Bytes                    0.926
+  Packet Length Std                  Subflow Bwd Bytes                    0.926
+  Fwd Packet Length Std              Fwd PSH Flags                        0.926
+  Total Length of Bwd Packet         Bwd Segment Size Avg                 0.926
+  Total Length of Bwd Packet         Bwd Packet Length Mean               0.926
+  Fwd Packet Length Std              PSH Flag Count                       0.926
+  Packet Length Max                  Subflow Bwd Bytes                    0.925
+  Protocol                           Bwd Packet Length Min                0.923
+  Fwd Header Length                  ACK Flag Count                       0.922
+  Total Length of Bwd Packet         Subflow Bwd Bytes                    0.920
+  Fwd IAT Total                      Bwd IAT Total                        0.919
+  Total Length of Bwd Packet         Packet Length Mean                   0.917
+  Total Length of Bwd Packet         Average Packet Size                  0.917
+  Fwd Packet Length Std              Bwd PSH Flags                        0.917
+  Fwd IAT Total                      Bwd IAT Max                          0.916
+  Fwd IAT Std                        Bwd IAT Std                          0.915
+  Fwd IAT Mean                       Bwd IAT Mean                         0.915
+  Protocol                           FWD Init Win Bytes                  -0.914
+  Fwd IAT Max                        Bwd IAT Max                          0.914
+  PSH Flag Count                     ACK Flag Count                       0.914
+  Flow IAT Std                       Fwd IAT Mean                         0.912
+  Fwd IAT Total                      Bwd IAT Mean                         0.912
+  Protocol                           Total TCP Flow Time                 -0.912
+  Fwd IAT Mean                       Bwd IAT Max                          0.911
+  Flow IAT Std                       Fwd IAT Max                          0.911
+  Fwd IAT Max                        Bwd IAT Total                        0.910
+  FWD Init Win Bytes                 Fwd Seg Size Min                     0.910
+  Fwd IAT Mean                       Bwd IAT Total                        0.910
+  Fwd IAT Max                        Bwd IAT Mean                         0.908
+  Bwd IAT Std                        PSH Flag Count                       0.908
+  Fwd PSH Flags                      ACK Flag Count                       0.908
+  Protocol                           Fwd Seg Size Min                    -0.908
+  Flow IAT Std                       Fwd IAT Total                        0.908
+  Bwd PSH Flags                      ACK Flag Count                       0.907
+  Bwd IAT Std                        Bwd PSH Flags                        0.905
+  Total Fwd Packet                   Fwd IAT Total                        0.904
+  Bwd IAT Std                        Fwd PSH Flags                        0.903
+  Total Bwd packets                  Bwd IAT Total                        0.903
+
+------------------------------------------------------------
+FLAGGED BY BOTH PEARSON AND SPEARMAN
+------------------------------------------------------------
+  48 pair(s)
+  Active Mean  ×  Active Min
+  Average Packet Size  ×  Bwd Segment Size Avg
+  Average Packet Size  ×  Subflow Bwd Bytes
+  Bwd Bytes/Bulk Avg  ×  Bwd Packet/Bulk Avg
+  Bwd PSH Flags  ×  PSH Flag Count
+  Bwd Packet Length Max  ×  Average Packet Size
+  Bwd Packet Length Max  ×  Bwd Packet Length Mean
+  Bwd Packet Length Max  ×  Bwd Segment Size Avg
+  Bwd Packet Length Max  ×  Packet Length Max
+  Bwd Packet Length Max  ×  Packet Length Mean
+  Bwd Packet Length Max  ×  Packet Length Std
+  Bwd Packet Length Max  ×  Packet Length Variance
+  Bwd Packet Length Max  ×  Subflow Bwd Bytes
+  Bwd Packet Length Mean  ×  Average Packet Size
+  Bwd Packet Length Mean  ×  Bwd Segment Size Avg
+  Bwd Packet Length Mean  ×  Packet Length Max
+  Bwd Packet Length Mean  ×  Packet Length Mean
+  Bwd Packet Length Mean  ×  Packet Length Std
+  Bwd Packet Length Mean  ×  Subflow Bwd Bytes
+  Bwd Segment Size Avg  ×  Subflow Bwd Bytes
+  Flow IAT Std  ×  Fwd IAT Mean
+  Flow Packets/s  ×  Fwd Packets/s
+  Fwd IAT Max  ×  Bwd IAT Max
+  Fwd IAT Mean  ×  Bwd IAT Mean
+  Fwd IAT Std  ×  Bwd IAT Std
+  Fwd IAT Total  ×  Bwd IAT Total
+  Fwd Packet Length Mean  ×  Fwd Segment Size Avg
+  Fwd Packet Length Mean  ×  Subflow Fwd Bytes
+  Fwd Segment Size Avg  ×  Subflow Fwd Bytes
+  Fwd URG Flags  ×  URG Flag Count
+  Idle Max  ×  Idle Min
+  Idle Mean  ×  Idle Max
+  Idle Mean  ×  Idle Min
+  Packet Length Max  ×  Average Packet Size
+  Packet Length Max  ×  Bwd Segment Size Avg
+  Packet Length Max  ×  Packet Length Mean
+  Packet Length Max  ×  Packet Length Std
+  Packet Length Max  ×  Packet Length Variance
+  Packet Length Max  ×  Subflow Bwd Bytes
+  Packet Length Mean  ×  Average Packet Size
+  Packet Length Mean  ×  Bwd Segment Size Avg
+  Packet Length Mean  ×  Packet Length Std
+  Packet Length Mean  ×  Subflow Bwd Bytes
+  Packet Length Std  ×  Average Packet Size
+  Packet Length Std  ×  Bwd Segment Size Avg
+  Packet Length Std  ×  Packet Length Variance
+  Packet Length Std  ×  Subflow Bwd Bytes
+  Total Fwd Packet  ×  Total Bwd packets

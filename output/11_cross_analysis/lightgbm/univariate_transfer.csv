@@ -1,0 +1,72 @@
+feature,imp_rank_2017,quadrant,acc_2017,acc_2018,accuracy_drop,transfers_well
+RST Flag Count,1,Q2_fragile_shortcut,0.9112,0.3495,0.5617,False
+SYN Flag Count,2,Q1_good,0.8363,0.7396,0.0966,False
+Bwd PSH Flags,3,Q2_fragile_shortcut,0.7057,0.4048,0.3009,False
+FWD Init Win Bytes,4,Q1_good,0.8492,0.3063,0.5429,False
+PSH Flag Count,5,Q1_good,0.7289,0.4939,0.235,False
+Flow Duration,6,Q4_underused_stable,0.6625,0.634,0.0286,True
+Fwd Act Data Pkts,7,Q4_underused_stable,0.6107,0.5,0.1107,False
+ACK Flag Count,8,Q4_underused_stable,0.8932,0.4574,0.4358,False
+Fwd IAT Min,9,Q2_fragile_shortcut,0.6031,0.5,0.1031,False
+Packet Length Min,10,Q1_good,0.817,0.7079,0.109,False
+Flow IAT Max,11,Q4_underused_stable,0.717,0.5661,0.151,False
+Bwd Packet Length Std,12,Q1_good,0.7593,0.7383,0.021,True
+Bwd Init Win Bytes,13,Q1_good,0.757,0.4996,0.2574,False
+Bwd IAT Max,14,Q1_good,0.6994,0.4758,0.2237,False
+Fwd Packet Length Min,15,Q1_good,0.8173,0.7073,0.11,False
+Fwd Packet Length Max,16,Q2_fragile_shortcut,0.928,0.4638,0.4642,False
+Fwd PSH Flags,17,Q2_fragile_shortcut,0.7072,0.4214,0.2858,False
+Fwd Seg Size Min,18,Q1_good,0.8161,0.7079,0.1083,False
+Fwd Packet Length Std,19,Q1_good,0.657,0.5121,0.1449,False
+Total TCP Flow Time,20,Q4_underused_stable,0.6614,0.4507,0.2107,False
+Bwd Packet Length Min,21,Q1_good,0.814,0.5,0.314,False
+Flow Packets/s,22,Q4_underused_stable,0.6952,0.5114,0.1838,False
+Packet Length Std,23,Q1_good,0.9412,0.3462,0.595,False
+Flow IAT Min,24,Q2_fragile_shortcut,0.7278,0.5,0.2278,False
+Total Length of Fwd Packet,25,Q1_good,0.8814,0.6124,0.269,False
+FIN Flag Count,26,Q2_fragile_shortcut,0.6676,0.452,0.2156,False
+Bwd Packet Length Max,27,Q4_underused_stable,0.9473,0.2847,0.6626,False
+Bwd Packet Length Mean,28,Q1_good,0.9562,0.4439,0.5123,False
+Packet Length Variance,29,Q1_good,0.9412,0.4987,0.4424,False
+Total Length of Bwd Packet,30,Q1_good,0.9575,0.5356,0.4219,False
+Total Bwd packets,31,Q3_noise,0.8017,0.5745,0.2272,False
+Bwd IAT Mean,32,Q1_good,0.6953,0.4859,0.2095,False
+Bwd IAT Total,33,Q1_good,0.6994,0.4804,0.2191,False
+Subflow Fwd Packets,34,Q3_noise,0.5234,0.4948,0.0286,False
+Down/Up Ratio,35,Q2_fragile_shortcut,0.6628,0.3996,0.2632,False
+Fwd Packet Length Mean,36,Q1_good,0.8003,0.5,0.3003,False
+Flow IAT Mean,37,Q4_underused_stable,0.6471,0.6051,0.042,True
+Total Fwd Packet,38,Q2_fragile_shortcut,0.774,0.2068,0.5672,False
+Bwd IAT Min,39,Q3_noise,0.7261,0.5,0.2261,False
+Bwd Packets/s,40,Q1_good,0.6629,0.5117,0.1511,False
+Fwd Header Length,41,Q4_underused_stable,0.856,0.7144,0.1416,False
+Packet Length Mean,42,Q1_good,0.9501,0.4683,0.4818,False
+Packet Length Max,43,Q1_good,0.9501,0.494,0.4561,False
+Idle Mean,44,Q3_noise,0.5825,0.595,-0.0125,True
+Bwd Header Length,45,Q4_underused_stable,0.8796,0.5935,0.2861,False
+Flow Bytes/s,46,Q1_good,0.7566,0.5384,0.2182,False
+Bwd IAT Std,47,Q3_noise,0.7001,0.4772,0.2229,False
+Fwd IAT Mean,48,Q2_fragile_shortcut,0.6208,0.472,0.1487,False
+Fwd Bytes/Bulk Avg,49,Q2_fragile_shortcut,0.5237,0.5015,0.0222,False
+Fwd IAT Std,50,Q3_noise,0.6172,0.3514,0.2658,False
+Bwd Bulk Rate Avg,51,Q2_fragile_shortcut,0.6222,0.498,0.1242,False
+Fwd Bulk Rate Avg,52,Q3_noise,0.5245,0.5,0.0245,False
+Fwd IAT Total,53,Q3_noise,0.6252,0.4092,0.216,False
+Fwd RST Flags,54,Q3_noise,0.7206,0.3915,0.3291,False
+Active Max,55,Q3_noise,0.566,0.5911,-0.025,True
+Flow IAT Std,56,Q4_underused_stable,0.6226,0.5811,0.0414,True
+Fwd Packet/Bulk Avg,57,Q3_noise,0.5226,0.4998,0.0228,False
+Fwd IAT Max,58,Q4_underused_stable,0.6285,0.3503,0.2781,False
+Bwd RST Flags,59,Q3_noise,0.6856,0.4526,0.233,False
+Active Min,60,Q3_noise,0.5814,0.5383,0.0431,True
+Bwd Bytes/Bulk Avg,61,Q3_noise,0.6289,0.4984,0.1304,False
+Idle Std,62,Q3_noise,0.5601,0.5366,0.0235,True
+Active Std,63,Q3_noise,0.5601,0.4997,0.0604,False
+ICMP Type,64,Q3_noise,0.5002,0.5007,-0.0005,False
+Active Mean,65,Q3_noise,0.5738,0.5749,-0.0011,True
+ICMP Code,66,Q2_fragile_shortcut,0.5002,0.5,0.0002,False
+Fwd URG Flags,67,Q3_noise,0.5001,0.5003,-0.0002,False
+ECE Flag Count,68,Q3_noise,0.5002,0.5,0.0002,False
+CWR Flag Count,69,Q3_noise,0.5002,0.5,0.0002,False
+Bwd URG Flags,70,Q3_noise,0.5,0.5,0.0,False
+Subflow Bwd Packets,71,Q3_noise,0.5,0.5,0.0,False

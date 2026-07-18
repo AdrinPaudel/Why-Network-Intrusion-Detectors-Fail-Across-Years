@@ -1,0 +1,187 @@
+======================================================================
+SCRIPT 11 — CROSS ANALYSIS (importance × shift)  [lightgbm]
+Started: 2026-07-17 15:44:45
+======================================================================
+  Engine    : lightgbm (the pipeline's only engine)
+  Output    : H:\nidswork\output\11_cross_analysis\lightgbm
+    single-dataset attack families (derived from parquets): ('PortScan',)
+
+[SUB-STEP 11.1] Join importance with distribution verdicts (started: 15:44:46)
+    permutation importance found -> H1 tested under BOTH native and permutation
+    joined 71 features | model-only 0 | data-only 12 (collinear twins / nominal — expected)
+    Added imp_rank_delta_L (L = rank_2017 - rank_2018) to cross_table
+  [✓] Sub-step 11.1 completed at 15:44:46
+
+[SUB-STEP 11.2] Headline rank statistics (started: 15:44:46)
+    imp_2017 vs calib C2ST (H1 axis1 native) spearman=+0.405  kendall=+0.267  CI95=[+0.169,+0.594]  n=71
+    imp_2017 vs sep_stability                spearman=+0.461  kendall=+0.331  CI95=[+0.237,+0.655]  n=71
+    imp_2018 vs calib C2ST                   spearman=+0.593  kendall=+0.433  CI95=[+0.370,+0.759]  n=71
+    imp_2018 vs sep_stability                spearman=+0.568  kendall=+0.395  CI95=[+0.372,+0.715]  n=71
+    imp_perm_2017 vs calib C2ST              spearman=-0.006  kendall=+0.008  CI95=[-0.264,+0.222]  n=71
+    imp_perm_2017 vs sep_stability           spearman=+0.154  kendall=+0.103  CI95=[-0.088,+0.372]  n=71
+    imp_perm_2018 vs calib C2ST              spearman=+0.197  kendall=+0.123  CI95=[-0.081,+0.440]  n=71
+    imp_perm_2018 vs sep_stability           spearman=+0.340  kendall=+0.256  CI95=[+0.101,+0.557]  n=71
+    partial (control cardinality,variance)  spearman_partial=+0.471
+    group medians K=5: top_C2ST=0.2179 bot_C2ST=0.0003 diff=+0.2176
+    group medians K=10: top_C2ST=0.2794 bot_C2ST=0.0002 diff=+0.2792
+    group medians K=15: top_C2ST=0.3611 bot_C2ST=0.0254 diff=+0.3357
+    cluster bootstrap (native vs concept_stability)   CI95=[+0.228,+0.657]  clusters=45 (vs 71 feats)
+    perm-importance noise (2017): 10/71 features have |mean|<std (5/35 in the bottom-importance half)
+    FDR (Benjamini-Hochberg, alpha=0.05): 5/8 tests survive correction (uncorrected at p<0.05: 5)
+  [✓] Sub-step 11.2 completed at 15:44:53
+
+[SUB-STEP 11.3] Drift exposure vs permutation null (started: 15:44:53)
+  [✓] Sub-step 11.3 completed at 15:44:53
+
+[SUB-STEP 11.4] Bidirectional K rank test (started: 15:44:53)
+    direction_a: 3 K values; direction_b: 3 K values
+  [✓] Sub-step 11.4 completed at 15:44:54
+
+[SUB-STEP 11.5] Per-attack-family breakdown (started: 15:44:54)
+    wrote 6 per-attack tables (separation_stability + axis1_shift_calibrated)
+  [✓] Sub-step 11.5 completed at 15:44:54
+
+[SUB-STEP 11.6] Visuals (started: 15:44:54)
+  [OK] static visuals written (baseline + new per-comparison plots)
+  [✓] Sub-step 11.6 completed at 15:44:55
+
+[SUB-STEP 11.7] Rank stability analysis (started: 15:44:55)
+  [OK] rank stability Spearman=+0.562 (moderate (some rank movement)) -> rank_stability.json
+  [✓] Sub-step 11.7 completed at 15:44:55
+
+[SUB-STEP 11.8] Benign vs attack shift breakdown (started: 15:44:55)
+  [OK] benign_driven=13 attack_driven=70 -> benign_vs_attack_shift.json
+  [✓] Sub-step 11.8 completed at 15:44:56
+
+[SUB-STEP 11.9] Per-class C2ST attribution (started: 15:44:56)
+  [OK] attributed 83 features; dominant-slice counts={'benign': 7, 'BruteForce': 25, 'Botnet': 20, 'DDoS': 14, 'DoS': 9, 'Infiltration': 6, 'attack': 1, 'WebAttack': 1} -> per_class_c2st_attribution.csv
+  [✓] Sub-step 11.9 completed at 15:44:56
+
+[SUB-STEP 11.10] MI signal preservation (started: 15:44:56)
+  [OK] survived=57 lost=9 -> mi_preservation.json
+  [✓] Sub-step 11.10 completed at 15:44:56
+
+[SUB-STEP 11.11] Prior-probability shift (started: 15:44:56)
+    cicids2017: P(benign)=0.759  P(attack)=0.241  n=1,679,912
+    cicids2018: P(benign)=0.944  P(attack)=0.056  n=50,556,009
+  [OK] |ΔP(benign)|=0.185 -> prior_shift.json
+  [✓] Sub-step 11.11 completed at 15:44:56
+
+[SUB-STEP 11.12] Ranked listing CSVs (started: 15:44:56)
+  [!] emit_ranked_listings failed (ValueError: cannot insert feature, already exists)
+  [✓] Sub-step 11.12 completed at 15:44:56
+
+[SUB-STEP 11.13] Family instability ranking (started: 15:44:56)
+    family ranking: 7 families -> family_instability_ranking.csv
+  [OK] 7 families ranked -> family_instability_ranking.csv
+  [✓] Sub-step 11.13 completed at 15:44:56
+
+[SUB-STEP 11.14] Feature × family stability matrix (started: 15:44:56)
+    feature×family matrix: (83, 6) -> feature_family_stability_matrix.csv
+  [✓] Sub-step 11.14 completed at 15:44:56
+
+[SUB-STEP 11.15] Rank change vs shift (started: 15:44:56)
+    L vs C2ST: Spearman=+0.144  Kendall=+0.088  CI95=[-0.086,+0.359]  n=71
+    L vs Wasserstein: Spearman=-0.194  Kendall=-0.125  CI95=[-0.439,+0.077]  n=61
+    L vs MMD: Spearman=+0.211  Kendall=+0.153  CI95=[-0.088,+0.475]  n=61
+    partial_spearman(L, C2ST | cardinality, variance) = +0.091
+    rank_change_vs_shift -> rank_change_vs_shift.json
+  [✓] Sub-step 11.15 completed at 15:44:57
+
+[SUB-STEP 11.16] Delta importance vs stability (H1.5) (started: 15:44:57)
+    H1.5 H1.5a delta_native vs C2ST       Spearman=+0.105  Kendall=+0.075  CI95=[-0.148,+0.346]  n=71  verdict=NEUTRAL: CI includes 0
+    H1.5 H1.5b delta_perm vs C2ST         Spearman=+0.077  Kendall=+0.051  CI95=[-0.150,+0.290]  n=71  verdict=NEUTRAL: CI includes 0
+    H1.5 H1.5c delta_native vs sep_stability Spearman=+0.176  Kendall=+0.099  CI95=[-0.100,+0.396]  n=71  verdict=NEUTRAL: CI includes 0
+    H1.5 H1.5d delta_perm vs sep_stability Spearman=+0.195  Kendall=+0.143  CI95=[-0.065,+0.443]  n=71  verdict=NEUTRAL: CI includes 0
+    H1.5 delta_importance_vs_stability -> delta_importance_vs_stability.json
+  [✓] Sub-step 11.16 completed at 15:44:59
+
+[SUB-STEP 11.17] Cross-domain ablation (started: 15:44:59)
+    step-6 baseline cicids2017->cicids2018: binary attack_f1 concept=0.5561134599479546 covariate=0.043729642302640925
+    step-6 baseline cicids2018->cicids2017: binary attack_f1 concept=9.891588193400332e-05 covariate=0.3929634002361275
+    ablation feature space: 71 features (name-aligned across domains)
+    ablation engine: LGBMClassifier(rf) — the pipeline's only engine (5 seeds per (policy, K, direction) cell)
+  Loading ablation matrices (capped, cap=500,000)
+    source rows: 1,679,912  ->  capped target ~904,330 (per-class cap 500,000)
+    loaded subsample: 904,330 rows x 71 features (0.26 GB in RAM)
+    source rows: 420,048  ->  capped target ~351,090 (per-class cap 250,000)
+    loaded subsample: 351,090 rows x 71 features (0.10 GB in RAM)
+    source rows: 50,556,009  ->  capped target ~1,761,543 (per-class cap 500,000)
+    loaded subsample: 1,761,543 rows x 71 features (0.50 GB in RAM)
+    source rows: 12,639,079  ->  capped target ~815,521 (per-class cap 250,000)
+    loaded subsample: 815,521 rows x 71 features (0.23 GB in RAM)
+      K=5   top_importance       2017->2018  macroF1 cross=0.289±0.003 (5 seeds)
+      K=5   top_importance       2018->2017  macroF1 cross=0.565±0.058 (5 seeds)
+      K=5   axis1_stable         2017->2018  macroF1 cross=0.252±0.021 (5 seeds)
+      K=5   axis1_stable         2018->2017  macroF1 cross=0.429±0.026 (5 seeds)
+      K=5   axis2_stable         2017->2018  macroF1 cross=0.282±0.002 (5 seeds)
+      K=5   axis2_stable         2018->2017  macroF1 cross=0.484±0.084 (5 seeds)
+      K=5   random               2017->2018  macroF1 cross=0.445±0.230 (5 seeds)
+      K=5   random               2018->2017  macroF1 cross=0.468±0.101 (5 seeds)
+      K=10  top_importance       2017->2018  macroF1 cross=0.383±0.182 (5 seeds)
+      K=10  top_importance       2018->2017  macroF1 cross=0.416±0.000 (5 seeds)
+      K=10  axis1_stable         2017->2018  macroF1 cross=0.235±0.000 (5 seeds)
+      K=10  axis1_stable         2018->2017  macroF1 cross=0.416±0.000 (5 seeds)
+      K=10  axis2_stable         2017->2018  macroF1 cross=0.293±0.020 (5 seeds)
+      K=10  axis2_stable         2018->2017  macroF1 cross=0.604±0.012 (5 seeds)
+      K=10  random               2017->2018  macroF1 cross=0.243±0.013 (5 seeds)
+      K=10  random               2018->2017  macroF1 cross=0.426±0.021 (5 seeds)
+      K=20  top_importance       2017->2018  macroF1 cross=0.859±0.009 (5 seeds)
+      K=20  top_importance       2018->2017  macroF1 cross=0.420±0.005 (5 seeds)
+      K=20  axis1_stable         2017->2018  macroF1 cross=0.245±0.009 (5 seeds)
+      K=20  axis1_stable         2018->2017  macroF1 cross=0.420±0.011 (5 seeds)
+      K=20  axis2_stable         2017->2018  macroF1 cross=0.593±0.002 (5 seeds)
+      K=20  axis2_stable         2018->2017  macroF1 cross=0.463±0.037 (5 seeds)
+      K=20  random               2017->2018  macroF1 cross=0.325±0.131 (5 seeds)
+      K=20  random               2018->2017  macroF1 cross=0.416±0.000 (5 seeds)
+      K=30  top_importance       2017->2018  macroF1 cross=0.878±0.013 (5 seeds)
+      K=30  top_importance       2018->2017  macroF1 cross=0.554±0.025 (5 seeds)
+      K=30  axis1_stable         2017->2018  macroF1 cross=0.234±0.000 (5 seeds)
+      K=30  axis1_stable         2018->2017  macroF1 cross=0.415±0.000 (5 seeds)
+      K=30  axis2_stable         2017->2018  macroF1 cross=0.594±0.006 (5 seeds)
+      K=30  axis2_stable         2018->2017  macroF1 cross=0.463±0.046 (5 seeds)
+      K=30  random               2017->2018  macroF1 cross=0.233±0.041 (5 seeds)
+      K=30  random               2018->2017  macroF1 cross=0.431±0.029 (5 seeds)
+      K=50  top_importance       2017->2018  macroF1 cross=0.895±0.004 (5 seeds)
+      K=50  top_importance       2018->2017  macroF1 cross=0.551±0.010 (5 seeds)
+      K=50  axis1_stable         2017->2018  macroF1 cross=0.324±0.134 (5 seeds)
+      K=50  axis1_stable         2018->2017  macroF1 cross=0.505±0.050 (5 seeds)
+      K=50  axis2_stable         2017->2018  macroF1 cross=0.514±0.249 (5 seeds)
+      K=50  axis2_stable         2018->2017  macroF1 cross=0.547±0.007 (5 seeds)
+      K=50  random               2017->2018  macroF1 cross=0.875±0.018 (5 seeds)
+      K=50  random               2018->2017  macroF1 cross=0.444±0.055 (5 seeds)
+      K=71  all_features         2017->2018  macroF1 cross=0.886±0.012 (5 seeds)
+      K=71  all_features         2018->2017  macroF1 cross=0.556±0.014 (5 seeds)
+  [OK] ablation: 210 runs (5 seeds/cell) -> ablation_results.csv  |  peak_k -> ablation_peak_k.csv
+  [✓] Sub-step 11.17 completed at 16:22:06
+
+[SUB-STEP 11.18] Prior/threshold recalibration summary (started: 16:22:06)
+  [OK] recalibration: 16 (direction x framing x strategy) rows -> recalibration_summary.json/.csv
+  [✓] Sub-step 11.18 completed at 16:22:06
+
+[SUB-STEP 11.19] Univariate transfer test (started: 16:22:06)
+    Loading matrices for univariate transfer (20000 per-class cap)
+    source rows: 1,679,912  ->  capped target ~106,283 (per-class cap 20,000)
+    loaded subsample: 106,283 rows x 71 features (0.03 GB in RAM)
+    source rows: 420,048  ->  capped target ~201,090 (per-class cap 100,000)
+    loaded subsample: 201,090 rows x 71 features (0.06 GB in RAM)
+    source rows: 50,556,009  ->  capped target ~120,083 (per-class cap 20,000)
+    loaded subsample: 120,083 rows x 71 features (0.03 GB in RAM)
+    source rows: 12,639,079  ->  capped target ~365,521 (per-class cap 100,000)
+    loaded subsample: 365,521 rows x 71 features (0.10 GB in RAM)
+    Univariate transfer: 71 features evaluated
+  [OK] 9/71 features transfer well -> univariate_transfer.csv
+  [✓] Sub-step 11.19 completed at 16:22:46
+
+[SUB-STEP 11.20] Cache analysis outputs for doc generation (started: 16:22:46)
+  [OK] analysis cache -> _doc_cache.pkl
+  [✓] Sub-step 11.20 completed at 16:22:46
+
+[SUB-STEP 11.21] Generate results.md (scripts/11_result_gen.py) (started: 16:22:46)
+  [OK] results.md generated
+  [✓] Sub-step 11.21 completed at 16:22:48
+  cross_table: 71 features | outputs in H:\nidswork\output\11_cross_analysis\lightgbm
+
+======================================================================
+Completed: 2026-07-17 16:22:48
+======================================================================

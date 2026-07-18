@@ -1,0 +1,346 @@
+================================================================================
+DATA EXPLORATION REPORT — CICIDS2018
+Generated: 2026-07-17 06:24:39
+================================================================================
+
+----------------------------------------------------------------------
+SECTION 1 — COLUMN INVENTORY
+----------------------------------------------------------------------
+Total columns: 91
+
+Columns (in order):
+    1. id
+    2. Flow ID
+    3. Src IP
+    4. Src Port
+    5. Dst IP
+    6. Dst Port
+    7. Protocol
+    8. Timestamp
+    9. Flow Duration
+   10. Total Fwd Packet
+   11. Total Bwd packets
+   12. Total Length of Fwd Packet
+   13. Total Length of Bwd Packet
+   14. Fwd Packet Length Max
+   15. Fwd Packet Length Min
+   16. Fwd Packet Length Mean
+   17. Fwd Packet Length Std
+   18. Bwd Packet Length Max
+   19. Bwd Packet Length Min
+   20. Bwd Packet Length Mean
+   21. Bwd Packet Length Std
+   22. Flow Bytes/s
+   23. Flow Packets/s
+   24. Flow IAT Mean
+   25. Flow IAT Std
+   26. Flow IAT Max
+   27. Flow IAT Min
+   28. Fwd IAT Total
+   29. Fwd IAT Mean
+   30. Fwd IAT Std
+   31. Fwd IAT Max
+   32. Fwd IAT Min
+   33. Bwd IAT Total
+   34. Bwd IAT Mean
+   35. Bwd IAT Std
+   36. Bwd IAT Max
+   37. Bwd IAT Min
+   38. Fwd PSH Flags
+   39. Bwd PSH Flags
+   40. Fwd URG Flags
+   41. Bwd URG Flags
+   42. Fwd RST Flags
+   43. Bwd RST Flags
+   44. Fwd Header Length
+   45. Bwd Header Length
+   46. Fwd Packets/s
+   47. Bwd Packets/s
+   48. Packet Length Min
+   49. Packet Length Max
+   50. Packet Length Mean
+   51. Packet Length Std
+   52. Packet Length Variance
+   53. FIN Flag Count
+   54. SYN Flag Count
+   55. RST Flag Count
+   56. PSH Flag Count
+   57. ACK Flag Count
+   58. URG Flag Count
+   59. CWR Flag Count
+   60. ECE Flag Count
+   61. Down/Up Ratio
+   62. Average Packet Size
+   63. Fwd Segment Size Avg
+   64. Bwd Segment Size Avg
+   65. Fwd Bytes/Bulk Avg
+   66. Fwd Packet/Bulk Avg
+   67. Fwd Bulk Rate Avg
+   68. Bwd Bytes/Bulk Avg
+   69. Bwd Packet/Bulk Avg
+   70. Bwd Bulk Rate Avg
+   71. Subflow Fwd Packets
+   72. Subflow Fwd Bytes
+   73. Subflow Bwd Packets
+   74. Subflow Bwd Bytes
+   75. FWD Init Win Bytes
+   76. Bwd Init Win Bytes
+   77. Fwd Act Data Pkts
+   78. Fwd Seg Size Min
+   79. Active Mean
+   80. Active Std
+   81. Active Max
+   82. Active Min
+   83. Idle Mean
+   84. Idle Std
+   85. Idle Max
+   86. Idle Min
+   87. ICMP Code
+   88. ICMP Type
+   89. Total TCP Flow Time
+   90. Label
+   91. Attempted Category
+
+----------------------------------------------------------------------
+SECTION 2 — PER-FILE STATISTICS
+----------------------------------------------------------------------
+
+File: Thursday-15-02-2018.csv
+  Total rows: 5,410,102
+
+  Data quality:
+    Clean: 5,410,088
+    NaN (any column): 0
+    Inf (any column): 14
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 5,372,471
+    DoS GoldenEye: 22,560
+    DoS Slowloris: 8,490
+    DoS GoldenEye - Attempted: 4,301
+    DoS Slowloris - Attempted: 2,280
+
+  Labels (after consolidation):
+    Benign: 5,379,052
+    DoS GoldenEye: 22,560
+    DoS Slowloris: 8,490
+
+
+File: Friday-23-02-2018.csv
+  Total rows: 5,976,481
+
+  Data quality:
+    Clean: 5,976,477
+    NaN (any column): 0
+    Inf (any column): 4
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 5,976,251
+    Web Attack - XSS: 73
+    Web Attack - Brute Force: 62
+    Web Attack - Brute Force - Attempted: 61
+    Web Attack - SQL: 23
+    Web Attack - SQL - Attempted: 10
+    Web Attack - XSS - Attempted: 1
+
+  Labels (after consolidation):
+    Benign: 5,976,323
+    Web Attack - XSS: 73
+    Web Attack - Brute Force: 62
+    Web Attack - SQL: 23
+
+
+File: Wednesday-14-02-2018.csv
+  Total rows: 5,898,350
+
+  Data quality:
+    Clean: 5,898,349
+    NaN (any column): 0
+    Inf (any column): 1
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 5,610,799
+    FTP-BruteForce - Attempted: 193,354
+    SSH-BruteForce: 94,197
+
+  Labels (after consolidation):
+    Benign: 5,804,153
+    SSH-BruteForce: 94,197
+
+
+File: Thursday-01-03-2018.csv
+  Total rows: 6,551,401
+
+  Data quality:
+    Clean: 6,551,394
+    NaN (any column): 0
+    Inf (any column): 7
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 6,511,554
+    Infiltration - NMAP Portscan: 39,634
+    Infiltration - Communication Victim Attacker: 161
+    Infiltration - Dropbox Download: 39
+    Infiltration - Dropbox Download - Attempted: 13
+
+  Labels (after consolidation):
+    Benign: 6,511,567
+    Infiltration - NMAP Portscan: 39,634
+    Infiltration - Communication Victim Attacker: 161
+    Infiltration - Dropbox Download: 39
+
+
+File: Thursday-22-02-2018.csv
+  Total rows: 6,071,153
+
+  Data quality:
+    Clean: 6,071,151
+    NaN (any column): 0
+    Inf (any column): 2
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 6,070,945
+    Web Attack - Brute Force - Attempted: 76
+    Web Attack - Brute Force: 69
+    Web Attack - XSS: 40
+    Web Attack - SQL: 16
+    Web Attack - SQL - Attempted: 4
+    Web Attack - XSS - Attempted: 3
+
+  Labels (after consolidation):
+    Benign: 6,071,028
+    Web Attack - Brute Force: 69
+    Web Attack - XSS: 40
+    Web Attack - SQL: 16
+
+
+File: Wednesday-28-02-2018.csv
+  Total rows: 6,568,726
+
+  Data quality:
+    Clean: 6,568,722
+    NaN (any column): 0
+    Inf (any column): 4
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 6,518,882
+    Infiltration - NMAP Portscan: 49,740
+    Infiltration - Dropbox Download: 46
+    Infiltration - Communication Victim Attacker: 43
+    Infiltration - Dropbox Download - Attempted: 15
+
+  Labels (after consolidation):
+    Benign: 6,518,897
+    Infiltration - NMAP Portscan: 49,740
+    Infiltration - Dropbox Download: 46
+    Infiltration - Communication Victim Attacker: 43
+
+
+File: Tuesday-20-02-2018.csv
+  Total rows: 6,054,702
+
+  Data quality:
+    Clean: 6,054,694
+    NaN (any column): 0
+    Inf (any column): 8
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 5,764,497
+    DDoS-LOIC-HTTP: 289,328
+    DDoS-LOIC-UDP: 797
+    DDoS-LOIC-UDP - Attempted: 80
+
+  Labels (after consolidation):
+    Benign: 5,764,577
+    DDoS-LOIC-HTTP: 289,328
+    DDoS-LOIC-UDP: 797
+
+
+File: Friday-02-03-2018.csv
+  Total rows: 6,311,371
+
+  Data quality:
+    Clean: 6,311,368
+    NaN (any column): 0
+    Inf (any column): 3
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 6,168,188
+    Botnet Ares: 142,921
+    Botnet Ares - Attempted: 262
+
+  Labels (after consolidation):
+    Benign: 6,168,450
+    Botnet Ares: 142,921
+
+
+File: Wednesday-21-02-2018.csv
+  Total rows: 6,962,593
+
+  Data quality:
+    Clean: 6,962,587
+    NaN (any column): 0
+    Inf (any column): 6
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 5,878,399
+    DDoS-HOIC: 1,082,293
+    DDoS-LOIC-UDP: 1,730
+    DDoS-LOIC-UDP - Attempted: 171
+
+  Labels (after consolidation):
+    Benign: 5,878,570
+    DDoS-HOIC: 1,082,293
+    DDoS-LOIC-UDP: 1,730
+
+
+File: Friday-16-02-2018.csv
+  Total rows: 7,390,266
+
+  Data quality:
+    Clean: 7,390,258
+    NaN (any column): 0
+    Inf (any column): 8
+    Both NaN + Inf: 0
+
+  Labels (before consolidation):
+    Benign: 5,481,500
+    DoS Hulk: 1,803,160
+    FTP-BruteForce - Attempted: 105,520
+    DoS Hulk - Attempted: 86
+
+  Labels (after consolidation):
+    Benign: 5,587,106
+    DoS Hulk: 1,803,160
+
+
+----------------------------------------------------------------------
+SECTION 3 — DATASET TOTALS
+----------------------------------------------------------------------
+Total rows across all files: 63,195,145
+
+Total rows per label (after consolidation):
+  Benign: 59,659,723  (94.41%)
+  DoS Hulk: 1,803,160  (2.85%)
+  DDoS-HOIC: 1,082,293  (1.71%)
+  DDoS-LOIC-HTTP: 289,328  (0.46%)
+  Botnet Ares: 142,921  (0.23%)
+  SSH-BruteForce: 94,197  (0.15%)
+  Infiltration - NMAP Portscan: 89,374  (0.14%)
+  DoS GoldenEye: 22,560  (0.04%)
+  DoS Slowloris: 8,490  (0.01%)
+  DDoS-LOIC-UDP: 2,527  (0.00%)
+  Infiltration - Communication Victim Attacker: 204  (0.00%)
+  Web Attack - Brute Force: 131  (0.00%)
+  Web Attack - XSS: 113  (0.00%)
+  Infiltration - Dropbox Download: 85  (0.00%)
+  Web Attack - SQL: 39  (0.00%)

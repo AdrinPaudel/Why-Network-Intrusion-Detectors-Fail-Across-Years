@@ -1,0 +1,61 @@
+{
+  "permutation_delta_available": true,
+  "h1_5a_delta_native_vs_axis1": {
+    "spearman": 0.10469834675058064,
+    "kendall": 0.07489431605651672,
+    "bootstrap_ci95": {
+      "lo": -0.14778481070790736,
+      "med": 0.10499366366849097,
+      "hi": 0.34560177409163567,
+      "p_boot": 0.38
+    },
+    "n_pairs": 71,
+    "fdr_significant": false,
+    "q_value_bh": 0.5066666666666667
+  },
+  "h1_5b_delta_perm_vs_axis1": {
+    "spearman": 0.07732304874215397,
+    "kendall": 0.05089898378259816,
+    "bootstrap_ci95": {
+      "lo": -0.15024016732084114,
+      "med": 0.0784356915109771,
+      "hi": 0.28986093902681,
+      "p_boot": 0.508
+    },
+    "n_pairs": 71,
+    "fdr_significant": false,
+    "q_value_bh": 0.508
+  },
+  "h1_5c_delta_native_vs_axis2": {
+    "spearman": 0.17580630287592078,
+    "kendall": 0.09901388809884495,
+    "bootstrap_ci95": {
+      "lo": -0.09972297255505391,
+      "med": 0.1767821871487174,
+      "hi": 0.3961769667713396,
+      "p_boot": 0.177
+    },
+    "n_pairs": 71,
+    "fdr_significant": false,
+    "q_value_bh": 0.354
+  },
+  "h1_5d_delta_perm_vs_axis2": {
+    "spearman": 0.1951980493835985,
+    "kendall": 0.14254052848833237,
+    "bootstrap_ci95": {
+      "lo": -0.06497979375804679,
+      "med": 0.19778527317937034,
+      "hi": 0.443170068241626,
+      "p_boot": 0.142
+    },
+    "n_pairs": 71,
+    "fdr_significant": false,
+    "q_value_bh": 0.354
+  },
+  "fdr_correction_summary": {
+    "alpha": 0.05,
+    "family": "the 4 H1.5 delta tests",
+    "n_tests": 4,
+    "n_significant_bh_corrected": 0
+  }
+}

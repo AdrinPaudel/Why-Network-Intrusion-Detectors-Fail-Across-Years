@@ -1,0 +1,103 @@
+======================================================================
+3_CORRELATION_COMPARISON STEPS LOG
+Started: 2026-07-17 06:51:53
+======================================================================
+
+[SUB-STEP 3.1] Load correlation matrices from script 2 output (started: 06:51:53)
+  Loading pearson_matrix.json ...
+    83 features, matrix (83, 83)
+  Loading spearman_matrix.json ...
+    83 features, matrix (83, 83)
+  Loading pearson_matrix.json ...
+    83 features, matrix (83, 83)
+  Loading spearman_matrix.json ...
+    83 features, matrix (83, 83)
+  [OK] All 4 matrices loaded
+
+[SUB-STEP 3.2] Align to common feature set (started: 06:51:54)
+  Common feature set: 83 features
+  [OK] Matrices reindexed to 83 common features
+
+[SUB-STEP 3.3] Compute aggregated correlation matrices (average + intersection/min) (started: 06:51:54)
+  [OK] Average + min matrices computed
+
+[SUB-STEP 3.4] Generate MIN Pearson matrix and heatmap (started: 06:51:54)
+  Rendering Pearson MIN heatmap ...
+  [OK] Saved pearson_min_heatmap.png
+  [OK] Saved min_pearson_matrix.json
+  [OK] Saved min_pearson_matrix.json and pearson_min_heatmap.png
+
+[SUB-STEP 3.5] Generate MIN Spearman matrix and heatmap (started: 06:51:55)
+  Rendering Spearman MIN heatmap ...
+  [OK] Saved spearman_min_heatmap.png
+  [OK] Saved min_spearman_matrix.json
+  [OK] Saved min_spearman_matrix.json and spearman_min_heatmap.png
+
+[SUB-STEP 3.6] Build consensus correlation graph (threshold=0.95) (started: 06:51:57)
+  Consensus graph edges (intersection rule) at threshold 0.95: 13
+  Redundancy groups (size > 1): 7
+    Group: Fwd Packet Length Mean | Fwd Segment Size Avg | Subflow Fwd Bytes
+    Group: Bwd Packet Length Mean | Bwd Segment Size Avg | Subflow Bwd Bytes
+    Group: Flow Packets/s | Fwd Packets/s
+    Group: Fwd URG Flags | URG Flag Count
+    Group: Packet Length Mean | Average Packet Size
+    Group: Bwd Bytes/Bulk Avg | Bwd Packet/Bulk Avg
+    Group: Idle Mean | Idle Max | Idle Min
+  [OK] 7 redundancy groups identified
+
+[SUB-STEP 3.7] Classify pairs (stable / shifted / weak) (started: 06:51:57)
+    stable: 10 pair(s)
+  [OK] Pair classification complete
+
+[SUB-STEP 3.8] Derive final drop list (started: 06:51:57)
+    Drop    : 10  features
+    Monitor : 0 features
+  [OK] Drop list finalized
+
+[SUB-STEP 3.9] Detect correlation drift pairs (shifted between years) (started: 06:51:57)
+    Drift pairs found: 38
+  [OK] Drift detection complete
+
+[SUB-STEP 3.10] Sweep consensus threshold (0.9, 0.925, 0.95, 0.975, 0.99) (sensitivity check, does not change the official 0.95 drop list) (started: 06:51:57)
+  Consensus graph edges (intersection rule) at threshold 0.9: 15
+  Redundancy groups (size > 1): 9
+    threshold=0.9: 12 dropped (71 remain), 2 differ from the official 0.95 drop set
+  Consensus graph edges (intersection rule) at threshold 0.925: 14
+  Redundancy groups (size > 1): 8
+    threshold=0.925: 11 dropped (72 remain), 1 differ from the official 0.95 drop set
+  Consensus graph edges (intersection rule) at threshold 0.95: 13
+  Redundancy groups (size > 1): 7
+    threshold=0.95: 10 dropped (73 remain), 0 differ from the official 0.95 drop set
+  Consensus graph edges (intersection rule) at threshold 0.975: 9
+  Redundancy groups (size > 1): 6
+    threshold=0.975: 8 dropped (75 remain), 2 differ from the official 0.95 drop set
+  Consensus graph edges (intersection rule) at threshold 0.99: 4
+  Redundancy groups (size > 1): 4
+    threshold=0.99: 4 dropped (79 remain), 6 differ from the official 0.95 drop set
+  [OK] Saved threshold_sensitivity.json
+
+[SUB-STEP 3.11] Generate visualisations (diff heatmap + redundancy groups) (started: 06:51:57)
+  Rendering diff heatmap ...
+  [OK] Saved diff_heatmap.png
+  Rendering redundancy groups chart ...
+  [OK] Saved redundancy_groups.png
+  [OK] Visualisations complete
+
+[SUB-STEP 3.12] Save JSON outputs (drop decisions + comparison matrices) (started: 06:52:00)
+  [OK] Saved drop_decisions.json  (10 drop, 0 monitor)
+  [OK] Saved comparison_matrix.json
+  [OK] JSON outputs saved
+
+[SUB-STEP 3.13] Write human-readable report (started: 06:52:00)
+  [OK] Saved 3_correlation_comparison_report.txt
+
+============================================================
+COMPLETE
+============================================================
+  Drop decisions : H:\nidswork\output\3_correlation_comparison\drop_decisions.json
+  Report         : H:\nidswork\results\3_correlation_comparison\3_correlation_comparison_report.txt
+  Diff heatmap   : H:\nidswork\results\3_correlation_comparison\diff_heatmap.png
+
+======================================================================
+Completed: 2026-07-17 06:52:00
+======================================================================

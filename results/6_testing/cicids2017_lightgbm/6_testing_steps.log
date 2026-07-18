@@ -1,0 +1,35 @@
+======================================================================
+6_TESTING STEPS LOG  [cicids2017 / lightgbm]
+Started: 2026-07-17 15:15:11
+======================================================================
+  Dataset   : cicids2017
+  Engine    : lightgbm (the pipeline's only engine)
+  Tasks     : ('binary', 'multiclass')
+
+============================================================
+DATASET: cicids2017  [engine: lightgbm]
+============================================================
+
+[SUB-STEP 6.1] Check train/test row overlap (full + overlap-free metrics) (started: 15:15:11)
+  train/test overlap: 86,767/420,048 (20.66%) test rows are exact feature-value duplicates of a train row -> train_test_overlap.json
+  [✓] Sub-step 6.1 completed at 15:15:16
+    loaded rf_binary.joblib  (from cicids2017_lightgbm)
+    loaded rf_multiclass.joblib  (from cicids2017_lightgbm)
+
+[SUB-STEP 6.2] [cicids2017] stream test.parquet and predict (2 model(s)) (started: 15:15:16)
+      predicted 420,048 rows (69,682 rows/s)
+  [OK] scored 420,048 test rows in 6.0s
+  [OK] Saved 6_testing_roc_binary.png
+  [OK] Saved 6_testing_pr_binary.png
+  [OK] Saved 6_testing_confusion_binary.png
+  [OK] Saved metrics_binary.json  (acc=0.9999  macro_f1=0.9998  mcc=0.9997)  overlap_free: acc=0.9999 macro_f1=0.9997
+  [OK] Saved 6_testing_confusion_multiclass.png
+  [OK] Saved 6_testing_per_class_f1_multiclass.png
+  [OK] Saved metrics_multiclass.json  (acc=0.9949  macro_f1=0.9731  mcc=0.9875)  overlap_free: acc=0.9998 macro_f1=0.9804
+
+[SUB-STEP 6.3] Write evaluation report (started: 15:15:23)
+  [OK] Saved 6_testing_report.txt
+
+======================================================================
+Completed: 2026-07-17 15:15:23
+======================================================================

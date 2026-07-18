@@ -1,0 +1,31 @@
+
+======================================================================
+PROFILE REPORT  --  cicids2017
+======================================================================
+Generated : 2026-07-17 15:29:00
+Features  : 83 profiled
+
+======================================================================
+TYPE DISTRIBUTION
+======================================================================
+  binary                              : 3
+  continuous                          : 65
+  discrete-count                      : 6
+  low-cardinality-discrete            : 7
+  nominal                             : 2
+
+======================================================================
+CHARACTERISTICS
+======================================================================
+  zero-inflated     : 66
+  multimodal        : 71
+  highly skewed     : 81   (|skewness| > 1)
+  heavy-tailed      : 81   (excess kurtosis > 1)
+  >1% outliers      : 68
+
+======================================================================
+OUTPUT
+======================================================================
+  profiles.json : H:\nidswork\output\7_profile\cicids2017\profiles.json
+  report.txt    : H:\nidswork\results\7_profile\cicids2017\7_profile_report.txt
+  steps.log     : H:\nidswork\results\7_profile\cicids2017\7_profile_steps.log

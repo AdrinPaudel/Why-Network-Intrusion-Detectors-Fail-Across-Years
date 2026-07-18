@@ -1,0 +1,44 @@
+
+======================================================================
+TRAINING REPORT  --  LightGBM RF-mode on CIC-IDS 2017 / 2018
+======================================================================
+Generated : 2026-07-17 15:15:07
+
+======================================================================
+MODEL CONFIGURATION (fixed, no hyperparameter search)
+======================================================================
+  engine                      : lightgbm
+  model                       : LGBMClassifier(rf)
+  native_importance_primary   : lgbm_gain
+  native_importance_secondary : lgbm_split_count
+  n_estimators                : 200
+  max_depth                   : None
+  num_leaves                  : 255
+  min_child_samples           : 20
+  bagging_fraction            : 0.632
+  feature_fraction            : 0.5
+  class_weight                : balanced
+  gpu                         : True
+  seed                        : 42
+  imbalance                   : class_weight rebalances priors; full data, no capping.
+  importance                  : NATIVE gain (primary, feature_importance_<task>.json)
+                                + NATIVE split-count (secondary, feature_importance_split_<task>.json)
+                                + PERMUTATION (held-out, overlap-free,
+                                  feature_importance_perm_<task>.json)
+                                — step 11 tests H1 under native AND permutation.
+
+======================================================================
+DATASET: cicids2018
+======================================================================
+  training rows       : 50,556,009
+  per-class counts    : {'Benign': 47727708, 'Botnet': 114400, 'BruteForce': 75397, 'DDoS': 1099348, 'DoS': 1467410, 'Infiltration': 71663, 'WebAttack': 83}
+  perm holdout        : 113,726 overlap-free rows (23,274 exact train-duplicates removed, 16.99% of the sampled holdout)
+
+  [binary]  rows=50,556,009  classes=2  fit=257.8s  perm_imp=yes  model=2.2MB
+  [multiclass]  rows=50,556,009  classes=7  fit=1546.0s  perm_imp=yes  model=11.4MB
+
+======================================================================
+NEXT STEP
+======================================================================
+  Test (evaluate) on the held-out test split:
+    python main.py --steps 6 --datasets cicids2018

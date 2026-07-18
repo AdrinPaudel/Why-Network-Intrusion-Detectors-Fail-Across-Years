@@ -1,0 +1,19 @@
+
+======================================================================
+VISUALIZE REPORT  —  cicids2017
+======================================================================
+Generated : 2026-07-17 15:33:34
+Plots     : 332 PNGs across 4 variant folders
+
+======================================================================
+OUTPUT LOCATIONS
+======================================================================
+  binary               : H:\nidswork\results\8_visualize\cicids2017\binary  (83 plots)
+  binary_extended      : H:\nidswork\results\8_visualize\cicids2017\binary_extended  (83 plots)
+  multiclass           : H:\nidswork\results\8_visualize\cicids2017\multiclass  (83 plots)
+  multiclass_extended  : H:\nidswork\results\8_visualize\cicids2017\multiclass_extended  (83 plots)
+  manifest             : H:\nidswork\results\8_visualize\cicids2017\filename_manifest.json
+
+  Standard folders clip outliers to the profile view range (readable body);
+  *_extended folders span the full min..max so the clipped outliers are shown.
+  The manifest maps each safe filename back to its real feature name.

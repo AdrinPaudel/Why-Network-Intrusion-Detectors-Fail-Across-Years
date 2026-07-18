@@ -1,0 +1,28 @@
+{
+  "binary": {
+    "Benign": 0,
+    "Attack": 1,
+    "rule": "Benign=0, every other label=1"
+  },
+  "multiclass": {
+    "Benign": 0,
+    "Botnet": 1,
+    "BruteForce": 2,
+    "DDoS": 3,
+    "DoS": 4,
+    "Infiltration": 5,
+    "PortScan": 6,
+    "WebAttack": 7
+  },
+  "multiclass_inverse": {
+    "0": "Benign",
+    "1": "Botnet",
+    "2": "BruteForce",
+    "3": "DDoS",
+    "4": "DoS",
+    "5": "Infiltration",
+    "6": "PortScan",
+    "7": "WebAttack"
+  },
+  "note": "Canonical map is the union of classes across BOTH years so encodings match between datasets. Absent from this dataset (0 rows): Botnet, BruteForce, DDoS, DoS, Infiltration, PortScan, WebAttack."
+}

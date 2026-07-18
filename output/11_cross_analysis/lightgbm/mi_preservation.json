@@ -1,0 +1,31 @@
+{
+  "n_features": 71,
+  "mean_mi_2017": 0.35246873687762525,
+  "mean_mi_2018": 0.381923448000169,
+  "mean_mi_drop": -0.029454711122543675,
+  "signal_survived_count": 57,
+  "signal_lost_count": 9,
+  "per_quadrant": {
+    "Q1_good": {
+      "mean_mi_2017": 0.5690139942688232,
+      "mean_mi_2018": 0.5840625452030482,
+      "mean_mi_drop": -0.01504855093422502
+    },
+    "Q2_fragile_shortcut": {
+      "mean_mi_2017": 0.23069205335012438,
+      "mean_mi_2018": 0.2985305402904227,
+      "mean_mi_drop": -0.06783848694029831
+    },
+    "Q3_noise": {
+      "mean_mi_2017": 0.0950306263562931,
+      "mean_mi_2018": 0.13520116123975984,
+      "mean_mi_drop": -0.040170534883466766
+    },
+    "Q4_underused_stable": {
+      "mean_mi_2017": 0.5627714458651752,
+      "mean_mi_2018": 0.5577168780043261,
+      "mean_mi_drop": 0.00505456786084899
+    }
+  },
+  "interpretation": "57 of 66 informative features retain >50% of their MI signal 2017->2018; 9 features lost >50% of their discriminative signal due to distribution shift."
+}

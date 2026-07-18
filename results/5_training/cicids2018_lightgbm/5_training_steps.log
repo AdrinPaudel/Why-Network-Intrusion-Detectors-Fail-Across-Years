@@ -1,0 +1,69 @@
+======================================================================
+5_TRAINING STEPS LOG  [cicids2018 / lightgbm]
+Started: 2026-07-17 09:22:52
+======================================================================
+  Engine    : lightgbm (RF mode) — the pipeline's only engine
+  Device    : gpu (CPU fallback on failure)
+  Tasks     : binary + multiclass (both)
+  Perm imp  : on (held-out cap 25,000/class, 30 repeats, exact train-duplicates removed)
+
+============================================================
+DATASET: cicids2018  [engine: lightgbm rf-mode]
+============================================================
+
+[SUB-STEP 5.1] Load training data (full, uncapped) (started: 09:22:52)
+    source rows: 50,556,009  ->  NO CAP (keeping all rows; ~14.4 GB float32 in RAM). Ensure enough memory / use LightGBM engine.
+    loaded subsample: 50,556,009 rows x 71 features (14.36 GB in RAM)
+  [OK] Loaded 50,556,009 rows
+  [✓] Sub-step 5.1 completed at 09:24:41
+
+[SUB-STEP 5.2] Load held-out sample for permutation importance (cap 25,000/class) (started: 09:24:41)
+    source rows: 12,639,079  ->  capped target ~137,000 (per-class cap 25,000)
+    loaded subsample: 137,000 rows x 71 features (0.04 GB in RAM)
+    hashing train rows to remove exact train-duplicates from the held-out sample ...
+  [OK] overlap filter: removed 23,274/137,000 rows (16.99%) that exactly duplicate a train row (128.2s); 113,726 overlap-free rows remain
+  [✓] Sub-step 5.2 completed at 09:27:02
+
+[SUB-STEP 5.3] Train binary classifier [LGBMClassifier(rf)] (started: 09:27:02)
+    X=50,556,009x71  classes=2  n_estimators=200  max_depth=None  device=gpu
+  [OK] fit in 257.8s
+  [✓] Sub-step 5.3 completed at 09:31:20
+  [OK] Saved rf_binary.joblib (2.2 MB)
+  [OK] Saved feature_importance_binary.json (lgbm_gain)
+  [OK] Saved feature_importance_binary.png
+  [OK] Saved feature_importance_split_binary.json (lgbm_split_count)
+  [OK] Saved feature_importance_split_binary.png
+    permutation importance on 113,726 overlap-free held-out rows (30 repeats, scoring=balanced_accuracy)...
+  [OK] Saved feature_importance_perm_binary.json (permutation)
+  [OK] Saved feature_importance_perm_binary.png
+
+[SUB-STEP 5.4] Train multiclass classifier [LGBMClassifier(rf)] (started: 09:38:54)
+    X=50,556,009x71  classes=7  n_estimators=200  max_depth=None  device=gpu
+  [OK] fit in 1546.0s
+  [✓] Sub-step 5.4 completed at 10:04:40
+  [OK] Saved rf_multiclass.joblib (11.4 MB)
+  [OK] Saved feature_importance_multiclass.json (lgbm_gain)
+  [OK] Saved feature_importance_multiclass.png
+  [OK] Saved feature_importance_split_multiclass.json (lgbm_split_count)
+  [OK] Saved feature_importance_split_multiclass.png
+    permutation importance on 113,726 overlap-free held-out rows (30 repeats, scoring=balanced_accuracy)...
+  [OK] Saved feature_importance_perm_multiclass.json (permutation)
+  [OK] Saved feature_importance_perm_multiclass.png
+
+[SUB-STEP 5.5] Save training metadata (started: 15:15:07)
+  [OK] Saved training_meta.json
+  [✓] Sub-step 5.5 completed at 15:15:07
+
+[SUB-STEP 5.6] Write per-dataset training report (started: 15:15:07)
+  [OK] Saved 5_training_report.txt
+  [✓] Sub-step 5.6 completed at 15:15:07
+
+============================================================
+COMPLETE
+============================================================
+  [binary]: fit=257.8s  -> H:\nidswork\output\5_training\cicids2018_lightgbm\rf_binary.joblib
+  [multiclass]: fit=1546.0s  -> H:\nidswork\output\5_training\cicids2018_lightgbm\rf_multiclass.joblib
+
+======================================================================
+Completed: 2026-07-17 15:15:07
+======================================================================

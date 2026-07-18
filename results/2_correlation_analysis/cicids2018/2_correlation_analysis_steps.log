@@ -1,0 +1,36 @@
+======================================================================
+SCRIPT 2 STEPS LOG
+Started: 2026-07-17 06:45:23
+======================================================================
+
+[SUB-STEP 2.1] Identify flow features (drop identifiers + Label) (started: 06:45:23)
+  [OK] 83 flow features kept (from 11.97 GB file)
+  [✓] Sub-step 2.1 completed at 06:45:23
+
+[SUB-STEP 2.2] Compute Pearson + Spearman correlations (single fused pass) (started: 06:45:23)
+  Fused pass: exact Pearson + Spearman sample (rate 0.1029, est_total ~63,195,088 rows, target 6,500,000)
+  Fused pass done: Pearson over 63,195,088 rows; Spearman sample 6,499,871 rows (seed 42, chunk-independent)
+  [OK] Pearson over 63,195,088 complete-case rows
+  Sample class mix (top): Benign:6,135,925, DoS:189,023, DDoS:141,530, Botnet:14,423, BruteForce:9,622, Infiltration:9,314
+  [OK] Spearman over 6,499,871 sampled rows
+  [✓] Sub-step 2.2 completed at 06:50:45
+
+[SUB-STEP 2.3] Flag highly correlated pairs (|r| >= 0.9) (started: 06:50:45)
+  [OK] Pearson flagged 47 pair(s); Spearman flagged 174
+  [✓] Sub-step 2.3 completed at 06:50:45
+
+[SUB-STEP 2.4] Save correlation matrices + flagged pairs (JSON metadata) (started: 06:50:45)
+  [OK] 4 JSON files written to H:\nidswork\output\2_correlation_analysis\cicids2018
+  [✓] Sub-step 2.4 completed at 06:50:46
+
+[SUB-STEP 2.5] Render dense heatmaps + flagged-pair summaries (started: 06:50:46)
+  [OK] Heatmaps + bars saved to H:\nidswork\results\2_correlation_analysis\cicids2018
+  [✓] Sub-step 2.5 completed at 06:51:51
+
+[SUB-STEP 2.6] Write text report (started: 06:51:51)
+  [OK] Report saved to H:\nidswork\results\2_correlation_analysis\cicids2018\2_correlation_analysis_report.txt
+  [✓] Sub-step 2.6 completed at 06:51:51
+
+======================================================================
+Completed: 2026-07-17 06:51:51
+======================================================================

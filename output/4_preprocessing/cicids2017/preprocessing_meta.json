@@ -1,0 +1,43 @@
+{
+  "dataset": "cicids2017",
+  "generated": "2026-07-17T06:52:24",
+  "backend": "cpu(numpy)",
+  "n_features": 71,
+  "rows_total": 2099960,
+  "rows_train": 1679912,
+  "rows_test": 420048,
+  "requested_test_size": 0.2,
+  "realized_test_fraction": 0.2,
+  "seed": 42,
+  "split": "deterministic per-class systematic (stratified, replayable)",
+  "scaling": "StandardScaler (z-score) fit on train rows only, applied to train+test",
+  "class_counts_train": {
+    "Benign": 1275582,
+    "Botnet": 709,
+    "BruteForce": 5533,
+    "DDoS": 76144,
+    "DoS": 137234,
+    "Infiltration": 57403,
+    "PortScan": 127266,
+    "WebAttack": 41
+  },
+  "class_counts_test": {
+    "Benign": 318958,
+    "Botnet": 27,
+    "BruteForce": 1400,
+    "DDoS": 19000,
+    "DoS": 34400,
+    "Infiltration": 14400,
+    "PortScan": 31800,
+    "WebAttack": 63
+  },
+  "verify": {
+    "verify_mean_abs_max": 1.683773947672813e-08,
+    "verify_std_min": 0.9999999668452462,
+    "verify_std_max": 1.0000000273801424
+  },
+  "outputs": {
+    "train": "H:\\nidswork\\output\\4_preprocessing\\cicids2017\\train.parquet",
+    "test": "H:\\nidswork\\output\\4_preprocessing\\cicids2017\\test.parquet"
+  }
+}

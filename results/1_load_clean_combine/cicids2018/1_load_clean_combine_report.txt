@@ -1,0 +1,60 @@
+STEP 1 REPORT  --  CICIDS2018
+Generated : 2026-07-17 06:44:31
+============================================================
+
+## Row Counts
+  Total raw rows       :   63,195,145
+  NaN rows removed     :            0
+  Inf rows removed     :           57
+  After NaN/Inf clean  :   63,195,088
+  Duplicates removed   :            0
+  After global dedup   :   63,195,088
+  Final (post-labels)  :   63,195,088
+
+## Per-File Stats
+  File                                                Raw        NaN        Inf         Clean
+  ------------------------------------------ ------------  ---------  ---------  ------------
+  Friday-16-02-2018.csv                         7,390,266          0          8     7,390,258
+  Wednesday-21-02-2018.csv                      6,962,593          0          6     6,962,587
+  Wednesday-28-02-2018.csv                      6,568,726          0          4     6,568,722
+  Thursday-01-03-2018.csv                       6,551,401          0          7     6,551,394
+  Friday-02-03-2018.csv                         6,311,371          0          3     6,311,368
+  Thursday-22-02-2018.csv                       6,071,153          0          2     6,071,151
+  Tuesday-20-02-2018.csv                        6,054,702          0          8     6,054,694
+  Friday-23-02-2018.csv                         5,976,481          0          4     5,976,477
+  Wednesday-14-02-2018.csv                      5,898,350          0          1     5,898,349
+  Thursday-15-02-2018.csv                       5,410,102          0         14     5,410,088
+
+## Raw Label Inventory (before consolidation)
+  Label                                                     Count
+  ---------------------------------------------------- ----------
+  BENIGN                                               59,353,429
+  DoS Hulk                                              1,803,160
+  DDoS-HOIC                                             1,082,293
+  Benign                                                  306,237
+  DDoS-LOIC-HTTP                                          289,328
+  Botnet Ares                                             142,921
+  SSH-BruteForce                                           94,197
+  Infiltration - NMAP Portscan                             89,374
+  DoS GoldenEye                                            22,560
+  DoS Slowloris                                             8,490
+  DDoS-LOIC-UDP                                             2,527
+  Infiltration - Communication Victim Attacker                204
+  Web Attack - Brute Force                                    131
+  Web Attack - XSS                                            113
+  Infiltration - Dropbox Download                              85
+  Web Attack - SQL                                             39
+
+## Canonical Families (after consolidation)
+  Family                      Count
+  ---------------------- ----------
+  Benign                 59,659,666
+  DoS                     1,834,210
+  DDoS                    1,374,148
+  Botnet                    142,921
+  BruteForce                 94,197
+  Infiltration               89,663
+  WebAttack                     283
+
+## Output
+  data/cc_data/cicids2018_cleaned.parquet

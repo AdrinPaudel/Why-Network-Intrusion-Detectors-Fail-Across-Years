@@ -1,0 +1,40 @@
+======================================================================
+0_DATAEXPLORE STEPS LOG
+Started: 2026-07-17 06:19:58
+======================================================================
+  Found 5 CSV file(s) (largest first):
+    wednesday.csv  (278 MB)
+    friday.csv  (272 MB)
+    monday.csv  (198 MB)
+    thursday.csv  (181 MB)
+    tuesday.csv  (170 MB)
+  
+
+[SUB-STEP 0.1] Column inventory (header-only reads, 0 data rows loaded) (started: 06:19:58)
+  wednesday.csv: 91 columns
+  friday.csv: 91 columns
+  monday.csv: 91 columns
+  thursday.csv: 91 columns
+  tuesday.csv: 91 columns
+  [OK] All 5 files aligned: 91 columns, same order
+
+[SUB-STEP 0.2] Single-pass analysis (parallel, 5 process(es)) (started: 06:19:58)
+  [1/5] tuesday.csv (170 MB): 322,078 rows | clean 322,078 | NaN/Inf 0
+      Attempted→Benign: 2 label type(s), 39 rows total
+  [2/5] monday.csv (198 MB): 371,624 rows | clean 371,621 | NaN/Inf 3
+  [3/5] thursday.csv (181 MB): 362,076 rows | clean 362,075 | NaN/Inf 1
+      Attempted→Benign: 4 label type(s), 1,997 rows total
+  [4/5] wednesday.csv (278 MB): 496,641 rows | clean 496,640 | NaN/Inf 1
+      Attempted→Benign: 4 label type(s), 5,876 rows total
+  [5/5] friday.csv (272 MB): 547,557 rows | clean 547,557 | NaN/Inf 0
+      Attempted→Benign: 1 label type(s), 4,067 rows total
+  [OK] Done
+
+[SUB-STEP 0.3] Writing results report (started: 06:20:18)
+
+[SUB-STEP 0.4] Writing visualization charts (started: 06:20:18)
+  [OK] All outputs written to H:\nidswork\results\0_dataexplore\cicids2017
+
+======================================================================
+Completed: 2026-07-17 06:20:21
+======================================================================

@@ -1,0 +1,122 @@
+
+======================================================================
+CORRELATION COMPARISON REPORT  --  CIC-IDS 2017 vs 2018 (corrected)
+======================================================================
+Generated : 2026-07-17 06:52:00
+
+======================================================================
+SETTINGS
+======================================================================
+  Features compared     : 83
+  Consensus threshold   : 0.95
+  Per-year threshold    : 0.95
+
+
+======================================================================
+SUMMARY
+======================================================================
+  Redundancy groups (pairs to consolidate) : 7
+  Features recommended to DROP              : 10
+  Features recommended to MONITOR (1 year) : 0
+  Correlation drift pairs (shifted only)   : 38
+
+======================================================================
+FEATURES TO DROP  (stable redundancy — both years, both metrics)
+======================================================================
+    1.  Average Packet Size                         → kept: Packet Length Mean
+    2.  Bwd Packet/Bulk Avg                         → kept: Bwd Bytes/Bulk Avg
+    3.  Bwd Segment Size Avg                        → kept: Bwd Packet Length Mean
+    4.  Fwd Packets/s                               → kept: Flow Packets/s
+    5.  Fwd Segment Size Avg                        → kept: Fwd Packet Length Mean
+    6.  Idle Max                                    → kept: Idle Mean
+    7.  Idle Min                                    → kept: Idle Mean
+    8.  Subflow Bwd Bytes                           → kept: Bwd Packet Length Mean
+    9.  Subflow Fwd Bytes                           → kept: Fwd Packet Length Mean
+   10.  URG Flag Count                              → kept: Fwd URG Flags
+
+======================================================================
+REDUNDANCY GROUPS (detail)
+======================================================================
+
+  Group (3 features)  status=stable
+    KEEP: Fwd Packet Length Mean
+    DROP: Fwd Segment Size Avg                         P17=1.0000  P18=1.0000  avg_P=1.0000  avg_S=1.0000
+    DROP: Subflow Fwd Bytes                            P17=0.9747  P18=0.9760  avg_P=0.9754  avg_S=0.9843
+
+  Group (3 features)  status=stable
+    KEEP: Bwd Packet Length Mean
+    DROP: Bwd Segment Size Avg                         P17=1.0000  P18=1.0000  avg_P=1.0000  avg_S=1.0000
+    DROP: Subflow Bwd Bytes                            P17=0.9810  P18=0.9764  avg_P=0.9787  avg_S=0.9936
+
+  Group (2 features)  status=stable
+    KEEP: Flow Packets/s
+    DROP: Fwd Packets/s                                P17=0.9690  P18=0.9920  avg_P=0.9805  avg_S=0.9990
+
+  Group (2 features)  status=stable
+    KEEP: Fwd URG Flags
+    DROP: URG Flag Count                               P17=0.9996  P18=1.0000  avg_P=0.9998  avg_S=0.9973
+
+  Group (2 features)  status=stable
+    KEEP: Packet Length Mean
+    DROP: Average Packet Size                          P17=1.0000  P18=1.0000  avg_P=1.0000  avg_S=1.0000
+
+  Group (2 features)  status=stable
+    KEEP: Bwd Bytes/Bulk Avg
+    DROP: Bwd Packet/Bulk Avg                          P17=0.9790  P18=0.9998  avg_P=0.9894  avg_S=0.9984
+
+  Group (3 features)  status=stable
+    KEEP: Idle Mean
+    DROP: Idle Max                                     P17=0.9870  P18=0.9903  avg_P=0.9887  avg_S=0.9993
+    DROP: Idle Min                                     P17=0.9896  P18=0.9901  avg_P=0.9898  avg_S=0.9981
+
+======================================================================
+CORRELATION DRIFT PAIRS  (new/lost correlation between years)
+======================================================================
+  Pairs where |Pearson| >= per_year_threshold in one year but NOT the other.
+  These represent structural changes in network traffic between 2017 and 2018.
+  Not candidates for dropping — they are a research finding.
+
+  Feature A                                 Feature B                                 In          P17      P18
+  ----------------------------------------  ----------------------------------------  ----------  -------  -------
+  Total Fwd Packet                          ACK Flag Count                            2017_only   0.9997   0.0811
+  Flow Duration                             Fwd IAT Total                             2017_only   0.9995   0.8574
+  Total Fwd Packet                          Total Bwd packets                         2017_only   0.9991   0.0748
+  Flow IAT Max                              Fwd IAT Max                               2017_only   0.9986   0.5863
+  Fwd Packet/Bulk Avg                       Fwd Act Data Pkts                         2018_only   0.6065   0.9977
+  Total Fwd Packet                          Total Length of Bwd Packet                2017_only   0.9970   0.0740
+  Fwd IAT Max                               Idle Max                                  2017_only   0.9969   0.5864
+  Total Fwd Packet                          Fwd Act Data Pkts                         2018_only   0.0592   0.9960
+  Fwd Packet Length Min                     Packet Length Min                         2018_only   0.8395   0.9947
+  Total Fwd Packet                          Fwd Packet/Bulk Avg                       2018_only   0.0082   0.9937
+  Flow Packets/s                            Bwd Packets/s                             2018_only   0.4938   0.9916
+  Bwd Packet Length Max                     Packet Length Max                         2017_only   0.9894   0.6028
+  Packet Length Mean                        Subflow Bwd Bytes                         2017_only   0.9877   0.8152
+  Average Packet Size                       Subflow Bwd Bytes                         2017_only   0.9877   0.8152
+  Fwd IAT Max                               Idle Mean                                 2017_only   0.9840   0.5407
+  Bwd Packet Length Max                     Packet Length Std                         2017_only   0.9834   0.7063
+  Fwd IAT Total                             Bwd IAT Total                             2017_only   0.9822   0.8476
+  Bwd Packet Length Std                     Packet Length Std                         2017_only   0.9821   0.7119
+  Bwd Packet Length Std                     Packet Length Max                         2017_only   0.9729   0.5790
+  Bwd Packet Length Mean                    Packet Length Mean                        2017_only   0.9677   0.8125
+  Bwd Packet Length Mean                    Average Packet Size                       2017_only   0.9677   0.8125
+  Packet Length Mean                        Bwd Segment Size Avg                      2017_only   0.9677   0.8125
+  Average Packet Size                       Bwd Segment Size Avg                      2017_only   0.9677   0.8125
+  Fwd Packets/s                             Bwd Packets/s                             2018_only   0.2638   0.9673
+  Fwd IAT Mean                              Fwd IAT Min                               2017_only   0.9669   0.6887
+  Total Length of Fwd Packet                Fwd Bytes/Bulk Avg                        2018_only   0.3790   0.9661
+  Bwd Packet Length Std                     Packet Length Variance                    2017_only   0.9640   0.0819
+  Active Mean                               Active Min                                2018_only   0.9070   0.9638
+  Bwd Packet Length Mean                    Packet Length Std                         2017_only   0.9635   0.6078
+  Packet Length Std                         Bwd Segment Size Avg                      2017_only   0.9635   0.6078
+  ... and 8 more (see drop_decisions.json → shifted_pairs)
+
+======================================================================
+OUTPUT FILES
+======================================================================
+  For Script 4 (Preprocessing):
+    - output/3_correlation_comparison/drop_decisions.json
+  For Manual Review:
+    - results/3_correlation_comparison/pearson_min_heatmap.png
+    - results/3_correlation_comparison/spearman_min_heatmap.png
+    - results/3_correlation_comparison/diff_heatmap.png
+    - results/3_correlation_comparison/redundancy_groups.png

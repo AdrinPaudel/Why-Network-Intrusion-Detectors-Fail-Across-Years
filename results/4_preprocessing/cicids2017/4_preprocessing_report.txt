@@ -1,0 +1,11 @@
+4_PREPROCESSING REPORT
+Generated: 2026-07-17 06:52:26
+Backend: cpu(numpy)
+
+Features: 71 kept, 10 dropped
+
+cicids2017:
+  rows total: 2,099,960
+  train: 1,679,912  test: 420,048
+  P(benign) in train: 75.9%  (1,275,582 benign / 1,679,912 total)
+  scaling: mean=1.68e-08, std=[1.0000, 1.0000]
