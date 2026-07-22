@@ -1,18 +1,18 @@
 ======================================================================
 SCRIPT 11b — RESULTS DOC GENERATION  [lightgbm]
-Started: 2026-07-17 16:22:47
+Started: 2026-07-21 14:22:57
 ======================================================================
   Engine    : lightgbm (the pipeline's only engine)
   Cache     : H:\nidswork\output\11_cross_analysis\lightgbm\_doc_cache.pkl
 
-[SUB-STEP 11.1] Load cached analysis outputs (started: 16:22:47)
+[SUB-STEP 11.1] Load cached analysis outputs (started: 14:22:57)
   [OK] loaded cache: 71 features
-  [✓] Sub-step 11.1 completed at 16:22:47
+  [✓] Sub-step 11.1 completed at 14:22:57
 
-[SUB-STEP 11.2] Write results.md (started: 16:22:47)
+[SUB-STEP 11.2] Write results.md (started: 14:22:57)
   [OK] results.md written to H:\nidswork\results\11_cross_analysis\lightgbm
-  [✓] Sub-step 11.2 completed at 16:22:48
+  [✓] Sub-step 11.2 completed at 14:22:58
 
 ======================================================================
-Completed: 2026-07-17 16:22:48
+Completed: 2026-07-21 14:22:58
 ======================================================================

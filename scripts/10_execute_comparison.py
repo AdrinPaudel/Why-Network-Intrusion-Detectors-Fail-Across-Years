@@ -1323,7 +1323,7 @@ def _write_verdict_report(ds1: str, ds2: str, results: list, counts: dict,
     lines.append('  This report is diagnostic output for the Axis 1/Axis 2 shift tests computed in')
     lines.append('  this step. It feeds step 11 (cross-analysis), which correlates these shift/')
     lines.append('  stability values against feature importance — see results.md for the canonical')
-    lines.append('  C1-C18/H1/H1.5/H2 analysis IDs and what each one means.')
+    lines.append('  C1-C9/H1/H1.5/H2 analysis IDs and what each one means.')
     lines.append('')
 
     h('VERDICT DISTRIBUTION (Flip vs Collapse: HOW did discrimination fail?)')

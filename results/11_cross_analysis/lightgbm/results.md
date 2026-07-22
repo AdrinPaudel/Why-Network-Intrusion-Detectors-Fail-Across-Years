@@ -702,7 +702,7 @@ Each trained model is evaluated in two framings against the opposite year's data
 
 ### Binary (benign vs attack)
 
-_Full metric table, same-year baseline (own 20% held-out split) alongside all four cross-year cells, with the gap from same-year made explicit, one table, not split across a metric-breakdown table and a separate gap table that repeated the same cross-year numbers. Same metric set as C18's ablation table below (this is the real full-feature model, the ceiling the K-feature ablation policies are compared against). Same-year rows use their own within-year 20% test split (⚠️ inflated by near-duplicate train/test flows, see the warning above), not a fifth/sixth cross framing, there is no "own-scaler, own-year" cross case to add, since concept and covariate framings only differ when train-year != test-year. Gap columns = same-year baseline minus that row's value; POSITIVE means performance LOST moving out of domain (e.g. a drop from 0.9999 to 0.9211 prints as 0.0788, not -0.0788).
+_Full metric table, same-year baseline (own 20% held-out split) alongside all four cross-year cells, with the gap from same-year made explicit, one table, not split across a metric-breakdown table and a separate gap table that repeated the same cross-year numbers. Same metric set as C9's ablation table below (this is the real full-feature model, the ceiling the K-feature ablation policies are compared against). Same-year rows use their own within-year 20% test split (⚠️ inflated by near-duplicate train/test flows, see the warning above), not a fifth/sixth cross framing, there is no "own-scaler, own-year" cross case to add, since concept and covariate framings only differ when train-year != test-year. Gap columns = same-year baseline minus that row's value; POSITIVE means performance LOST moving out of domain (e.g. a drop from 0.9999 to 0.9211 prints as 0.0788, not -0.0788).
 
 | Cell | Accuracy | Macro F1 | Attack F1 | Benign F1 | Sensitivity | FPR | Precision | Specificity | Balanced Acc | ROC-AUC | MCC | Acc gap (same−cross) | Macro-F1 gap (same−cross) |
 |------|------:|------:|------:|------:|------:|------:|------:|------:|------:|------:|------:|------:|------:|
@@ -1510,15 +1510,15 @@ Step 10 computes Axis 1 (per-family slice C2ST-AUC, slices carry C2ST only; the 
 | Total TCP Flow Time | 0.0234 | 0.0287 | 0.0310 | 0.0003 | 0.0240 | 0.3683 |
 
 ---
-## Step 11: Cross-Analysis (C1–C18)
+## Step 11: Cross-Analysis (C1–C9)
 
-Step 11 joins feature importance (Step 5) with drift axes (Step 10) and runs C1 through C18 (several split into lettered sub-tests, e.g. C4a/C4b) characterizing how importance, covariate shift, concept stability, and cross-year transfer performance relate. C18 is [DECISIVE]: it retrains the real model on competing feature subsets and directly measures cross-year transfer F1.
+Step 11 joins feature importance (Step 5) with drift axes (Step 10) and runs C1 through C9 (several split into lettered sub-tests, e.g. C4a/C4b) characterizing how importance, covariate shift, concept stability, and cross-year transfer performance relate. C9 is [DECISIVE]: it retrains the real model on competing feature subsets and directly measures cross-year transfer F1.
 
 ### Reference: Naming Convention
 
 One label scheme, no symbol reused across layers:
 
-- **Hypotheses:** `H1` (8 independent tests, C4a-C7a/C4b-C7b, one per importance-variant x axis cell, no longer one combined two-axis verdict; BH-FDR corrected across exactly these 8), `H1.5` (4 supplementary delta-importance tests, C8a-C8d, Section 3, its own BH-FDR family), `H2` (the decisive ablation, C18).
+- **Hypotheses:** `H1` (8 independent tests, C4a-C7a/C4b-C7b, one per importance-variant x axis cell, no longer one combined two-axis verdict; BH-FDR corrected across exactly these 8), `H1.5` (4 supplementary delta-importance tests, C8a-C8d, Section 3, its own BH-FDR family), `H2` (the decisive ablation, C9).
 - **Inputs** (measured quantities consumed by each analysis):
   | name | meaning | name | meaning |
   |------|---------|------|---------|
@@ -1529,7 +1529,7 @@ One label scheme, no symbol reused across layers:
   | `benign_shift` | benign-only slice C2ST (calibrated) | `attack_shift` | attack-only slice C2ST (calibrated) |
   | `mi_2017` | mutual information 2017 | `mi_2018` | mutual information 2018 |
   | `rank_delta` | importance-rank change 2017→2018 | | |
-- **Analyses:** `C1`–`C18`. `C18` is [DECISIVE].
+- **Analyses:** `C1`–`C9`. `C9` is [DECISIVE].
 - **Axes:** Axis 1 = `cov_shift`; Axis 2 = `concept_stab`.
 
 ### Dataset and model scope
@@ -2405,7 +2405,7 @@ Note:
 
 ### H1 correlation summary: all 8 independent tests (binary importance, both axes)
 
-**In short:** Axis 1 (covariate shift) is confirmed in 2/4 of the importance variants tested above; Axis 2 (concept stability) is contradicted in 3/4. So across these 8 correlation tests, H1 holds only partially and only on one axis, see the per-cell verdicts below for which variants agree, and C18 further down for the decisive (retrained-model) test, since these are supporting correlations, not the decisive evidence.
+**In short:** Axis 1 (covariate shift) is confirmed in 2/4 of the importance variants tested above; Axis 2 (concept stability) is contradicted in 3/4. So across these 8 correlation tests, H1 holds only partially and only on one axis, see the per-cell verdicts below for which variants agree, and C9 further down for the decisive (retrained-model) test, since these are supporting correlations, not the decisive evidence.
 
 **Full detail:**
 
@@ -2514,11 +2514,11 @@ _H1.5 is NOT an ablation input, no feature selection or retraining uses delta im
 
 
 ---
-## Section 4: Decisive experiment (C18)
+## Section 4: Decisive experiment (C9)
 
 > The correlations in Sections 2-3 are supporting evidence. The analysis below retrains / re-evaluates the real model and is the decisive test.
 
-### C18 [DECISIVE]: Cross-domain ablation (H2 test)
+### C9 [DECISIVE]: Cross-domain ablation (H2 test)
 
 **What we are doing, before any numbers:** we pick the top K features by a few different rules (K = 5, 10, 20, 30, 50, or all), train a real model on just those K features using 2017 data, and separately using 2018 data, then test each trained model on both years. This is the DECISIVE test for H2, it retrains the actual model and measures real transfer F1, not a correlation proxy like Sections 3-6 above.
 
@@ -3130,7 +3130,7 @@ Runs the tests Step 9 planned, producing the two-axis verdict (covariate shift, 
 
 ### Step 11
 
-Joins Step 5's importance with Step 10's drift verdicts, runs the C1-C18 tests, and generates this document.
+Joins Step 5's importance with Step 10's drift verdicts, runs the C1-C9 tests, and generates this document.
 
 - `output/11_cross_analysis/`, 15 .csv, 13 .json, 1 .pkl
-- `results/11_cross_analysis/`, 16 .png, 2 .log
+- `results/11_cross_analysis/`, 16 .png, 2 .log, 1 .md

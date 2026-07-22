@@ -316,7 +316,7 @@ def _single_axis_verdict(blk: dict, expect_positive: bool, axis_label: str) -> s
       Axis 2 (vs separation_stability, expect_positive=False): more important features keep LESS
         concept stability, i.e. a NEGATIVE Spearman against a stability score (not a shift score).
     See the H1 correlation summary table below for how the two axes compare side by side; the
-    ablation (C18/H2), not any of these correlations, is the definitive concept-transfer test.
+    ablation (C9/H2), not any of these correlations, is the definitive concept-transfer test.
     """
     state = _axis_support_state(blk, expect_positive)
     sp = blk.get('spearman', float('nan')) if isinstance(blk, dict) else float('nan')
@@ -351,7 +351,7 @@ _STEP_DESCRIPTIONS = {
          'feature per dataset per class-mode variant. Produces no numbers consumed downstream.'),
     9:  'Decides, per feature, which statistical test(s) Step 10 should run against it, based on Step 7\'s profile.',
     10: 'Runs the tests Step 9 planned, producing the two-axis verdict (covariate shift, concept stability) per feature.',
-    11: ('Joins Step 5\'s importance with Step 10\'s drift verdicts, runs the C1-C18 tests, and '
+    11: ('Joins Step 5\'s importance with Step 10\'s drift verdicts, runs the C1-C9 tests, and '
          'generates this document.'),
 }
 
@@ -417,7 +417,7 @@ def _build_output_map_section() -> list:
 
 
 def _build_preamble_sections(df: 'pd.DataFrame', baseline: dict | None) -> 'tuple[list, dict]':
-    """Build the Step 5–10 pipeline walkthrough sections that precede C1–C18 in results.md.
+    """Build the Step 5–10 pipeline walkthrough sections that precede C1–C9 in results.md.
     Returns (lines, layer_a): layer_a is the verdicts_layerA_<DS1>_<DS2>.json load performed here
     (needed for the per-attack-family breakdown below), returned so write_results_doc() can reuse
     it for its own E1 section instead of loading the same file a second time."""
@@ -1045,7 +1045,7 @@ def _build_preamble_sections(df: 'pd.DataFrame', baseline: dict | None) -> 'tupl
             ('_Full metric table, same-year baseline (own 20% held-out split) alongside all four '
              'cross-year cells, with the gap from same-year made explicit — one table, not split '
              'across a metric-breakdown table and a separate gap table that repeated the same '
-             'cross-year numbers. Same metric set as C18\'s ablation table below (this is the real '
+             'cross-year numbers. Same metric set as C9\'s ablation table below (this is the real '
              'full-feature model — the ceiling the K-feature ablation policies are compared '
              'against). Same-year rows use their own within-year 20% test split (⚠️ inflated by '
              'near-duplicate train/test flows, see the warning above), not a fifth/sixth cross '
@@ -1714,7 +1714,7 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
                       benign_atk=None,
                       prior_shift=None,
                       baseline=None, delta_imp_stab=None):
-    """Detailed reference document (results.md): every analysis C1–C18 with full tables."""
+    """Detailed reference document (results.md): every analysis C1–C9 with full tables."""
     # ── inner helpers ────────────────────────────────────────────────────────────
     perm_ok = report.get('permutation_importance_available', False)
     # _layer_a itself is assigned below, from _build_preamble_sections()'s return value (it
@@ -1870,12 +1870,12 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
     # ── Step 11 header + naming legend ───────────────────────────────────────────
     lines += [
         '---',
-        '## Step 11: Cross-Analysis (C1–C18)',
+        '## Step 11: Cross-Analysis (C1–C9)',
         '',
         'Step 11 joins feature importance (Step 5) with drift axes (Step 10) and runs '
-        'C1 through C18 (several split into lettered sub-tests, e.g. C4a/C4b) characterizing '
+        'C1 through C9 (several split into lettered sub-tests, e.g. C4a/C4b) characterizing '
         'how importance, covariate shift, concept stability, and cross-year transfer performance '
-        'relate. C18 is [DECISIVE]: it retrains the real model on competing feature '
+        'relate. C9 is [DECISIVE]: it retrains the real model on competing feature '
         'subsets and directly measures cross-year transfer F1.',
         '',
         '### Reference: Naming Convention',
@@ -1885,7 +1885,7 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
         ('- **Hypotheses:** `H1` (8 independent tests, C4a-C7a/C4b-C7b, one per importance-variant '
          'x axis cell — no longer one combined two-axis verdict; BH-FDR corrected across exactly '
          'these 8), `H1.5` (4 supplementary delta-importance tests, C8a-C8d, Section 3, its own '
-         'BH-FDR family), `H2` (the decisive ablation, C18).'),
+         'BH-FDR family), `H2` (the decisive ablation, C9).'),
         '- **Inputs** (measured quantities consumed by each analysis):',
         '  | name | meaning | name | meaning |',
         '  |------|---------|------|---------|',
@@ -1896,7 +1896,7 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
         '  | `benign_shift` | benign-only slice C2ST (calibrated) | `attack_shift` | attack-only slice C2ST (calibrated) |',
         '  | `mi_2017` | mutual information 2017 | `mi_2018` | mutual information 2018 |',
         '  | `rank_delta` | importance-rank change 2017→2018 | | |',
-        '- **Analyses:** `C1`–`C18`. `C18` is [DECISIVE].',
+        '- **Analyses:** `C1`–`C9`. `C9` is [DECISIVE].',
         '- **Axes:** Axis 1 = `cov_shift`; Axis 2 = `concept_stab`.',
         '',
         '### Dataset and model scope',
@@ -2473,7 +2473,7 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
         (f'**In short:** Axis 1 (covariate shift) is confirmed in {_a1_sup}/4 of the importance '
          f'variants tested above; Axis 2 (concept stability) is contradicted in {_a2_con}/4. So '
          'across these 8 correlation tests, H1 holds only partially and only on one axis — see '
-         'the per-cell verdicts below for which variants agree, and C18 further down for the '
+         'the per-cell verdicts below for which variants agree, and C9 further down for the '
          'decisive (retrained-model) test, since these are supporting correlations, not the '
          'decisive evidence.'),
         '',
@@ -2652,14 +2652,14 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
     # ── SECTION 4: DECISIVE EXPERIMENT ───────────────────────────────────────────
     lines += [
         '---',
-        '## Section 4: Decisive experiment (C18)',
+        '## Section 4: Decisive experiment (C9)',
         '',
         '> The correlations in Sections 2-3 are supporting evidence. The analysis below '
         'retrains / re-evaluates the real model and is the decisive test.',
         '',
     ]
 
-    # C18 (decisive ablation; formerly D1)
+    # C9 (decisive ablation; formerly D1)
     def _h2_metric_col(abl_df) -> tuple:
         """Macro F1 (mean of Attack F1 and Benign F1) is the H2 decision metric — fit_eval() in
         11_cross_analysis.py computes it for every scenario/policy. Falls back to Attack F1
@@ -2855,7 +2855,7 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
 
     _h2_verdict = _compute_h2_verdict(abl)
     lines += [
-        '### C18 [DECISIVE]: Cross-domain ablation (H2 test)',
+        '### C9 [DECISIVE]: Cross-domain ablation (H2 test)',
         '',
         ('**What we are doing, before any numbers:** we pick the '
          'top K features by a few different rules (K = 5, 10, 20, 30, 50, or all), train a real '
@@ -3265,9 +3265,9 @@ def write_results_doc(df, stats, drift, abl, report, out_path: Path, *,
         lines.append('_Ablation not run (set RUN_ABLATION=True in Config11)._')
     lines += ['', '**Status: DONE**', '']
 
-    # ── SUPPLEMENTARY: E-series (non-sequential, does not renumber C1-C18) ───────
-    # Placed at the very end of Step 11's content, after C18 — these are
-    # robustness/diagnostic checks on metrics already used above, not part of the core C1-C18
+    # ── SUPPLEMENTARY: E-series (non-sequential, does not renumber C1-C9) ───────
+    # Placed at the very end of Step 11's content, after C9 — these are
+    # robustness/diagnostic checks on metrics already used above, not part of the core C1-C9
     # numbered sequence, so they sit after it rather than disturbing it.
     lines += ['---', '## Supplementary checks (E-series)', '']
 

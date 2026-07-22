@@ -310,7 +310,7 @@ def _cross_summary(task: str, m: dict) -> dict:
     """Compact scalars step 11 (and results.md's Step-6 table) need as the real full-feature-model
     cross-year baseline. For binary, this mirrors 11_cross_analysis.py's _full_metrics() naming
     exactly (benign_f1/sensitivity/fpr/precision/specificity) so the ablation's K-feature policies
-    (C18) and this real full-feature baseline are directly comparable on the SAME metric set —
+    (C9) and this real full-feature baseline are directly comparable on the SAME metric set —
     macro_f1/balanced_accuracy/mcc were already equivalent (both derived from the same per-class
     confusion-matrix counts), only the finer-grained breakdown was missing here."""
     out = {'accuracy': m['accuracy'], 'balanced_accuracy': m['balanced_accuracy'],

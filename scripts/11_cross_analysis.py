@@ -686,7 +686,7 @@ def headline_stats(df: pd.DataFrame, log) -> dict:
     # Axis 1 (calibrated C2ST). Expected sign under H1: POSITIVE (important features shift more).
     out['importance_vs_c2st'] = block('imp_2017 vs calib C2ST (H1 axis1 native)', imp_hi, c2st)
     # Axis 2 (separation_stability = univariate attack-vs-benign gap survival; a UNIVARIATE PROXY
-    # for concept stability — the H2 ablation (C18, decisive) is the definitive test).
+    # for concept stability — the H2 ablation (C9, decisive) is the definitive test).
     out['importance_vs_concept_stability'] = block('imp_2017 vs sep_stability', imp_hi, stab)
 
     _rank_arrays: dict = {}   # name -> already-computed -rank array, reused below (H1 cell inputs)
